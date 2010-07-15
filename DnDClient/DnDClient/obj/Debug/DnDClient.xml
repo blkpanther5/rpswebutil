@@ -1,0 +1,221 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+DnDClient
+</name>
+</assembly>
+<members>
+<member name="F:DnDClient.Login.RegisterHyperLink">
+	<summary>
+RegisterHyperLink control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:DnDClient.Login.LoginUser">
+	<summary>
+LoginUser control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:DnDClient.Register.RegisterUser">
+	<summary>
+RegisterUser control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:DnDClient.Register.RegisterUserWizardStep">
+	<summary>
+RegisterUserWizardStep control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:DnDClient.ChangePassword.ChangeUserPassword">
+	<summary>
+ChangeUserPassword control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="T:DnDClient.Common.AbilityScoreBlock">
+	<summary>
+ Represents a creatures ability scores and modifiers.
+ </summary>
+</member><member name="F:DnDClient.Site.HeadContent">
+	<summary>
+HeadContent control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:DnDClient.Site.MasterPageScriptManager">
+	<summary>
+MasterPageScriptManager control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:DnDClient.Site.HeadLoginView">
+	<summary>
+HeadLoginView control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:DnDClient.Site.HeadHomeLink">
+	<summary>
+HeadHomeLink control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:DnDClient.Site.HeadAboutLink">
+	<summary>
+HeadAboutLink control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="F:DnDClient.Site.MainContent">
+	<summary>
+MainContent control.
+</summary>
+	<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member><member name="P:DnDClient.My.MyWebExtension.Application">
+	<summary>
+ Returns information about the current application.
+ </summary>
+</member><member name="P:DnDClient.My.MyWebExtension.Computer">
+	<summary>
+ Returns information about the host computer.
+ </summary>
+</member><member name="P:DnDClient.My.MyWebExtension.User">
+	<summary>
+ Returns information for the current Web user.
+ </summary>
+</member><member name="P:DnDClient.My.MyWebExtension.Request">
+	<summary>
+ Returns Request object.
+ </summary>
+</member><member name="P:DnDClient.My.MyWebExtension.Response">
+	<summary>
+ Returns Response object.
+ </summary>
+</member><member name="P:DnDClient.My.MyWebExtension.Log">
+	<summary>
+ Returns the Asp log object.
+ </summary>
+</member><member name="P:DnDClient.My.MyWebExtension.WebServices">
+	<summary>
+ Provides access to WebServices added to this project.
+ </summary>
+</member><member name="T:DnDClient.My.MyWebExtension">
+	<summary>
+ Module used to define the properties that are available in the My Namespace for Web projects.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:DnDClient.Common.Utility.SizeClass">
+	<summary>
+ Represents size class of object.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:DnDClient.Common.Utility.Gender">
+	<summary>
+ Represents gender of creature.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:DnDClient.Common.Utility.Alignment">
+	<summary>
+ Represents alignment of creature.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:DnDClient.Common.Utility">
+	<summary>
+ Contains commonly used functions, enumerations and tools.
+ </summary>
+	<remarks></remarks>
+</member><member name="P:DnDClient.Common.Character.Base.Name">
+	<summary>
+ Name of character.
+ </summary>
+</member><member name="P:DnDClient.Common.Character.Base.Level">
+	<summary>
+ Level of character.
+ </summary>
+</member><member name="P:DnDClient.Common.Character.Base.CharacterClass">
+	<summary>
+ Class of character.
+ </summary>
+</member><member name="P:DnDClient.Common.Character.Base.CharacterRace">
+	<summary>
+ Race of character.
+ </summary>
+</member><member name="P:DnDClient.Common.Character.Base.Size">
+	<summary>
+ Size class of character.
+ </summary>
+</member><member name="P:DnDClient.Common.Character.Base.Gender">
+	<summary>
+ Gender of character.
+ </summary>
+</member><member name="P:DnDClient.Common.Character.Base.ParagonPath">
+	<summary>
+ Selected Paragon Path of character.
+ </summary>
+</member><member name="P:DnDClient.Common.Character.Base.EpicDestiny">
+	<summary>
+ Selected Epic Destiny of character.
+ </summary>
+</member><member name="P:DnDClient.Common.Character.Base.Alignment">
+	<summary>
+ Alignment of character.
+ </summary>
+</member><member name="P:DnDClient.Common.Character.Base.Deity">
+	<summary>
+ Deity of character.
+ </summary>
+</member><member name="P:DnDClient.Common.Character.Base.Height">
+	<summary>
+ Height of character.
+ </summary>
+</member><member name="P:DnDClient.Common.Character.Base.Weight">
+	<summary>
+ Weight of character.
+ </summary>
+</member><member name="P:DnDClient.Common.Character.Base.PlayerName">
+	<summary>
+ Name of player who owns this character.
+ </summary>
+</member><member name="P:DnDClient.Common.Character.Base.AdventureName">
+	<summary>
+ Name of current character's adventure.
+ </summary>
+</member><member name="P:DnDClient.Common.Character.Base.AbilityScores">
+	<summary>
+ Represents characters ability scores and modifiers.
+ </summary>
+</member><member name="T:DnDClient.Common.Character.Base">
+	<summary>
+ This class represents a 4th Edition Dungeons and Dragons character.
+ </summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>
