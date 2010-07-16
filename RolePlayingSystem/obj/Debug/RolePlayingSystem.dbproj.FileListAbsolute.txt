@@ -1,8 +1,0 @@
-C:\Data\Projects\RolePlayingSystem\sql\debug\RolePlayingSystem_Script.PreDeployment.sql
-C:\Data\Projects\RolePlayingSystem\sql\debug\RolePlayingSystem_Script.PostDeployment.sql
-C:\Data\Projects\RolePlayingSystem\sql\debug\RolePlayingSystem_Database.sqlsettings
-C:\Data\Projects\RolePlayingSystem\sql\debug\RolePlayingSystem_Database.sqldeployment
-C:\Data\Projects\RolePlayingSystem\sql\debug\RolePlayingSystem_Database.sqlcmdvars
-C:\Data\Projects\RolePlayingSystem\sql\debug\RolePlayingSystem.deploymanifest
-C:\Data\Projects\RolePlayingSystem\sql\debug\RolePlayingSystem.dbschema
-C:\Data\Projects\RolePlayingSystem\obj\Debug\RolePlayingSystem.dbschema
