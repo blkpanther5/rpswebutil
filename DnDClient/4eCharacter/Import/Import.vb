@@ -210,7 +210,11 @@ Namespace Import
             _Character.Level = getStat("Level").Value
             _Character.Size = DirectCast([Enum].Parse(GetType(SizeClass), getRule(Of Rule)(Type:="Size").Name), SizeClass)
             _Character.Gender = DirectCast([Enum].Parse(GetType(Gender), getRule(Of Rule)(Type:="Gender").Name), Gender)
-            _Character.ParagonPath = Nothing 'getRule(Of Rule)(Type:="Paragon Path1").Name
+            _Character.ParagonPath = getRule(Of Rule)(Type:="Paragon Path").Name
+            _Character.EpicDestiny = getRule(Of Rule)(Type:="Epic Destiny").Name
+            _Character.Alignment = DirectCast([Enum].Parse(GetType(Alignment), _
+                                                           getRule(Of Rule)(Type:="Alignment").Name.ToString.Replace("_", " ")), Alignment)
+
 
             'Begin loading base stats!
             _Character.AbilityScores.Strength.Score = getStat("Strength").Value
