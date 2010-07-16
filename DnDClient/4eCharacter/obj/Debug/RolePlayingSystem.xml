@@ -6,162 +6,423 @@ RolePlayingSystem
 </name>
 </assembly>
 <members>
-<member name="F:RolePlayingSystem.Common.Ability.AbilityScore._Level">
+<member name="P:RolePlayingSystem.Import.Rule.Name">
+	<summary>
+ Represents the name of the rule.
+ </summary>
+</member><member name="P:RolePlayingSystem.Import.Rule.Type">
+	<summary>
+ Represents the type of the rule (such as feat).
+ </summary>
+</member><member name="P:RolePlayingSystem.Import.Rule.InternalId">
+	<summary>
+ The internal Id of this rule.
+ </summary>
+</member><member name="P:RolePlayingSystem.Import.Rule.CharElem">
+	<summary>
+ Reference Id, links rules to stats, etc.
+ </summary>
+</member><member name="P:RolePlayingSystem.Import.Rule.Legality">
+	<summary>
+ Indicates if this rule is legalally applied.
+ </summary>
+</member><member name="P:RolePlayingSystem.Import.Rule.URL">
+	<summary>
+ The reference URL (to the D and D Insider website).
+ </summary>
+</member><member name="M:RolePlayingSystem.Import.Rule.#ctor(System.String,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ Creates new instance of the rules object and sets vaules.
+ </summary>
+	<param name="Name">Name of rule.</param>
+	<param name="Type">Type of rule.</param>
+	<param name="InternalId">Internal id for rule.</param>
+	<param name="CharElem">Linking id for rule.</param>
+	<param name="Legality">Indicates if the rule is legally applied.</param>
+	<param name="URL">URL reference for rule, points to D and D insider website.</param>
+</member><member name="T:RolePlayingSystem.Import.Rule">
+	<summary>
+ Represents a rule reference for a specific character sheet element.
+ </summary>
+</member><member name="P:RolePlayingSystem.Import.Stat.Name">
+	<summary>
+ Contains primary name for stat.
+ </summary>
+	<returns>Name value for stat.</returns>
+</member><member name="P:RolePlayingSystem.Import.Stat.AlternateNames">
+	<summary>
+ Contains any alternate names for stat (ie. str for strength, etc).
+ </summary>
+	<returns>Array of string alternate name values.</returns>
+</member><member name="P:RolePlayingSystem.Import.Stat.Value">
+	<summary>
+ Contains numeric value for stat.
+ </summary>
+	<returns>Numeric stat value.</returns>
+</member><member name="P:RolePlayingSystem.Import.Stat.StatElement">
+	<summary>
+ Contains raw unmodified XML stat element.
+ </summary>
+	<returns>XML Element.</returns>
+	<remarks>Used for further processing.</remarks>
+</member><member name="M:RolePlayingSystem.Import.Stat.#ctor(System.String,System.Int32,System.Xml.Linq.XElement,System.String[],System.Collections.Generic.List{RolePlayingSystem.Import.StatModifier})">
+	<summary>
+ Generates new instance of stat class.
+ </summary>
+</member><member name="T:RolePlayingSystem.Import.Stat">
+	<summary>
+ Represents a stat element from character XML file.
+ </summary>
+</member><member name="P:RolePlayingSystem.Import.StatModifier.Type">
+	<summary>
+ Specifies type of stat modifier.
+ </summary>
+</member><member name="P:RolePlayingSystem.Import.StatModifier.Value">
+	<summary>
+ Specifies value of stat modifier.
+ </summary>
+	<remarks>May always be 1 or 0 to indicate if the modifier is active.</remarks>
+</member><member name="P:RolePlayingSystem.Import.StatModifier.Level">
+	<summary>
+ Indicates level of stat modifier.
+ </summary>
+</member><member name="P:RolePlayingSystem.Import.StatModifier.CharElem">
+	<summary>
+ A reference to the supporting rules element.
+ </summary>
+</member><member name="P:RolePlayingSystem.Import.StatModifier.AbilityLink">
+	<summary>
+ Indicates if this modifier is tied to a specific ability score.
+ </summary>
+</member><member name="P:RolePlayingSystem.Import.StatModifier.AbilityModifier">
+	<summary>
+ Value of modifier, if indicated.
+ </summary>
+</member><member name="P:RolePlayingSystem.Import.StatModifier.Rule">
+	<summary>
+ Gets associated rule element for specified stat.
+ </summary>
+	<returns>Rule element class.</returns>
+	<remarks>Returns nothing, if supporting rule cannot be found.</remarks>
+</member><member name="T:RolePlayingSystem.Import.StatModifier">
+	<summary>
+ Contains a conditional modifier for a stat block.
+ </summary>
+</member><member name="F:RolePlayingSystem.Import.Character._CharSheetData">
+	<summary>
+ Contains XDocument data for specified character sheet file.
+ </summary>
+</member><member name="F:RolePlayingSystem.Import.Character._CharSheetPath">
+	<summary>
+ Path to specified character sheet file.
+ </summary>
+</member><member name="F:RolePlayingSystem.Import.Character._Character">
+	<summary>
+ Contains the final, parsed character base object for manipulation by consumer code.
+ </summary>
+</member><member name="P:RolePlayingSystem.Import.Character.Character">
+	<summary>
+ Exposes character data to consuming application.
+ </summary>
+	<returns>Parsed character data.</returns>
+</member><member name="M:RolePlayingSystem.Import.Character.#ctor(System.String)">
+	<summary>
+ Inits the XML character file importation system.
+ </summary>
+	<param name="FilePath">Path to file to be queried.</param>
+</member><member name="M:RolePlayingSystem.Import.Character.getRule``1(System.String,System.String,System.String,System.String)">
+	<summary>
+ Searches for a rule based on specified optional parameters.
+ </summary>
+	<typeparam name="t">Type to return, should either be Generic.List(Of Rule) or Rule.</typeparam>
+	<param name="Name">Name search parameter.</param>
+	<param name="Type">Type search parameter (ex. feat).</param>
+	<param name="InternalId">InternalId search parameter.</param>
+	<param name="CharElem">CharElem search parameter.</param>
+	<returns>Will return specified rules that match search query.</returns>
+</member><member name="M:RolePlayingSystem.Import.Character.getStat(System.String)">
+	<summary>
+ Searches loaded character file for specified stat.
+ </summary>
+	<param name="StatName">Name of stat to find.</param>
+	<returns>Parsed stat object.</returns>
+</member><member name="M:RolePlayingSystem.Import.Character.getDetail(System.String)">
+	<summary>
+ Searches details element for specified detail.
+ </summary>
+	<param name="DetailName">Name of element to retrieve</param>
+	<returns>String value of specified element.</returns>
+</member><member name="M:RolePlayingSystem.Import.Character.doInitCharacterParsing">
+	<summary>
+ Begins parsing the supplied character sheet file.
+ </summary>
+</member><member name="T:RolePlayingSystem.Import.Character">
+	<summary>
+ Performs importation and querying of character sheet file.
+ </summary>
+</member><member name="P:RolePlayingSystem.Character.Movement.MovementBlock.Speed">
+	<summary>
+ Final tallied movement speed of creature.
+ </summary>
+	<remarks>Value is in squares of movement.</remarks>
+</member><member name="P:RolePlayingSystem.Character.Movement.MovementBlock.Base">
+	<summary>
+ Base creature movement speed.
+ </summary>
+</member><member name="P:RolePlayingSystem.Character.Movement.MovementBlock.Armor">
+	<summary>
+ Armor penalty (or bonus) to movement speed.
+ </summary>
+</member><member name="P:RolePlayingSystem.Character.Movement.MovementBlock.Item">
+	<summary>
+ Enhancements to speed granted by items.
+ </summary>
+</member><member name="P:RolePlayingSystem.Character.Movement.MovementBlock.Misc">
+	<summary>
+ Miscellanious bonuses or detriments to movement speed.
+ </summary>
+</member><member name="T:RolePlayingSystem.Character.Movement.MovementBlock">
+	<summary>
+ Represents the movement scores for a creature.
+ </summary>
+</member><member name="F:RolePlayingSystem.Character.Skills.Skill._Level">
+	<summary>
+ The level of creature, used in calculation of skill bonus.
+ </summary>
+</member><member name="T:RolePlayingSystem.Character.Skills.Skill">
+	<summary>
+ Represents a single skill for a character or creature.
+ </summary>
+</member><member name="F:RolePlayingSystem.Character.Skills.SkillCollection.Items">
+	<summary>
+ A collection of all characters skills.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:RolePlayingSystem.Character.Skills.SkillCollection">
+	<summary>
+ Represents all of the skills that are associated to a character.
+ </summary>
+</member><member name="F:RolePlayingSystem.Character.Defense.DefenseScore._Level">
 	<summary>
  Represents current creatures level.
  </summary>
-</member><member name="F:RolePlayingSystem.Common.Ability.AbilityScore._Score">
+</member><member name="F:RolePlayingSystem.Character.Defense.DefenseScore._Armor">
 	<summary>
- Represents current ability score.
+ Represents armor bonus to defense score.
  </summary>
-	<remarks></remarks>
-</member><member name="P:RolePlayingSystem.Common.Ability.AbilityScore.Score">
+</member><member name="F:RolePlayingSystem.Character.Defense.DefenseScore._Ability">
+	<summary>
+ Represents ability modifier to defense score.
+ </summary>
+</member><member name="F:RolePlayingSystem.Character.Defense.DefenseScore._Class">
+	<summary>
+ Represents class modifier to defense score.
+ </summary>
+</member><member name="F:RolePlayingSystem.Character.Defense.DefenseScore._Feat">
+	<summary>
+ Represents feat modifier to defense score.
+ </summary>
+</member><member name="F:RolePlayingSystem.Character.Defense.DefenseScore._Enhancement">
+	<summary>
+ Represents armor/item bonus to defense score.
+ </summary>
+</member><member name="F:RolePlayingSystem.Character.Defense.DefenseScore._Misc">
+	<summary>
+ Misc defense bonuses.
+ </summary>
+</member><member name="P:RolePlayingSystem.Character.Defense.DefenseScore.Score">
 	<summary>
  Final tallied creature ability score.
  </summary>
-</member><member name="P:RolePlayingSystem.Common.Ability.AbilityScore.Modifier">
+</member><member name="P:RolePlayingSystem.Character.Defense.DefenseScore.TenPlus">
 	<summary>
- Returns calculated modifer for ability score.
+ Base defense score, 10 plus half level.
  </summary>
-</member><member name="P:RolePlayingSystem.Common.Ability.AbilityScore.ModifierPlus">
+</member><member name="P:RolePlayingSystem.Character.Defense.DefenseScore.Armor">
 	<summary>
- Returns calculated modifier for ability score plus half level.
+ Bonus granted by armor.
  </summary>
-</member><member name="M:RolePlayingSystem.Common.Ability.AbilityScore.#ctor(System.Int32,System.Int32)">
+</member><member name="P:RolePlayingSystem.Character.Defense.DefenseScore.Ability">
 	<summary>
- Initializes base values for ability score.
+ Bonus granted by realted ability (int/dex).
  </summary>
-	<param name="Level">Character level.</param>
-</member><member name="T:RolePlayingSystem.Common.Ability.AbilityScore">
+</member><member name="P:RolePlayingSystem.Character.Defense.DefenseScore.ClassBonus">
 	<summary>
- Represents a generic ability score and modifiers.
+ Bonus granted by class.
+ </summary>
+</member><member name="P:RolePlayingSystem.Character.Defense.DefenseScore.Feat">
+	<summary>
+ Bonus granted by feats.
+ </summary>
+</member><member name="P:RolePlayingSystem.Character.Defense.DefenseScore.Enhancement">
+	<summary>
+ Bonus granted by item enhancements.
+ </summary>
+</member><member name="P:RolePlayingSystem.Character.Defense.DefenseScore.Misc">
+	<summary>
+ Additional bonuses.
+ </summary>
+</member><member name="T:RolePlayingSystem.Character.Defense.DefenseScore">
+	<summary>
+ Represents a generic defense score and modifiers.
  </summary>
 	<remarks></remarks>
-</member><member name="F:RolePlayingSystem.Common.Ability.AbilityScoreBlock._Level">
+</member><member name="F:RolePlayingSystem.Character.Defense.DefenseScoreBlock._Level">
 	<summary>
  Represents creature level for purpose of calculating ability score modifiers.
  </summary>
-</member><member name="P:RolePlayingSystem.Common.Ability.AbilityScoreBlock.Strength">
+</member><member name="P:RolePlayingSystem.Character.Defense.DefenseScoreBlock.AC">
+	<summary>
+ Armor class of creature.
+ </summary>
+</member><member name="P:RolePlayingSystem.Character.Defense.DefenseScoreBlock.Fortitude">
+	<summary>
+ Fortitude defense of creature.
+ </summary>
+</member><member name="P:RolePlayingSystem.Character.Defense.DefenseScoreBlock.Reflex">
+	<summary>
+ Reflex defense of creature.
+ </summary>
+</member><member name="P:RolePlayingSystem.Character.Defense.DefenseScoreBlock.Will">
+	<summary>
+ Will defense of creature.
+ </summary>
+</member><member name="T:RolePlayingSystem.Character.Defense.DefenseScoreBlock">
+	<summary>
+ Represents a generic defense score for a creature.
+ </summary>
+</member><member name="F:RolePlayingSystem.Character.Ability.AbilityScore._Level">
+	<summary>
+ Private use integer representing character level.
+ </summary>
+</member><member name="P:RolePlayingSystem.Character.Ability.AbilityScore.Level">
+	<summary>
+ Represents current creatures level.
+ </summary>
+</member><member name="P:RolePlayingSystem.Character.Ability.AbilityScore.Score">
+	<summary>
+ Final tallied creature ability score.
+ </summary>
+</member><member name="P:RolePlayingSystem.Character.Ability.AbilityScore.Modifier">
+	<summary>
+ Returns calculated modifer for ability score.
+ </summary>
+</member><member name="P:RolePlayingSystem.Character.Ability.AbilityScore.ModifierPlus">
+	<summary>
+ Returns calculated modifier for ability score plus half level.
+ </summary>
+</member><member name="T:RolePlayingSystem.Character.Ability.AbilityScore">
+	<summary>
+ Represents a generic ability score and modifiers.
+ </summary>
+</member><member name="P:RolePlayingSystem.Character.Ability.AbilityScoreBlock.Level">
+	<summary>
+ Represents creature level for purpose of calculating ability score modifiers.
+ </summary>
+	<value></value>
+	<remarks></remarks>
+</member><member name="P:RolePlayingSystem.Character.Ability.AbilityScoreBlock.Strength">
 	<summary>
  Represents a creatures stength score.
  </summary>
-</member><member name="P:RolePlayingSystem.Common.Ability.AbilityScoreBlock.Constitution">
+</member><member name="P:RolePlayingSystem.Character.Ability.AbilityScoreBlock.Constitution">
 	<summary>
  Represents a creatures constitution score.
  </summary>
-</member><member name="P:RolePlayingSystem.Common.Ability.AbilityScoreBlock.Dexterity">
+</member><member name="P:RolePlayingSystem.Character.Ability.AbilityScoreBlock.Dexterity">
 	<summary>
  Represents a creatures dexterity score.
  </summary>
-</member><member name="P:RolePlayingSystem.Common.Ability.AbilityScoreBlock.Intelligence">
+</member><member name="P:RolePlayingSystem.Character.Ability.AbilityScoreBlock.Intelligence">
 	<summary>
  Represents a creatures intelligence score.
  </summary>
-</member><member name="P:RolePlayingSystem.Common.Ability.AbilityScoreBlock.Wisdom">
+</member><member name="P:RolePlayingSystem.Character.Ability.AbilityScoreBlock.Wisdom">
 	<summary>
  Represents a creatures wisdom score.
  </summary>
-</member><member name="P:RolePlayingSystem.Common.Ability.AbilityScoreBlock.Charisma">
+</member><member name="P:RolePlayingSystem.Character.Ability.AbilityScoreBlock.Charisma">
 	<summary>
  Represents a creatures charisma score.
  </summary>
-</member><member name="M:RolePlayingSystem.Common.Ability.AbilityScoreBlock.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
-	<summary>
- Initializes a creature ability score array.
- </summary>
-</member><member name="T:RolePlayingSystem.Common.Ability.AbilityScoreBlock">
+</member><member name="T:RolePlayingSystem.Character.Ability.AbilityScoreBlock">
 	<summary>
  Represents a creatures ability scores and modifiers.
  </summary>
-</member><member name="T:RolePlayingSystem.Common.Utility.SizeClass">
+</member><member name="F:RolePlayingSystem.Character.Base._Level">
 	<summary>
- Represents size class of object.
+ Internal use literal represeting character level.
  </summary>
 	<remarks></remarks>
-</member><member name="T:RolePlayingSystem.Common.Utility.Gender">
-	<summary>
- Represents gender of creature.
- </summary>
-	<remarks></remarks>
-</member><member name="T:RolePlayingSystem.Common.Utility.Alignment">
-	<summary>
- Represents alignment of creature.
- </summary>
-	<remarks></remarks>
-</member><member name="T:RolePlayingSystem.Common.Utility">
-	<summary>
- Contains commonly used functions, enumerations and tools.
- </summary>
-	<remarks></remarks>
-</member><member name="P:RolePlayingSystem.Common.Character.Base.Name">
-	<summary>
- Name of character.
- </summary>
-</member><member name="P:RolePlayingSystem.Common.Character.Base.Level">
+</member><member name="P:RolePlayingSystem.Character.Base.Level">
 	<summary>
  Level of character.
  </summary>
-</member><member name="P:RolePlayingSystem.Common.Character.Base.CharacterClass">
+</member><member name="P:RolePlayingSystem.Character.Base.Name">
+	<summary>
+ Name of character.
+ </summary>
+</member><member name="P:RolePlayingSystem.Character.Base.CharacterClass">
 	<summary>
  Class of character.
  </summary>
-</member><member name="P:RolePlayingSystem.Common.Character.Base.CharacterRace">
+</member><member name="P:RolePlayingSystem.Character.Base.CharacterRace">
 	<summary>
  Race of character.
  </summary>
-</member><member name="P:RolePlayingSystem.Common.Character.Base.Size">
+</member><member name="P:RolePlayingSystem.Character.Base.Size">
 	<summary>
  Size class of character.
  </summary>
-</member><member name="P:RolePlayingSystem.Common.Character.Base.Gender">
+</member><member name="P:RolePlayingSystem.Character.Base.Gender">
 	<summary>
  Gender of character.
  </summary>
-</member><member name="P:RolePlayingSystem.Common.Character.Base.ParagonPath">
+</member><member name="P:RolePlayingSystem.Character.Base.ParagonPath">
 	<summary>
  Selected Paragon Path of character.
  </summary>
-</member><member name="P:RolePlayingSystem.Common.Character.Base.EpicDestiny">
+</member><member name="P:RolePlayingSystem.Character.Base.EpicDestiny">
 	<summary>
  Selected Epic Destiny of character.
  </summary>
-</member><member name="P:RolePlayingSystem.Common.Character.Base.Alignment">
+</member><member name="P:RolePlayingSystem.Character.Base.Alignment">
 	<summary>
  Alignment of character.
  </summary>
-</member><member name="P:RolePlayingSystem.Common.Character.Base.Deity">
+</member><member name="P:RolePlayingSystem.Character.Base.Deity">
 	<summary>
  Deity of character.
  </summary>
-</member><member name="P:RolePlayingSystem.Common.Character.Base.Height">
+</member><member name="P:RolePlayingSystem.Character.Base.Height">
 	<summary>
  Height of character.
  </summary>
-</member><member name="P:RolePlayingSystem.Common.Character.Base.Weight">
+</member><member name="P:RolePlayingSystem.Character.Base.Weight">
 	<summary>
  Weight of character.
  </summary>
-</member><member name="P:RolePlayingSystem.Common.Character.Base.PlayerName">
+</member><member name="P:RolePlayingSystem.Character.Base.PlayerName">
 	<summary>
  Name of player who owns this character.
  </summary>
-</member><member name="P:RolePlayingSystem.Common.Character.Base.AdventureName">
+</member><member name="P:RolePlayingSystem.Character.Base.AdventureName">
 	<summary>
  Name of current character's adventure.
  </summary>
-</member><member name="P:RolePlayingSystem.Common.Character.Base.AbilityScores">
+</member><member name="P:RolePlayingSystem.Character.Base.AbilityScores">
 	<summary>
  Represents characters ability scores and modifiers.
  </summary>
-</member><member name="P:RolePlayingSystem.Common.Character.Base.Defenses">
+</member><member name="P:RolePlayingSystem.Character.Base.Defenses">
 	<summary>
  Defense scores of creature.
  </summary>
-</member><member name="P:RolePlayingSystem.Common.Character.Base.Movement">
+</member><member name="P:RolePlayingSystem.Character.Base.Movement">
 	<summary>
  Represents creatures movement scores.
  </summary>
-</member><member name="T:RolePlayingSystem.Common.Character.Base">
+</member><member name="T:RolePlayingSystem.Character.Base">
 	<summary>
  This class represents a 4th Edition Dungeons and Dragons character.
  </summary>
@@ -190,6 +451,32 @@ RolePlayingSystem
 	<summary>
  Generic name/value pair representing bonuses.
  </summary>
+</member><member name="T:RolePlayingSystem.Common.Utility.SizeClass">
+	<summary>
+ Represents size class of object.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:RolePlayingSystem.Common.Utility.Gender">
+	<summary>
+ Represents gender of creature.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:RolePlayingSystem.Common.Utility.Alignment">
+	<summary>
+ Represents alignment of creature.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:RolePlayingSystem.Common.Utility.getAttributeValue(System.Xml.Linq.XAttribute)">
+	<summary>
+ Performs simple check for null attributes.
+ </summary>
+	<param name="Attribute">XAttribute to check.</param>
+	<returns>Object value of supplied attribute.</returns>
+</member><member name="T:RolePlayingSystem.Common.Utility">
+	<summary>
+ Contains commonly used functions, enumerations and tools.
+ </summary>
+	<remarks></remarks>
 </member><member name="P:RolePlayingSystem.My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
@@ -203,137 +490,6 @@ RolePlayingSystem
 	<summary>
   A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
-</member><member name="P:RolePlayingSystem.Common.Movement.MovementBlock.Speed">
-	<summary>
- Final tallied movement speed of creature.
- </summary>
-	<remarks>Value is in squares of movement.</remarks>
-</member><member name="P:RolePlayingSystem.Common.Movement.MovementBlock.Base">
-	<summary>
- Base creature movement speed.
- </summary>
-</member><member name="P:RolePlayingSystem.Common.Movement.MovementBlock.Armor">
-	<summary>
- Armor penalty (or bonus) to movement speed.
- </summary>
-</member><member name="P:RolePlayingSystem.Common.Movement.MovementBlock.Item">
-	<summary>
- Enhancements to speed granted by items.
- </summary>
-</member><member name="P:RolePlayingSystem.Common.Movement.MovementBlock.Misc">
-	<summary>
- Miscellanious bonuses or detriments to movement speed.
- </summary>
-</member><member name="T:RolePlayingSystem.Common.Movement.MovementBlock">
-	<summary>
- Represents the movement scores for a creature.
- </summary>
-</member><member name="F:RolePlayingSystem.Common.Skills.Skill._Level">
-	<summary>
- The level of creature, used in calculation of skill bonus.
- </summary>
-</member><member name="T:RolePlayingSystem.Common.Skills.Skill">
-	<summary>
- Represents a single skill for a character or creature.
- </summary>
-</member><member name="F:RolePlayingSystem.Common.Defense.DefenseScore._Level">
-	<summary>
- Represents current creatures level.
- </summary>
-</member><member name="F:RolePlayingSystem.Common.Defense.DefenseScore._Armor">
-	<summary>
- Represents armor bonus to defense score.
- </summary>
-</member><member name="F:RolePlayingSystem.Common.Defense.DefenseScore._Ability">
-	<summary>
- Represents ability modifier to defense score.
- </summary>
-</member><member name="F:RolePlayingSystem.Common.Defense.DefenseScore._Class">
-	<summary>
- Represents class modifier to defense score.
- </summary>
-</member><member name="F:RolePlayingSystem.Common.Defense.DefenseScore._Feat">
-	<summary>
- Represents feat modifier to defense score.
- </summary>
-</member><member name="F:RolePlayingSystem.Common.Defense.DefenseScore._Enhancement">
-	<summary>
- Represents armor/item bonus to defense score.
- </summary>
-</member><member name="F:RolePlayingSystem.Common.Defense.DefenseScore._Misc">
-	<summary>
- Misc defense bonuses.
- </summary>
-</member><member name="P:RolePlayingSystem.Common.Defense.DefenseScore.Score">
-	<summary>
- Final tallied creature ability score.
- </summary>
-</member><member name="P:RolePlayingSystem.Common.Defense.DefenseScore.TenPlus">
-	<summary>
- Base defense score, 10 plus half level.
- </summary>
-</member><member name="P:RolePlayingSystem.Common.Defense.DefenseScore.Armor">
-	<summary>
- Bonus granted by armor.
- </summary>
-</member><member name="P:RolePlayingSystem.Common.Defense.DefenseScore.Ability">
-	<summary>
- Bonus granted by realted ability (int/dex).
- </summary>
-</member><member name="P:RolePlayingSystem.Common.Defense.DefenseScore.ClassBonus">
-	<summary>
- Bonus granted by class.
- </summary>
-</member><member name="P:RolePlayingSystem.Common.Defense.DefenseScore.Feat">
-	<summary>
- Bonus granted by feats.
- </summary>
-</member><member name="P:RolePlayingSystem.Common.Defense.DefenseScore.Enhancement">
-	<summary>
- Bonus granted by item enhancements.
- </summary>
-</member><member name="P:RolePlayingSystem.Common.Defense.DefenseScore.Misc">
-	<summary>
- Additional bonuses.
- </summary>
-</member><member name="T:RolePlayingSystem.Common.Defense.DefenseScore">
-	<summary>
- Represents a generic defense score and modifiers.
- </summary>
-	<remarks></remarks>
-</member><member name="F:RolePlayingSystem.Common.Defense.DefenseScoreBlock._Level">
-	<summary>
- Represents creature level for purpose of calculating ability score modifiers.
- </summary>
-</member><member name="P:RolePlayingSystem.Common.Defense.DefenseScoreBlock.AC">
-	<summary>
- Armor class of creature.
- </summary>
-</member><member name="P:RolePlayingSystem.Common.Defense.DefenseScoreBlock.Fortitude">
-	<summary>
- Fortitude defense of creature.
- </summary>
-</member><member name="P:RolePlayingSystem.Common.Defense.DefenseScoreBlock.Reflex">
-	<summary>
- Reflex defense of creature.
- </summary>
-</member><member name="P:RolePlayingSystem.Common.Defense.DefenseScoreBlock.Will">
-	<summary>
- Will defense of creature.
- </summary>
-</member><member name="T:RolePlayingSystem.Common.Defense.DefenseScoreBlock">
-	<summary>
- Represents a generic defense score for a creature.
- </summary>
-</member><member name="F:RolePlayingSystem.Common.Skills.SkillCollection.Items">
-	<summary>
- A collection of all characters skills.
- </summary>
-	<remarks></remarks>
-</member><member name="T:RolePlayingSystem.Common.Skills.SkillCollection">
-	<summary>
- Represents all of the skills that are associated to a character.
- </summary>
 </member>
 </members>
 </doc>

@@ -42,6 +42,21 @@
             Unaligned = 4
         End Enum
 
+
+        ''' <summary>
+        ''' Performs simple check for null attributes.
+        ''' </summary>
+        ''' <param name="Attribute">XAttribute to check.</param>
+        ''' <returns>Object value of supplied attribute.</returns>
+        Shared Function getAttributeValue(ByVal Attribute As XAttribute) As Object
+            'First check if the attribute is valid.
+            If Attribute Is Nothing Then _
+                Return Nothing
+
+            'Ok, now return the attribute value.
+            Return Attribute.Value
+        End Function
+
     End Class
 
 End Namespace

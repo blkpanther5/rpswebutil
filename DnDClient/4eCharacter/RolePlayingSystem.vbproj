@@ -64,15 +64,18 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\Ability\AbilityScore.vb" />
-    <Compile Include="Common\Ability\AbilityScoreBlock.vb" />
-    <Compile Include="Common\Character\Base.vb" />
-    <Compile Include="Common\Defenses\DefenseScoreBlock.vb" />
-    <Compile Include="Common\Defenses\DefenseScore.vb" />
-    <Compile Include="Common\MovementBlock.vb" />
-    <Compile Include="Common\Skills\Skill.vb" />
-    <Compile Include="Common\Skills\SkillCollection.vb" />
+    <Compile Include="Character\Ability\AbilityScore.vb" />
+    <Compile Include="Character\Ability\AbilityScoreBlock.vb" />
+    <Compile Include="Character\Base.vb" />
+    <Compile Include="Character\Defenses\DefenseScoreBlock.vb" />
+    <Compile Include="Character\Defenses\DefenseScore.vb" />
+    <Compile Include="Character\MovementBlock.vb" />
+    <Compile Include="Character\Skills\Skill.vb" />
+    <Compile Include="Character\Skills\SkillCollection.vb" />
     <Compile Include="Common\Utility.vb" />
+    <Compile Include="Import\Import.vb" />
+    <Compile Include="Import\Rule.vb" />
+    <Compile Include="Import\Stat.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -88,7 +91,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Types.vb" />
+    <Compile Include="Common\Types.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -109,9 +112,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Import\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
