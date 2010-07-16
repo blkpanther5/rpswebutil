@@ -18,3 +18,13 @@ C:\Data\Projects\DnDClient\4eCharacter\obj\Debug\RolePlayingSystem.pdb
 C:\Data\Projects\DnDClient\4eCharacter\bin\Debug\RolePlayingSystem.dll
 C:\Data\Projects\DnDClient\4eCharacter\bin\Debug\RolePlayingSystem.pdb
 C:\Data\Projects\DnDClient\4eCharacter\bin\Debug\RolePlayingSystem.xml
+C:\Data\Personal\DnDClient\4eCharacter\bin\Debug\RolePlayingSystem.dll
+C:\Data\Personal\DnDClient\4eCharacter\bin\Debug\RolePlayingSystem.pdb
+C:\Data\Personal\DnDClient\4eCharacter\bin\Debug\RolePlayingSystem.xml
+C:\Data\Personal\DnDClient\4eCharacter\obj\Debug\ResolveAssemblyReference.cache
+C:\Data\Personal\DnDClient\4eCharacter\obj\Debug\RolePlayingSystem.Resources.resources
+C:\Data\Personal\DnDClient\4eCharacter\obj\Debug\GenerateResource.read.1.tlog
+C:\Data\Personal\DnDClient\4eCharacter\obj\Debug\GenerateResource.write.1.tlog
+C:\Data\Personal\DnDClient\4eCharacter\obj\Debug\RolePlayingSystem.dll
+C:\Data\Personal\DnDClient\4eCharacter\obj\Debug\RolePlayingSystem.xml
+C:\Data\Personal\DnDClient\4eCharacter\obj\Debug\RolePlayingSystem.pdb

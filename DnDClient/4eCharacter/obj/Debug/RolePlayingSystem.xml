@@ -73,6 +73,26 @@ RolePlayingSystem
 	<summary>
  Represents a creatures ability scores and modifiers.
  </summary>
+</member><member name="T:RolePlayingSystem.Common.Utility.SizeClass">
+	<summary>
+ Represents size class of object.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:RolePlayingSystem.Common.Utility.Gender">
+	<summary>
+ Represents gender of creature.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:RolePlayingSystem.Common.Utility.Alignment">
+	<summary>
+ Represents alignment of creature.
+ </summary>
+	<remarks></remarks>
+</member><member name="T:RolePlayingSystem.Common.Utility">
+	<summary>
+ Contains commonly used functions, enumerations and tools.
+ </summary>
+	<remarks></remarks>
 </member><member name="P:RolePlayingSystem.Common.Character.Base.Name">
 	<summary>
  Name of character.
@@ -146,29 +166,75 @@ RolePlayingSystem
  This class represents a 4th Edition Dungeons and Dragons character.
  </summary>
 	<remarks></remarks>
-</member><member name="F:RolePlayingSystem.Common.Defense.DefenseScoreBlock._Level">
+</member><member name="F:RolePlayingSystem.Common.Types.GenericBonusCollection.Items">
 	<summary>
- Represents creature level for purpose of calculating ability score modifiers.
+ Collection of untyped bonuses.
  </summary>
-</member><member name="P:RolePlayingSystem.Common.Defense.DefenseScoreBlock.AC">
+</member><member name="M:RolePlayingSystem.Common.Types.GenericBonusCollection.Sum">
 	<summary>
- Armor class of creature.
+ Returns the sum of all bonuses in collection.
  </summary>
-</member><member name="P:RolePlayingSystem.Common.Defense.DefenseScoreBlock.Fortitude">
+</member><member name="T:RolePlayingSystem.Common.Types.GenericBonusCollection">
 	<summary>
- Fortitude defense of creature.
+ Collection of generic name/value pair representing bonuses.
  </summary>
-</member><member name="P:RolePlayingSystem.Common.Defense.DefenseScoreBlock.Reflex">
+</member><member name="F:RolePlayingSystem.Common.Types.GenericBonus.Name">
 	<summary>
- Reflex defense of creature.
+ Name of untyped bonus.
  </summary>
-</member><member name="P:RolePlayingSystem.Common.Defense.DefenseScoreBlock.Will">
+</member><member name="F:RolePlayingSystem.Common.Types.GenericBonus.Bonus">
 	<summary>
- Will defense of creature.
+ Numeric value of untyped bonus.
  </summary>
-</member><member name="T:RolePlayingSystem.Common.Defense.DefenseScoreBlock">
+</member><member name="T:RolePlayingSystem.Common.Types.GenericBonus">
 	<summary>
- Represents a generic defense score for a creature.
+ Generic name/value pair representing bonuses.
+ </summary>
+</member><member name="P:RolePlayingSystem.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:RolePlayingSystem.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:RolePlayingSystem.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="P:RolePlayingSystem.Common.Movement.MovementBlock.Speed">
+	<summary>
+ Final tallied movement speed of creature.
+ </summary>
+	<remarks>Value is in squares of movement.</remarks>
+</member><member name="P:RolePlayingSystem.Common.Movement.MovementBlock.Base">
+	<summary>
+ Base creature movement speed.
+ </summary>
+</member><member name="P:RolePlayingSystem.Common.Movement.MovementBlock.Armor">
+	<summary>
+ Armor penalty (or bonus) to movement speed.
+ </summary>
+</member><member name="P:RolePlayingSystem.Common.Movement.MovementBlock.Item">
+	<summary>
+ Enhancements to speed granted by items.
+ </summary>
+</member><member name="P:RolePlayingSystem.Common.Movement.MovementBlock.Misc">
+	<summary>
+ Miscellanious bonuses or detriments to movement speed.
+ </summary>
+</member><member name="T:RolePlayingSystem.Common.Movement.MovementBlock">
+	<summary>
+ Represents the movement scores for a creature.
+ </summary>
+</member><member name="F:RolePlayingSystem.Common.Skills.Skill._Level">
+	<summary>
+ The level of creature, used in calculation of skill bonus.
+ </summary>
+</member><member name="T:RolePlayingSystem.Common.Skills.Skill">
+	<summary>
+ Represents a single skill for a character or creature.
  </summary>
 </member><member name="F:RolePlayingSystem.Common.Defense.DefenseScore._Level">
 	<summary>
@@ -235,95 +301,29 @@ RolePlayingSystem
  Represents a generic defense score and modifiers.
  </summary>
 	<remarks></remarks>
-</member><member name="T:RolePlayingSystem.Common.Utility.SizeClass">
+</member><member name="F:RolePlayingSystem.Common.Defense.DefenseScoreBlock._Level">
 	<summary>
- Represents size class of object.
+ Represents creature level for purpose of calculating ability score modifiers.
  </summary>
-	<remarks></remarks>
-</member><member name="T:RolePlayingSystem.Common.Utility.Gender">
+</member><member name="P:RolePlayingSystem.Common.Defense.DefenseScoreBlock.AC">
 	<summary>
- Represents gender of creature.
+ Armor class of creature.
  </summary>
-	<remarks></remarks>
-</member><member name="T:RolePlayingSystem.Common.Utility.Alignment">
+</member><member name="P:RolePlayingSystem.Common.Defense.DefenseScoreBlock.Fortitude">
 	<summary>
- Represents alignment of creature.
+ Fortitude defense of creature.
  </summary>
-	<remarks></remarks>
-</member><member name="T:RolePlayingSystem.Common.Utility">
+</member><member name="P:RolePlayingSystem.Common.Defense.DefenseScoreBlock.Reflex">
 	<summary>
- Contains commonly used functions, enumerations and tools.
+ Reflex defense of creature.
  </summary>
-	<remarks></remarks>
-</member><member name="F:RolePlayingSystem.Common.Skills.Skill._Level">
+</member><member name="P:RolePlayingSystem.Common.Defense.DefenseScoreBlock.Will">
 	<summary>
- The level of creature, used in calculation of skill bonus.
+ Will defense of creature.
  </summary>
-</member><member name="T:RolePlayingSystem.Common.Skills.Skill">
+</member><member name="T:RolePlayingSystem.Common.Defense.DefenseScoreBlock">
 	<summary>
- Represents a single skill for a character or creature.
- </summary>
-</member><member name="P:RolePlayingSystem.My.Resources.Resources.ResourceManager">
-	<summary>
-  Returns the cached ResourceManager instance used by this class.
-</summary>
-</member><member name="P:RolePlayingSystem.My.Resources.Resources.Culture">
-	<summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
-</summary>
-</member><member name="T:RolePlayingSystem.My.Resources.Resources">
-	<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
-</summary>
-</member><member name="P:RolePlayingSystem.Common.Movement.MovementBlock.Speed">
-	<summary>
- Final tallied movement speed of creature.
- </summary>
-	<remarks>Value is in squares of movement.</remarks>
-</member><member name="P:RolePlayingSystem.Common.Movement.MovementBlock.Base">
-	<summary>
- Base creature movement speed.
- </summary>
-</member><member name="P:RolePlayingSystem.Common.Movement.MovementBlock.Armor">
-	<summary>
- Armor penalty (or bonus) to movement speed.
- </summary>
-</member><member name="P:RolePlayingSystem.Common.Movement.MovementBlock.Item">
-	<summary>
- Enhancements to speed granted by items.
- </summary>
-</member><member name="P:RolePlayingSystem.Common.Movement.MovementBlock.Misc">
-	<summary>
- Miscellanious bonuses or detriments to movement speed.
- </summary>
-</member><member name="T:RolePlayingSystem.Common.Movement.MovementBlock">
-	<summary>
- Represents the movement scores for a creature.
- </summary>
-</member><member name="F:RolePlayingSystem.Common.Types.GenericBonusCollection.Items">
-	<summary>
- Collection of untyped bonuses.
- </summary>
-</member><member name="M:RolePlayingSystem.Common.Types.GenericBonusCollection.Sum">
-	<summary>
- Returns the sum of all bonuses in collection.
- </summary>
-</member><member name="T:RolePlayingSystem.Common.Types.GenericBonusCollection">
-	<summary>
- Collection of generic name/value pair representing bonuses.
- </summary>
-</member><member name="F:RolePlayingSystem.Common.Types.GenericBonus.Name">
-	<summary>
- Name of untyped bonus.
- </summary>
-</member><member name="F:RolePlayingSystem.Common.Types.GenericBonus.Bonus">
-	<summary>
- Numeric value of untyped bonus.
- </summary>
-</member><member name="T:RolePlayingSystem.Common.Types.GenericBonus">
-	<summary>
- Generic name/value pair representing bonuses.
+ Represents a generic defense score for a creature.
  </summary>
 </member><member name="F:RolePlayingSystem.Common.Skills.SkillCollection.Items">
 	<summary>

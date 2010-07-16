@@ -11,7 +11,10 @@ Public Class _Default
                      Where C.Attribute("name") = "Strength" _
                      Select C
 
-        Response.Write(XDoc.ToString)
+        'Dim Ref = From R In XDoc.Descendants("StatBlock").Elements("Stat") _
+        '          Where 
+
+        Response.Write(Output.Value)
     End Sub
 
 End Class
