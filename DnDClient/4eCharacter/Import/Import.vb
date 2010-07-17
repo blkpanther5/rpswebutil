@@ -130,7 +130,12 @@ Namespace Import
                     Next
                 End If
             Catch ex As Exception
-                Output = Nothing
+                Output = New Rule(Nothing, _
+                                  Nothing, _
+                                  Nothing, _
+                                  Nothing, _
+                                  Nothing, _
+                                  Nothing)
 
             End Try
 
@@ -178,7 +183,9 @@ Namespace Import
 
             Catch ex As Exception
                 'If we encounter an error, just return nothing.
-                Return Nothing
+                Return New Stat(Nothing, _
+                                Nothing, _
+                                Nothing)
 
             End Try
         End Function
