@@ -36,6 +36,7 @@ Namespace Character
                 'Initialize level for all necessary classes.
                 _Level = value
                 AbilityScores.Level = _Level
+                Defenses.Level = _Level
             End Set
         End Property
 

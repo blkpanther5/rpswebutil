@@ -170,6 +170,7 @@ Namespace Import
                                                        getAttributeValue(Item.Attribute("value")), _
                                                        getAttributeValue(Item.Attribute("charelem")), _
                                                        getAttributeValue(Item.Attribute("statlink")), _
+                                                       getStat(getAttributeValue(Item.Attribute("statlink"))), _
                                                        Convert.ToBoolean(getAttributeValue(Item.Attribute("abilmod"))), _
                                                        getRule(Of Rule)(CharElem:=getAttributeValue(Item.Attribute("charelem")))))
                 Next
@@ -210,6 +211,9 @@ Namespace Import
         ''' Begins parsing the supplied character sheet file.
         ''' </summary>
         Private Sub doInitCharacterParsing()
+            'Basics.
+            Dim HalfLevel As Stat = getStat("HALF-LEVEL")
+
             'Start by loading base info.
             _Character.Name = getDetail("name")
             _Character.CharacterClass = getRule(Of Rule)(Type:="Class").Name
@@ -241,7 +245,11 @@ Namespace Import
             Dim Ref As Stat = getStat("Reflex Defense")
             Dim Will As Stat = getStat("Will Defense")
 
-            Dim StatModifier = AC.StatModifiers.Find(Function(Elem) Elem.AbilityLink = "HALF-LEVEL")
+            'AC
+            Dim Test2 As StatModifier = AC.StatModifiers.Find(Function(Elem) Elem.StatLink.Name = "Armor")
+            _Character.Defenses.AC.Ability = AC.StatModifiers.Max(Function(Elem) Elem.StatLink.Value)
+
+
         End Sub
 
 #End Region

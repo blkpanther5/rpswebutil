@@ -14,7 +14,7 @@ Namespace Character.Defense
         ''' <summary>
         ''' Represents current creatures level.
         ''' </summary>
-        Private _Level As Integer = 0
+        Private _Level As Integer = 1
 
         ''' <summary>
         ''' Represents armor bonus to defense score.
@@ -44,11 +44,20 @@ Namespace Character.Defense
         ''' <summary>
         ''' Misc defense bonuses.
         ''' </summary>
-        Private _Misc As GenericBonusCollection
+        Private _Misc As New GenericBonusCollection
 
 #End Region
 
 #Region "Properties"
+
+        ''' <summary>
+        ''' Represents current creatures level.
+        ''' </summary>
+        Friend WriteOnly Property Level As Integer
+            Set(ByVal value As Integer)
+                _Level = value
+            End Set
+        End Property
 
         ''' <summary>
         ''' Final tallied creature ability score.

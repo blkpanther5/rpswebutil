@@ -84,6 +84,7 @@
     <Compile Include="Import\Import.vb" />
     <Compile Include="Import\Rule.vb" />
     <Compile Include="Import\Stat.vb" />
+    <Compile Include="Import\StatModifier.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
