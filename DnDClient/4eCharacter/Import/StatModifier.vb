@@ -19,7 +19,7 @@
 
         Private _StatLink As Stat = New Stat(Nothing, Nothing, Nothing)
 
-        Private _StatModifier As Boolean = False
+        Private _StatModifier As Integer = 0
 
         Private _Rule As Rule = Nothing
 
@@ -85,7 +85,7 @@
         ''' <summary>
         ''' Value of modifier, if indicated.
         ''' </summary>
-        Public ReadOnly Property StatModifier As Boolean
+        Public ReadOnly Property StatModifier As Integer
             Get
                 Return _StatModifier
             End Get
@@ -112,7 +112,7 @@
                        ByVal CharElem As String, _
                        ByVal StatName As String, _
                        ByVal StatLink As Stat, _
-                       ByVal StatModifier As Boolean, _
+                       ByVal StatModifier As Integer, _
                        ByVal Rule As Rule)
 
             'Assign values to private literals.

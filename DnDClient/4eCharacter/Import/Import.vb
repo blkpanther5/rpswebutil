@@ -1,7 +1,9 @@
 ﻿Imports System.Linq
 Imports System.Xml.Linq
 Imports System.IO
+Imports RolePlayingSystem.Common.Types
 Imports RolePlayingSystem.Common.Utility
+Imports RolePlayingSystem.Character.Defense
 
 Namespace Import
 
@@ -165,13 +167,22 @@ Namespace Import
 
                 'Loop and create a collection of StatModifier objects.
                 For Each Item As XElement In StatMods
+                    'Find ability modifier value, if needed.
+                    Dim iAbilMod As Integer = Nothing
+
+                    'Don't allow "modifier" elements to statlink back, otherwise we get an infinite loop.
+                    If Not StatName.ToLower.Contains("modifier") AndAlso Convert.ToBoolean(getAttributeValue(Item.Attribute("abilmod"))) Then
+                        iAbilMod = getStat(getAttributeValue(Item.Attribute("statlink")) & " modifier").Value
+                    End If
+
+                    'Add to collection.
                     StatModifiers.Add(New StatModifier(getAttributeValue(Item.Attribute("type")), _
                                                        CInt(getAttributeValue(Item.Attribute("Level"))), _
                                                        getAttributeValue(Item.Attribute("value")), _
                                                        getAttributeValue(Item.Attribute("charelem")), _
                                                        getAttributeValue(Item.Attribute("statlink")), _
                                                        getStat(getAttributeValue(Item.Attribute("statlink"))), _
-                                                       Convert.ToBoolean(getAttributeValue(Item.Attribute("abilmod"))), _
+                                                       iAbilMod, _
                                                        getRule(Of Rule)(CharElem:=getAttributeValue(Item.Attribute("charelem")))))
                 Next
 
@@ -208,6 +219,37 @@ Namespace Import
         End Function
 
         ''' <summary>
+        ''' Loads specified defense score.
+        ''' </summary>
+        ''' <param name="Defense">Reference to defense score to populate.</param>
+        ''' <param name="Stat">Stat object to load defense block with.</param>
+        ''' <param name="IncludeArmor">Indicates this stat block should include armor.</param>
+        Private Sub doLoadDefense(ByRef Defense As DefenseScore, _
+                                  ByRef Stat As Stat, _
+                                  Optional ByVal IncludeArmor As Boolean = False)
+
+            'If the stat is empty, exit now.
+            If Stat Is Nothing Then _
+                Exit Sub
+
+            'Load each sub-stat part that new need.
+            Dim ArmorMod As IEnumerable(Of StatModifier) = Stat.StatModifiers.Where(Function(Elem) Elem.Type = "Armor")
+            Dim AbilityMod As IEnumerable(Of StatModifier) = Stat.StatModifiers.Where(Function(Elem) Elem.Type = "Ability")
+            Dim ClassMod As IEnumerable(Of StatModifier) = Stat.StatModifiers.Where(Function(Elem) Elem.Type = "Class")
+            Dim FeatMod As IEnumerable(Of StatModifier) = Stat.StatModifiers.Where(Function(Elem) Elem.Type = "Feat")
+            Dim EnhancementMod As IEnumerable(Of StatModifier) = Stat.StatModifiers.Where(Function(Elem) Elem.Type = "Enhancement")
+
+            Defense.Ability = IIf(AbilityMod.Count > 0, AbilityMod.Max(Function(Elem) Elem.StatModifier), Nothing)
+            Defense.ClassBonus = IIf(ClassMod.Count > 0, ClassMod.Sum(Function(Elem) Elem.Value), Nothing)
+            Defense.Feat = IIf(FeatMod.Count > 0, FeatMod.Max(Function(Elem) Elem.Value), Nothing)
+            Defense.Enhancement = IIf(EnhancementMod.Count > 0, EnhancementMod.Sum(Function(Elem) Elem.Value), Nothing)
+
+            'Include armor score, if indicated.
+            If IncludeArmor Then _
+                Defense.Armor = IIf(ArmorMod.Count > 0, ArmorMod.Sum(Function(Elem) Elem.Value), Nothing)
+        End Sub
+
+        ''' <summary>
         ''' Begins parsing the supplied character sheet file.
         ''' </summary>
         Private Sub doInitCharacterParsing()
@@ -240,14 +282,31 @@ Namespace Import
             _Character.AbilityScores.Charisma.Score = getStat("Charisma").Value
 
             'Load defenses.
-            Dim AC As Stat = getStat("AC")
-            Dim Fort As Stat = getStat("Fortitude Defense")
-            Dim Ref As Stat = getStat("Reflex Defense")
-            Dim Will As Stat = getStat("Will Defense")
+            doLoadDefense(_Character.Defenses.AC, getStat("AC"), True)
+            doLoadDefense(_Character.Defenses.Fortitude, getStat("Fortitude Defense"))
+            doLoadDefense(_Character.Defenses.Reflex, getStat("Reflex Defense"))
+            doLoadDefense(_Character.Defenses.Will, getStat("Will Defense"))
+
+            'Load Movement info.
+            Dim SpeedStat As Stat = getStat("Speed")
+            Dim BaseSpeed As StatModifier = SpeedStat.StatModifiers.Find(Function(E) E.Level = "1")
+            Dim ArmorSpeed As IEnumerable(Of StatModifier) = SpeedStat.StatModifiers.Where(Function(E) E.Type = "Armor")
+            Dim ItemSpeed As IEnumerable(Of StatModifier) = SpeedStat.StatModifiers.Where(Function(E) E.Type = "item")
+            _Character.Movement.Base = IIf(BaseSpeed IsNot Nothing, BaseSpeed.Value, 0)
+            _Character.Movement.Armor = IIf(ArmorSpeed.Count > 0, ArmorSpeed.Sum(Function(E) E.Value), 0)
+            _Character.Movement.Item = IIf(ItemSpeed.Count > 0, ItemSpeed.Sum(Function(E) E.Value), 0)
+
+            'Add up any remaining misc speed modifiers.
+            Dim MiscSpeed As New GenericBonusCollection
+            MiscSpeed.Add(New GenericBonus(Nothing, SpeedStat.Value - _Character.Movement.Speed))
+            _Character.Movement.Misc = MiscSpeed
 
             'AC
-            Dim Test2 As StatModifier = AC.StatModifiers.Find(Function(Elem) Elem.StatLink.Name = "Armor")
-            _Character.Defenses.AC.Ability = AC.StatModifiers.Max(Function(Elem) Elem.StatLink.Value)
+            'Dim AC As Stat = getStat("AC")
+            'Dim ACArmor As StatModifier = AC.StatModifiers.Find(Function(Elem) Elem.StatLink.Name = "Armor")
+            'Dim ACC
+            '_Character.Defenses.AC.Armor = IIf(ACArmor IsNot Nothing, ACArmor.Value, Nothing)
+            '_Character.Defenses.AC.Ability = AC.StatModifiers.Max(Function(Elem) Elem.StatModifier)
 
 
         End Sub

@@ -38,7 +38,7 @@ Namespace Character.Movement
         ''' <summary>
         ''' Miscellanious bonuses or detriments to movement speed.
         ''' </summary>
-        Public Property Misc As GenericBonusCollection
+        Public Property Misc As New GenericBonusCollection
 
 #End Region
 
