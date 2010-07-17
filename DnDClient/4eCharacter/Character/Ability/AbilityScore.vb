@@ -26,10 +26,6 @@
             End Set
         End Property
 
-#End Region
-
-#Region "Properties"
-
         ''' <summary>
         ''' Final tallied creature ability score.
         ''' </summary>
@@ -40,7 +36,7 @@
         ''' </summary>
         Public ReadOnly Property Modifier As Integer
             Get
-                Return Math.Floor(Score - 10) / 2
+                Return Math.Floor((Score - 10) / 2)
             End Get
         End Property
 
