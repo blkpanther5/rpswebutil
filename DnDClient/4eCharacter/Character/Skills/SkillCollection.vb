@@ -8,16 +8,7 @@ Namespace Character.Skills
     ''' </summary>
     <Serializable()> _
     Public Class SkillCollection
-
-#Region "Properties"
-
-        ''' <summary>
-        ''' A collection of all characters skills.
-        ''' </summary>
-        ''' <remarks></remarks>
-        Public Items As Generic.List(Of Skill)
-
-#End Region
+        Inherits Generic.List(Of Skill)
 
     End Class
 

@@ -301,6 +301,9 @@ Namespace Import
             MiscSpeed.Add(New GenericBonus(Nothing, SpeedStat.Value - _Character.Movement.Speed))
             _Character.Movement.Misc = MiscSpeed
 
+            'Load up skills.
+
+
             'AC
             'Dim AC As Stat = getStat("AC")
             'Dim ACArmor As StatModifier = AC.StatModifiers.Find(Function(Elem) Elem.StatLink.Name = "Armor")
