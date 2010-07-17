@@ -240,7 +240,7 @@ Namespace Import
             Dim EnhancementMod As IEnumerable(Of StatModifier) = Stat.StatModifiers.Where(Function(Elem) Elem.Type = "Enhancement")
 
             Defense.Ability = IIf(AbilityMod.Count > 0, AbilityMod.Max(Function(Elem) Elem.StatModifier), Nothing)
-            Defense.ClassBonus = IIf(ClassMod.Count > 0, ClassMod.Sum(Function(Elem) Elem.Value), Nothing)
+            Defense.ClassBonus = IIf(ClassMod.Count > 0, ClassMod.Sum(Function(Elem) Elem.StatLink.StatModifiers.Sum(Function(E) E.Value)), Nothing)
             Defense.Feat = IIf(FeatMod.Count > 0, FeatMod.Max(Function(Elem) Elem.Value), Nothing)
             Defense.Enhancement = IIf(EnhancementMod.Count > 0, EnhancementMod.Sum(Function(Elem) Elem.Value), Nothing)
 
