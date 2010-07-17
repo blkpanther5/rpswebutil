@@ -169,8 +169,8 @@ Namespace Import
                                                        CInt(getAttributeValue(Item.Attribute("Level"))), _
                                                        getAttributeValue(Item.Attribute("value")), _
                                                        getAttributeValue(Item.Attribute("charelem")), _
-                                                       Convert.ToBoolean(getAttributeValue(Item.Attribute("statlink"))), _
-                                                       getAttributeValue(Item.Attribute("abilmod")), _
+                                                       getAttributeValue(Item.Attribute("statlink")), _
+                                                       Convert.ToBoolean(getAttributeValue(Item.Attribute("abilmod"))), _
                                                        getRule(Of Rule)(CharElem:=getAttributeValue(Item.Attribute("charelem")))))
                 Next
 
@@ -220,13 +220,28 @@ Namespace Import
             _Character.ParagonPath = getRule(Of Rule)(Type:="Paragon Path").Name
             _Character.EpicDestiny = getRule(Of Rule)(Type:="Epic Destiny").Name
             _Character.Alignment = DirectCast([Enum].Parse(GetType(Alignment), _
-                                                           getRule(Of Rule)(Type:="Alignment").Name.ToString.Replace("_", " ")), Alignment)
-
+                                                           getRule(Of Rule)(Type:="Alignment").Name.ToString.Replace(" ", "_")), Alignment)
+            _Character.Deity = getRule(Of Rule)(Type:="Deity").Name
+            _Character.Height = getDetail("Height")
+            _Character.Weight = getDetail("Weight")
+            _Character.PlayerName = getDetail("Player")
+            _Character.AdventureName = getDetail("Company")
 
             'Begin loading base stats!
             _Character.AbilityScores.Strength.Score = getStat("Strength").Value
             _Character.AbilityScores.Dexterity.Score = getStat("Dexterity").Value
             _Character.AbilityScores.Constitution.Score = getStat("Constitution").Value
+            _Character.AbilityScores.Intelligence.Score = getStat("Intelligence").Value
+            _Character.AbilityScores.Wisdom.Score = getStat("Wisdom").Value
+            _Character.AbilityScores.Charisma.Score = getStat("Charisma").Value
+
+            'Load defenses.
+            Dim AC As Stat = getStat("AC")
+            Dim Fort As Stat = getStat("Fortitude Defense")
+            Dim Ref As Stat = getStat("Reflex Defense")
+            Dim Will As Stat = getStat("Will Defense")
+
+            Dim StatModifier = AC.StatModifiers.Find(Function(Elem) Elem.AbilityLink = "HALF-LEVEL")
         End Sub
 
 #End Region

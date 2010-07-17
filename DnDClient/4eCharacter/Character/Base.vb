@@ -119,6 +119,9 @@ Namespace Character
         ''' </summary>
         Public Property Movement As New MovementBlock
 
+        ''' <summary>
+        ''' Represents the skill collection of the creature/character.
+        ''' </summary>
         Public Property Skills As New SkillCollection
 #End Region
 

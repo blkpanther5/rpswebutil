@@ -62,6 +62,16 @@
             End Get
         End Property
 
+        ''' <summary>
+        ''' Contains all "statadd" elements for a particular stat block.
+        ''' </summary>
+        ''' <returns>Collection of stat modifiers.</returns>
+        Public ReadOnly Property StatModifiers As Generic.List(Of StatModifier)
+            Get
+                Return _StatModifiers
+            End Get
+        End Property
+
 #End Region
 
 #Region "Events"
@@ -102,9 +112,9 @@
 
         Private _CharElem As String = Nothing
 
-        Private _AbilityLink As Boolean = False
+        Private _AbilityLink As String = Nothing
 
-        Private _AbilityModifier As Integer = 0
+        Private _AbilityModifier As Boolean = False
 
         Private _Rule As Rule = Nothing
 
@@ -152,7 +162,7 @@
         ''' <summary>
         ''' Indicates if this modifier is tied to a specific ability score.
         ''' </summary>
-        Public ReadOnly Property AbilityLink As Boolean
+        Public ReadOnly Property AbilityLink As String
             Get
                 Return _AbilityLink
             End Get
@@ -161,7 +171,7 @@
         ''' <summary>
         ''' Value of modifier, if indicated.
         ''' </summary>
-        Public ReadOnly Property AbilityModifier As Integer
+        Public ReadOnly Property AbilityModifier As Boolean
             Get
                 Return _AbilityModifier
             End Get
@@ -186,8 +196,8 @@
                        ByVal Level As Integer, _
                        ByVal Value As String, _
                        ByVal CharElem As String, _
-                       ByVal AbilityLink As Boolean, _
-                       ByVal AbilityModifier As Integer, _
+                       ByVal AbilityLink As String, _
+                       ByVal AbilityModifier As Boolean, _
                        ByVal Rule As Rule)
 
             'Assign values to private literals.
