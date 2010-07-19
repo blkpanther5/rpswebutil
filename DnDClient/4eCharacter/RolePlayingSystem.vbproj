@@ -80,6 +80,7 @@
     <Compile Include="Character\MovementBlock.vb" />
     <Compile Include="Character\Skills\Skill.vb" />
     <Compile Include="Character\Skills\SkillCollection.vb" />
+    <Compile Include="Import\Helpers.vb" />
     <Compile Include="Common\Utility.vb" />
     <Compile Include="Import\Import.vb" />
     <Compile Include="Import\Rule.vb" />

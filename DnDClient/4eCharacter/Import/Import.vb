@@ -4,6 +4,7 @@ Imports System.IO
 Imports RolePlayingSystem.Common.Types
 Imports RolePlayingSystem.Common.Utility
 Imports RolePlayingSystem.Character.Defense
+Imports RolePlayingSystem.Character.Skills
 
 Namespace Import
 
@@ -302,7 +303,13 @@ Namespace Import
             _Character.Movement.Misc = MiscSpeed
 
             'Load up skills.
+            'To find skills, we'll look for any rules with a type of skill.
+            Dim SkillRules As IEnumerable(Of Rule) = getRule(Of IEnumerable(Of Rule))(Type:="Skill")
+            Dim SkillCollection As New SkillCollection
 
+            For Each Rule As Rule In SkillRules
+                SkillCollection.Add(New Skill())
+            Next
 
             'AC
             'Dim AC As Stat = getStat("AC")

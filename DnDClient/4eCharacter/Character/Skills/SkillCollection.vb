@@ -10,6 +10,21 @@ Namespace Character.Skills
     Public Class SkillCollection
         Inherits Generic.List(Of Skill)
 
+#Region "Properties"
+
+        ''' <summary>
+        ''' Represents creature level for purpose of calculating ability score modifiers.
+        ''' </summary>
+        ''' <value></value>
+        ''' <remarks></remarks>
+        Friend WriteOnly Property Level As Integer
+            Set(ByVal value As Integer)
+
+            End Set
+        End Property
+
+#End Region
+
     End Class
 
 End Namespace
