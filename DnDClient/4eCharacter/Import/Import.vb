@@ -306,9 +306,12 @@ Namespace Import
             'To find skills, we'll look for any rules with a type of skill.
             Dim SkillRules As IEnumerable(Of Rule) = getRule(Of IEnumerable(Of Rule))(Type:="Skill")
             Dim SkillCollection As New SkillCollection
+            Dim TempSkill As Skill = Nothing 'Temporary container for iterated skill.
 
             For Each Rule As Rule In SkillRules
-                SkillCollection.Add(New Skill())
+                'TempSkill = getStat(Rule.Name)
+                'SkillCollection.Add(New Skill(TempSkill.Name, _
+                '                              _Character.AbilityScores.)
             Next
 
             'AC

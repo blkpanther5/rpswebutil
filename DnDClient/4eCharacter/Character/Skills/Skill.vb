@@ -1,4 +1,5 @@
-﻿Imports RolePlayingSystem.Common.Types
+﻿Imports RolePlayingSystem.Character.Ability
+Imports RolePlayingSystem.Common.Types
 
 Namespace Character.Skills
 
@@ -12,7 +13,7 @@ Namespace Character.Skills
 
         Private _Level As Integer = 1
 
-        Private _Ability As Integer = 0
+        Private _Ability As AbilityScore
 
         Private _Trained As Boolean = False
 
@@ -38,7 +39,7 @@ Namespace Character.Skills
         ''' <summary>
         ''' Represents the associated ability bonus for skill.
         ''' </summary>
-        Public ReadOnly Property Ability As Integer
+        Public ReadOnly Property Ability As AbilityScore
             Get
                 Return _Ability
             End Get
@@ -88,7 +89,7 @@ Namespace Character.Skills
         ''' </summary>
         Public ReadOnly Property Bonus As Integer
             Get
-                Return (Misc.Sum() + (Math.Floor(_Level / 2) + Ability + IIf(Trained, 5, 0) + Penalty))
+                Return (Misc.Sum() + ((Ability.ModifierPlus) + IIf(Trained, 5, 0) + Penalty))
             End Get
         End Property
 
@@ -101,7 +102,7 @@ Namespace Character.Skills
         ''' </summary>
         ''' <remarks></remarks>
         Public Sub New(ByVal SkillName As String, _
-                       ByVal Ability As String, _
+                       ByRef Ability As AbilityScore, _
                        ByVal Trained As Boolean, _
                        ByVal Penalty As Integer, _
                        ByVal Misc As GenericBonusCollection)
