@@ -56,6 +56,38 @@
 
 #End Region
 
+#Region "Methods"
+
+        ''' <summary>
+        ''' Allows return of appropriate ability score by text name (or 3 char abbreviation).
+        ''' </summary>
+        ''' <param name="Name">Name or abbreviation of ability.</param>
+        ''' <returns>Ability Score reference.</returns>
+        Public Function getAbilityByName(ByVal Name As String) As AbilityScore
+            Select Case Name.ToLower()
+                Case "strength", "str"
+                    Return Me.Strength
+
+                Case "dexterity", "dex"
+                    Return Me.Dexterity
+
+                Case "constitution", "con"
+                    Return Me.Constitution
+
+                Case "intelligence", "int"
+                    Return Me.Intelligence
+
+                Case "wisdom", "wis"
+                    Return Me.Wisdom
+
+                Case "charisma", "cha"
+                    Return Me.Charisma
+
+            End Select
+        End Function
+
+#End Region
+
     End Class
 
 End Namespace

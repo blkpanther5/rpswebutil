@@ -304,24 +304,30 @@ Namespace Import
 
             'Load up skills.
             'To find skills, we'll look for any rules with a type of skill.
-            Dim SkillRules As IEnumerable(Of Rule) = getRule(Of IEnumerable(Of Rule))(Type:="Skill")
+            Dim SkillRules As List(Of Rule) = getRule(Of List(Of Rule))(Type:="Skill")
             Dim SkillCollection As New SkillCollection
-            Dim TempSkill As Skill = Nothing 'Temporary container for iterated skill.
 
             For Each Rule As Rule In SkillRules
-                'TempSkill = getStat(Rule.Name)
-                'SkillCollection.Add(New Skill(TempSkill.Name, _
-                '                              _Character.AbilityScores.)
+                Dim StatTemp As Stat = getStat(Rule.Name)
+                Dim StatModifiers As Generic.List(Of StatModifier) = StatTemp.StatModifiers
+                Dim SkillTemp As New Skill(StatTemp.Name, _
+                                           _Character.AbilityScores.getAbilityByName(StatModifiers.Find(Function(E) E.Type = "Ability").StatName), _
+                                           CBool(StatTemp.StatModifiers.Find(Function(E) E.StatName = StatTemp.Name & " Trained").StatLink.Value), _
+                                           StatTemp.StatModifiers.Find(Function(E) E.StatName = "Armor Penalty").StatLink.Value, _
+                                           Nothing)
+
+                'Check to see if there is an uncalculated difference, and add to misc modifiers.
+                If SkillTemp.Bonus <> StatTemp.Value Then
+                    'Create new collection & add difference to collection.
+                    Dim SkillMisc As New GenericBonusCollection
+                    SkillMisc.Add(New GenericBonus("Unnamed", StatTemp.Value - SkillTemp.Bonus))
+
+                    'Update the skill entry.
+                    SkillTemp.Misc = SkillMisc
+                End If
+
+                SkillCollection.Add(SkillTemp)
             Next
-
-            'AC
-            'Dim AC As Stat = getStat("AC")
-            'Dim ACArmor As StatModifier = AC.StatModifiers.Find(Function(Elem) Elem.StatLink.Name = "Armor")
-            'Dim ACC
-            '_Character.Defenses.AC.Armor = IIf(ACArmor IsNot Nothing, ACArmor.Value, Nothing)
-            '_Character.Defenses.AC.Ability = AC.StatModifiers.Max(Function(Elem) Elem.StatModifier)
-
-
         End Sub
 
 #End Region
