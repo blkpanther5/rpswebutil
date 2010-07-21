@@ -11,7 +11,7 @@
         ''' Returns the sum of all bonuses in collection.
         ''' </summary>
         Public Function Sum() As Integer
-            If Me.Count <= 0 Then _
+            If Me IsNot Nothing AndAlso Me.Count <= 0 Then _
                 Return Nothing
 
             Return Me.Sum(Function(Bonus) _

@@ -77,6 +77,7 @@
     <Compile Include="Character\Base.vb" />
     <Compile Include="Character\Defenses\DefenseScoreBlock.vb" />
     <Compile Include="Character\Defenses\DefenseScore.vb" />
+    <Compile Include="Character\Initiative.vb" />
     <Compile Include="Character\MovementBlock.vb" />
     <Compile Include="Character\Skills\Skill.vb" />
     <Compile Include="Character\Skills\SkillCollection.vb" />

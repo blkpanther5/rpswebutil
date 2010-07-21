@@ -1,4 +1,5 @@
-﻿Imports RolePlayingSystem.Common.Types
+﻿Imports RolePlayingSystem.Character.Ability
+Imports RolePlayingSystem.Common.Types
 
 Namespace Character.Defense
 
@@ -17,6 +18,11 @@ Namespace Character.Defense
         Private _Level As Integer = 1
 
         ''' <summary>
+        ''' Represents a creatures base defense score.
+        ''' </summary>
+        Private _BaseScore As Integer = 10
+
+        ''' <summary>
         ''' Represents armor bonus to defense score.
         ''' </summary>
         Private _Armor As Integer = 0
@@ -24,7 +30,7 @@ Namespace Character.Defense
         ''' <summary>
         ''' Represents ability modifier to defense score.
         ''' </summary>
-        Private _Ability As Integer = 0
+        Private _Ability As AbilityScore = Nothing
 
         ''' <summary>
         ''' Represents class modifier to defense score.
@@ -60,24 +66,6 @@ Namespace Character.Defense
         End Property
 
         ''' <summary>
-        ''' Final tallied creature ability score.
-        ''' </summary>
-        Public ReadOnly Property Score As Integer
-            Get
-                Return TenPlus + Ability + Armor + ClassBonus + Feat + Enhancement + Misc.Sum()
-            End Get
-        End Property
-
-        ''' <summary>
-        ''' Base defense score, 10 plus half level.
-        ''' </summary>
-        Public ReadOnly Property TenPlus As Integer
-            Get
-                Return Math.Floor(_Level / 2) + 10
-            End Get
-        End Property
-
-        ''' <summary>
         ''' Bonus granted by armor.
         ''' </summary>
         Public Property Armor As Integer
@@ -90,13 +78,13 @@ Namespace Character.Defense
         End Property
 
         ''' <summary>
-        ''' Bonus granted by realted ability (int/dex).
+        ''' Bonus granted by realted ability.
         ''' </summary>
-        Public Property Ability As Integer
+        Public Property Ability As AbilityScore
             Get
                 Return _Ability
             End Get
-            Set(ByVal value As Integer)
+            Set(ByVal value As AbilityScore)
                 _Ability = value
             End Set
         End Property
@@ -147,7 +135,15 @@ Namespace Character.Defense
             Set(ByVal value As GenericBonusCollection)
                 _Misc = value
             End Set
+        End Property
 
+        ''' <summary>
+        ''' Final tallied creature ability score.
+        ''' </summary>
+        Public ReadOnly Property Score As Integer
+            Get
+                Return _BaseScore + Ability.ModifierPlus + Armor + ClassBonus + Feat + Enhancement + Misc.Sum()
+            End Get
         End Property
 
 #End Region

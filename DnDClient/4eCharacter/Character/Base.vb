@@ -106,6 +106,11 @@ Namespace Character
         Public Property AdventureName As String
 
         ''' <summary>
+        ''' Represents a creatures initiative values.
+        ''' </summary>
+        Public Property Initiative As New Initiative
+
+        ''' <summary>
         ''' Represents characters ability scores and modifiers.
         ''' </summary>
         Public Property AbilityScores As New AbilityScoreBlock

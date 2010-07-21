@@ -105,14 +105,16 @@ Namespace Character.Skills
                        ByRef Ability As AbilityScore, _
                        ByVal Trained As Boolean, _
                        ByVal Penalty As Integer, _
-                       ByVal Misc As GenericBonusCollection)
+                       Optional ByVal Misc As GenericBonusCollection = Nothing)
 
             'Set values.
             _Name = SkillName
             _Ability = Ability
             _Trained = Trained
             _Penalty = Penalty
-            _Misc = Misc
+
+            If Misc IsNot Nothing Then _
+                _Misc = Misc
         End Sub
 
 #End Region

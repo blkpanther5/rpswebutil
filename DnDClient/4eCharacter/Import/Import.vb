@@ -4,6 +4,7 @@ Imports System.IO
 Imports RolePlayingSystem.Common.Types
 Imports RolePlayingSystem.Common.Utility
 Imports RolePlayingSystem.Character.Defense
+Imports RolePlayingSystem.Character.Ability
 Imports RolePlayingSystem.Character.Skills
 
 Namespace Import
@@ -152,12 +153,20 @@ Namespace Import
         ''' <param name="StatName">Name of stat to find.</param>
         ''' <returns>Parsed stat object.</returns>
         Private Function getStat(ByVal StatName As String) As Stat
-            Try
-                'Use linq to query xml doc for the specified stat name.
-                Dim Query = (From Stat In _CharSheetData.Descendants("StatBlock").Elements("Stat") _
-                             Where Stat.Attribute("name") = StatName _
-                             Select Stat).SingleOrDefault
+            'Exit function if no name is passed.
+            If StatName Is Nothing Then _
+                Return Nothing
 
+            'Use linq to query xml doc for the specified stat name.
+            Dim Query = (From Stat In _CharSheetData.Descendants("StatBlock").Elements("Stat") _
+                         Where Stat.Attribute("name") = StatName _
+                         Select Stat).SingleOrDefault
+
+            'Exit function if query returns no results.
+            If Query Is Nothing Then _
+                Return Nothing
+
+            Try
                 Dim AltNames = (From Names In Query.Elements("alias").Attributes("name") _
                                 Select Names.Value).ToArray()
 
@@ -176,13 +185,21 @@ Namespace Import
                         iAbilMod = getStat(getAttributeValue(Item.Attribute("statlink")) & " modifier").Value
                     End If
 
+                    'Get linked stat ref.
+                    Dim StatLink As Stat = Nothing
+
+                    'Don't look up a stat unless there is a statlink value.
+                    If Not String.IsNullOrEmpty(getAttributeValue(Item.Attribute("statlink"))) Then
+                        StatLink = getStat(getAttributeValue(Item.Attribute("statlink")))
+                    End If
+
                     'Add to collection.
                     StatModifiers.Add(New StatModifier(getAttributeValue(Item.Attribute("type")), _
                                                        CInt(getAttributeValue(Item.Attribute("Level"))), _
                                                        getAttributeValue(Item.Attribute("value")), _
                                                        getAttributeValue(Item.Attribute("charelem")), _
                                                        getAttributeValue(Item.Attribute("statlink")), _
-                                                       getStat(getAttributeValue(Item.Attribute("statlink"))), _
+                                                       StatLink, _
                                                        iAbilMod, _
                                                        getRule(Of Rule)(CharElem:=getAttributeValue(Item.Attribute("charelem")))))
                 Next
@@ -196,9 +213,7 @@ Namespace Import
 
             Catch ex As Exception
                 'If we encounter an error, just return nothing.
-                Return New Stat(Nothing, _
-                                Nothing, _
-                                Nothing)
+                Return Nothing
 
             End Try
         End Function
@@ -235,12 +250,13 @@ Namespace Import
 
             'Load each sub-stat part that new need.
             Dim ArmorMod As IEnumerable(Of StatModifier) = Stat.StatModifiers.Where(Function(Elem) Elem.Type = "Armor")
-            Dim AbilityMod As IEnumerable(Of StatModifier) = Stat.StatModifiers.Where(Function(Elem) Elem.Type = "Ability")
+            Dim AbilityMod As IEnumerable(Of StatModifier) = Stat.StatModifiers.Where(Function(Elem) Elem.Type = "Ability").OrderByDescending(Function(E) E.StatModifier)
             Dim ClassMod As IEnumerable(Of StatModifier) = Stat.StatModifiers.Where(Function(Elem) Elem.Type = "Class")
             Dim FeatMod As IEnumerable(Of StatModifier) = Stat.StatModifiers.Where(Function(Elem) Elem.Type = "Feat")
             Dim EnhancementMod As IEnumerable(Of StatModifier) = Stat.StatModifiers.Where(Function(Elem) Elem.Type = "Enhancement")
 
-            Defense.Ability = IIf(AbilityMod.Count > 0, AbilityMod.Max(Function(Elem) Elem.StatModifier), Nothing)
+            'Defense.Ability = IIf(AbilityMod.Count > 0, AbilityMod.Max(Function(Elem) Elem.StatModifier), Nothing)
+            Defense.Ability = _Character.AbilityScores.getAbilityByName(If(AbilityMod.Count > 0, AbilityMod(0).StatName, Nothing))
             Defense.ClassBonus = IIf(ClassMod.Count > 0, ClassMod.Sum(Function(Elem) Elem.StatLink.StatModifiers.Sum(Function(E) E.Value)), Nothing)
             Defense.Feat = IIf(FeatMod.Count > 0, FeatMod.Max(Function(Elem) Elem.Value), Nothing)
             Defense.Enhancement = IIf(EnhancementMod.Count > 0, EnhancementMod.Sum(Function(Elem) Elem.Value), Nothing)
@@ -307,13 +323,19 @@ Namespace Import
             Dim SkillRules As List(Of Rule) = getRule(Of List(Of Rule))(Type:="Skill")
             Dim SkillCollection As New SkillCollection
 
+            'Loop through every skill with a rule present.
             For Each Rule As Rule In SkillRules
                 Dim StatTemp As Stat = getStat(Rule.Name)
                 Dim StatModifiers As Generic.List(Of StatModifier) = StatTemp.StatModifiers
+                Dim SkillAbility As AbilityScore = _Character.AbilityScores.getAbilityByName(StatModifiers.Find(Function(E) E.Type = "Ability").StatName)
+                Dim SkillTrained As Boolean = Convert.ToBoolean(StatTemp.StatModifiers.Find(Function(E) E.StatName = StatTemp.Name & " Trained").StatLink.Value)
+                Dim SkillAP As StatModifier = StatTemp.StatModifiers.Find(Function(E) E.StatName = "Armor Penalty")
+
+                'Create new skill object.
                 Dim SkillTemp As New Skill(StatTemp.Name, _
-                                           _Character.AbilityScores.getAbilityByName(StatModifiers.Find(Function(E) E.Type = "Ability").StatName), _
-                                           CBool(StatTemp.StatModifiers.Find(Function(E) E.StatName = StatTemp.Name & " Trained").StatLink.Value), _
-                                           StatTemp.StatModifiers.Find(Function(E) E.StatName = "Armor Penalty").StatLink.Value, _
+                                           SkillAbility, _
+                                           SkillTrained, _
+                                           If(SkillAP IsNot Nothing, SkillAP.StatLink.Value, Nothing), _
                                            Nothing)
 
                 'Check to see if there is an uncalculated difference, and add to misc modifiers.
@@ -328,6 +350,25 @@ Namespace Import
 
                 SkillCollection.Add(SkillTemp)
             Next
+
+            'Load skill collection into character object.
+            _Character.Skills = SkillCollection
+
+            'Initiative.
+            Dim InitStat = getStat("Initiative")
+            Dim InitMods As Generic.List(Of StatModifier) = InitStat.StatModifiers
+            Dim InitAbil As AbilityScore = _Character.AbilityScores.getAbilityByName(InitMods.Find(Function(E) E.Type = "Ability").StatName)
+            Dim InitMisc As Stat = getStat("Initiative Misc")
+            Dim InitMiscList As New GenericBonusCollection
+
+            'Add all modifiers to misc init modifiers collection.
+            For Each InitMod As StatModifier In InitMisc.StatModifiers
+                InitMiscList.Add(New GenericBonus(InitMod.Rule.Name, InitMod.Value))
+            Next
+
+            'Assign init values to character object.
+            _Character.Initiative.Ability = InitAbil
+            _Character.Initiative.Misc = InitMiscList
         End Sub
 
 #End Region
