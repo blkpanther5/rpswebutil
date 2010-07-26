@@ -140,6 +140,9 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <Content Include="Default.aspx" />
+    <Content Include="Include\jQuery\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Include\jQuery\jQuery.frameReady.js" />
+    <Content Include="Include\jQuery\jquery.min.js" />
     <Content Include="Rolen.xml">
       <SubType>Designer</SubType>
     </Content>

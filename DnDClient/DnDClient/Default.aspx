@@ -4,12 +4,45 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>DnDClient</title>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js " type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="Include/jQuery/jQuery.frameReady.js" type="text/javascript"></script>
+
+    <% If False Then %>
+    <script src="Include/jQuery/jquery-1.4.1-vsdoc.js" type="text/javascript"></script>
+    <% End If %>
+
+    <script>
+
+        function doJS() {
+            $(function () {
+                $("#iframeOutput").attr("src", "http://www.wizards.com/dndinsider/compendium/race.aspx?id=43");
+
+            });
+        }
+
+
+        function doTest() {
+            alert($("#iframeOutput").innerHTML)
+            //$("#iframeOutput").contents().find("div").css("background-color", "red");
+        }
+
+
+    </script>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
-    
+        User Name: <asp:TextBox ID="txtLogin" runat="server" /> <br />
+        Password: <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" />
+        <asp:Button ID="btnLogin" runat="server" Text="Login" />
+
+        <br /><br />
+        <asp:Button runat="server" ID="btnGet" Text="Get it!" />
+        <input type="button" id="btnTest" value="Test it!" onclick="doTest();" /><br />
+        <iframe id="iframeOutput" runat="server" frameborder="0" src="about:blank" style="height:480px; width:590px; display:none;" />
     </div>
     </form>
 </body>
