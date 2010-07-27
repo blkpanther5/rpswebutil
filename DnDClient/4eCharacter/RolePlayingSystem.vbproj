@@ -84,10 +84,11 @@
     <Compile Include="Character\Powers\Power.vb" />
     <Compile Include="Character\Skills\Skill.vb" />
     <Compile Include="Character\Skills\SkillCollection.vb" />
-    <Compile Include="Import\Helpers.vb" />
-    <Compile Include="Common\Utility.vb">
+    <Compile Include="Common\ExtendedWebClient.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Data\Compendium.vb" />
+    <Compile Include="Common\Utility.vb" />
     <Compile Include="Import\Import.vb" />
     <Compile Include="Import\Rule.vb" />
     <Compile Include="Import\Stat.vb" />

@@ -1,6 +1,7 @@
 ﻿Imports System.IO
 Imports System.Linq
 Imports System.Xml.Linq
+Imports RolePlayingSystem.Data
 
 Public Class _Default
     Inherits System.Web.UI.Page
@@ -32,6 +33,12 @@ Public Class _Default
         Post.Add("email", Request.Cookies("Login").Value)
         Post.Add("password", Request.Cookies("Password").Value)
 
-        Response.Write(RolePlayingSystem.Common.Utility.getCompendiumEntry("http://www.wizards.com/dndinsider/compendium/item.aspx?fid=5827&ftype=1", Post))
+        Dim CompendiumData As New Compendium()
+
+        Response.Write("<hr />")
+        Response.Write(CompendiumData.getCompendiumEntry("http://www.wizards.com/dndinsider/compendium/power.aspx?id=3701", Post))
+        Response.Write("<hr />")
+        Response.Write(CompendiumData.getCompendiumEntry("http://www.wizards.com/dndinsider/compendium/power.aspx?id=3005", Post))
+        Response.Write("<hr />")
     End Sub
 End Class
