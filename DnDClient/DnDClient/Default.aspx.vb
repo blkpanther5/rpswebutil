@@ -32,6 +32,6 @@ Public Class _Default
         Post.Add("email", Request.Cookies("Login").Value)
         Post.Add("password", Request.Cookies("Password").Value)
 
-        Response.Write(RolePlayingSystem.Common.Utility.getCompendiumEntry("http://www.wizards.com/dndinsider/compendium/race.aspx?id=43", Post))
+        Response.Write(RolePlayingSystem.Common.Utility.getCompendiumEntry("http://www.wizards.com/dndinsider/compendium/item.aspx?fid=5827&ftype=1", Post))
     End Sub
 End Class

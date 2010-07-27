@@ -14,23 +14,15 @@
     <script src="Include/jQuery/jquery-1.4.1-vsdoc.js" type="text/javascript"></script>
     <% End If %>
 
-    <script>
-
-        function doJS() {
-            $(function () {
-                $("#iframeOutput").attr("src", "http://www.wizards.com/dndinsider/compendium/race.aspx?id=43");
-
-            });
+    <style>
+    
+        #detail 
+        {
+            font-family: Century Gothic;
+            font-size: 12px;
         }
-
-
-        function doTest() {
-            alert($("#iframeOutput").innerHTML)
-            //$("#iframeOutput").contents().find("div").css("background-color", "red");
-        }
-
-
-    </script>
+    
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -40,8 +32,7 @@
         <asp:Button ID="btnLogin" runat="server" Text="Login" />
 
         <br /><br />
-        <asp:Button runat="server" ID="btnGet" Text="Get it!" />
-        <input type="button" id="btnTest" value="Test it!" onclick="doTest();" /><br />
+        <asp:Button runat="server" ID="btnGet" Text="Get it!" /><br />
         <iframe id="iframeOutput" runat="server" frameborder="0" src="about:blank" style="height:480px; width:590px; display:none;" />
     </div>
     </form>

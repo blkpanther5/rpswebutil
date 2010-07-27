@@ -1,5 +1,6 @@
 ﻿Imports System.Text.RegularExpressions
 Imports System.Web
+Imports System.Net
 
 Namespace Common
 
@@ -72,8 +73,9 @@ Namespace Common
             Dim sLoginUrl As String = "http://www.wizards.com/dndinsider/compendium/login.aspx"
 
             'Web client object will do the heavy lifting.
-            Dim Client As New Net.WebClient
+            Dim Client As New ExtendedWebClient
             Client.UseDefaultCredentials = False
+            Client.Headers.Add("Content-Type", "application/x-www-form-urlencoded")
 
             'Literal to hold response, get initial page.
             Dim Response() As Byte = Client.DownloadData(Url)
@@ -85,6 +87,7 @@ Namespace Common
                 Dim sPage As String = Nothing
                 Dim sPageId As String = Nothing
 
+                'Grab the target page and id, to append to login URL.
                 For Each Match As Match In Regex.Matches(sResponse, "\<form.*page\=(\w*)\&amp\;id\=(\d*).*\>")
                     If Match.Groups.Count >= 3 Then
                         sPage = Match.Groups(1).Value
@@ -113,14 +116,45 @@ Namespace Common
                     End If
                 Next
 
-                'Parse byte array as ASCII text.
+                'Reconstruct the login URL.
                 sLoginUrl += "?page=" & sPage & "&id=" & sPageId
-                Return Text.Encoding.ASCII.GetString(Client.UploadValues(sLoginUrl, "POST", PostData))
+
+                Try
+                    'Attempt to authenticate.
+                    sResponse = Text.Encoding.ASCII.GetString(Client.UploadValues(sLoginUrl, "POST", PostData))
+
+                Catch ex As Exception
+                    'If we throw an error, try the target page again, as we should have authenticated.
+                    Response = Client.DownloadData(Url)
+                    sResponse = Text.Encoding.ASCII.GetString(Response)
+
+                End Try
             End If
 
+            'Extract detail div.
+            sResponse = sResponse.Replace(vbCrLf, " ")
+            sResponse = sResponse.Substring(sResponse.IndexOf("<div id=""detail"">"))
+            sResponse = sResponse.Substring(0, sResponse.LastIndexOf("</div>") + 6)
+
+            'Return the final content.
             Return sResponse
         End Function
 
+    End Class
+
+    Public Class ExtendedWebClient
+        Inherits Net.WebClient
+
+        Private CookieContainer As New CookieContainer
+
+        Protected Overrides Function GetWebRequest(ByVal address As System.Uri) As System.Net.WebRequest
+            Dim Request As WebRequest = MyBase.GetWebRequest(address)
+            If TypeOf Request Is HttpWebRequest Then
+                DirectCast(Request, HttpWebRequest).CookieContainer = CookieContainer
+            End If
+
+            Return Request
+        End Function
     End Class
 
 End Namespace
