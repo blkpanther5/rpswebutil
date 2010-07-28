@@ -1,7 +1,11 @@
-﻿Imports System.Text.RegularExpressions
+﻿Imports RolePlayingSystem.Common.Net
+Imports System.Text.RegularExpressions
 Imports System.Web
 Imports System.Net
-Imports RolePlayingSystem.Common.Net
+Imports System.Xml
+Imports System.Text
+Imports System.Linq
+Imports System.Xml.Linq
 
 Namespace Data
 
@@ -9,6 +13,28 @@ Namespace Data
     ''' Data manipulation, retrieval and caching utilities.
     ''' </summary>
     Public Class Compendium
+
+#Region "Enumerations"
+
+        ''' <summary>
+        ''' Represents valid "tab" types for searching compendium.
+        ''' </summary>
+        Public Enum DataType
+            Race = 0
+            Power = 1
+            [Class] = 2
+            Feat = 3
+            Item = 4
+            Skill = 5
+            Ritual = 6
+            ParagonPath = 7
+            EpicDestiny = 8
+            Monster = 9
+            Deity = 10
+            Glossary = 11
+        End Enum
+
+#End Region
 
 #Region "Literals"
 
@@ -30,6 +56,32 @@ Namespace Data
 #End Region
 
 #Region "Methods"
+
+        ''' <summary>
+        ''' Searches public compendium source for specified item.
+        ''' </summary>
+        ''' <param name="SearchQuery">Keyword search term.</param>
+        ''' <param name="Type">Type of item to search for.</param>
+        ''' <param name="Id">Optional Id search filter.</param>
+        ''' <returns>Matching XElements.</returns>
+        Function getCompendiumSearchResults(ByVal SearchQuery As String, _
+                                            ByVal Type As DataType, _
+                                            Optional ByVal Id As Integer = 0) As IEnumerable(Of XElement)
+
+            'Load XML document from query response.
+            Dim ResponseDoc As XDocument = _
+                XDocument.Load("http://www.wizards.com/dndinsider/compendium/CompendiumSearch.asmx/KeywordSearch?Keywords=" & SearchQuery & _
+                               "&tab=" & [Enum].Parse(GetType(DataType), Type).ToString() & "&NameOnly=false")
+
+            'Get result elements.
+            Dim ResponseElements As Generic.IEnumerable(Of XElement) = ResponseDoc.Descendants.Elements("Results").First.Elements()
+
+            'If Id is specified, search for it.
+            If Id <> 0 Then _
+                ResponseElements = ResponseElements.Where(Function(E) E.Elements("ID").Value = Id)
+
+            Return ResponseElements
+        End Function
 
         ''' <summary>
         ''' Returns content of specified URL.

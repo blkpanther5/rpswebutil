@@ -29,16 +29,17 @@ Public Class _Default
     End Sub
 
     Private Sub btnGet_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnGet.Click
-        Dim Post As New Collections.Specialized.NameValueCollection
-        Post.Add("email", Request.Cookies("Login").Value)
-        Post.Add("password", Request.Cookies("Password").Value)
-
         Dim CompendiumData As New Compendium()
+        CompendiumData.getCompendiumSearchResults("Lightning Shift", Compendium.DataType.Power)
 
-        Response.Write("<hr />")
-        Response.Write(CompendiumData.getCompendiumEntry("http://www.wizards.com/dndinsider/compendium/power.aspx?id=3701", Post))
-        Response.Write("<hr />")
-        Response.Write(CompendiumData.getCompendiumEntry("http://www.wizards.com/dndinsider/compendium/power.aspx?id=3005", Post))
-        Response.Write("<hr />")
+        'Dim Post As New Collections.Specialized.NameValueCollection
+        'Post.Add("email", Request.Cookies("Login").Value)
+        'Post.Add("password", Request.Cookies("Password").Value)
+
+        'Response.Write("<hr />")
+        'Response.Write(CompendiumData.getCompendiumEntry("http://www.wizards.com/dndinsider/compendium/power.aspx?id=3701", Post))
+        'Response.Write("<hr />")
+        'Response.Write(CompendiumData.getCompendiumEntry("http://www.wizards.com/dndinsider/compendium/power.aspx?id=3005", Post))
+        'Response.Write("<hr />")
     End Sub
 End Class
