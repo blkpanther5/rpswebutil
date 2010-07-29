@@ -258,7 +258,7 @@ Namespace Import
         ''' </summary>
         ''' <param name="PowerCollection">Target collection object to store imported powers in.</param>
         ''' <remarks>I implemented this rather than building out a proxy set of class objects, because it's of limited use, unlike rules and stats.</remarks>
-        Private Sub doLoadPowers(ByRef PowerCollection As Generic.SortedSet(Of Power))
+        Private Sub doLoadPowers(ByRef PowerCollection As List(Of Power))
             'Get all "power" type rules.
             Dim PowerRules As Generic.List(Of Rule) = getRule(Of List(Of Rule))(Type:="Power")
 

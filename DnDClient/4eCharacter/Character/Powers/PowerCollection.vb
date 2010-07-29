@@ -5,7 +5,7 @@
     ''' </summary>
     <Serializable()> _
     Public Class PowerCollection
-        Inherits Generic.SortedSet(Of Power)
+        Inherits List(Of Power)
 
     End Class
 
