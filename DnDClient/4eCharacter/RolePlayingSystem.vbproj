@@ -82,6 +82,8 @@
     <Compile Include="Character\Initiative.vb" />
     <Compile Include="Character\MovementBlock.vb" />
     <Compile Include="Character\Powers\Power.vb" />
+    <Compile Include="Character\Powers\PowerCollection.vb" />
+    <Compile Include="Character\Powers\Usage.vb" />
     <Compile Include="Character\Skills\Skill.vb" />
     <Compile Include="Character\Skills\SkillCollection.vb" />
     <Compile Include="Common\ExtendedWebClient.vb">

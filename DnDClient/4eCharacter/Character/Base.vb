@@ -1,8 +1,10 @@
-﻿Imports RolePlayingSystem.Common.Utility
+﻿Imports RolePlayingSystem.Common.Types
+Imports RolePlayingSystem.Common.Utility
 Imports RolePlayingSystem.Character.Ability
 Imports RolePlayingSystem.Character.Defense
 Imports RolePlayingSystem.Character.Movement
 Imports RolePlayingSystem.Character.Skills
+Imports RolePlayingSystem.Character.Powers
 
 Namespace Character
 
@@ -129,6 +131,17 @@ Namespace Character
         ''' Represents the skill collection of the creature/character.
         ''' </summary>
         Public Property Skills As New SkillCollection
+
+        ''' <summary>
+        ''' Represents all usable powers for creature/character.
+        ''' </summary>
+        Public Property Powers As New PowerCollection
+
+        Public Property RaceFeatures As New List(Of GenericNVP)
+
+        Public Property ClassFeatures As New List(Of GenericNVP)
+
+        Public Property Feats As New SortedSet(Of GenericNVP)
 #End Region
 
     End Class

@@ -9,6 +9,8 @@
 
         Private _Name As String = Nothing
 
+        Private _Description As String = Nothing
+
         Private _Type As String = Nothing
 
         Private _InternalId As String = Nothing
@@ -29,6 +31,15 @@
         Public ReadOnly Property Name As String
             Get
                 Return _Name
+            End Get
+        End Property
+
+        ''' <summary>
+        ''' Contains optional description for rule.
+        ''' </summary>
+        Public ReadOnly Property Description As String
+            Get
+                Return _Description
             End Get
         End Property
 
@@ -95,7 +106,8 @@
                        ByVal InternalId As String, _
                        ByVal CharElem As String, _
                        ByVal Legality As String, _
-                       ByVal URL As String)
+                       ByVal URL As String, _
+                       Optional ByVal Description As String = Nothing)
 
             'Set values on new object.
             _Name = Name
@@ -104,6 +116,7 @@
             _CharElem = CharElem
             _Legality = Legality
             _URL = URL
+            _Description = Description
         End Sub
 
 #End Region

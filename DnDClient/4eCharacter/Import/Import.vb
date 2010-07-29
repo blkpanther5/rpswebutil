@@ -6,6 +6,7 @@ Imports RolePlayingSystem.Common.Utility
 Imports RolePlayingSystem.Character.Defense
 Imports RolePlayingSystem.Character.Ability
 Imports RolePlayingSystem.Character.Skills
+Imports RolePlayingSystem.Character.Powers
 
 Namespace Import
 
@@ -30,6 +31,11 @@ Namespace Import
         ''' Contains the final, parsed character base object for manipulation by consumer code.
         ''' </summary>
         Private _Character As New RolePlayingSystem.Character.Base
+
+        ''' <summary>
+        ''' Instance of compendium utilities.
+        ''' </summary>
+        Private _CompendiumData As New RolePlayingSystem.Data.Compendium
 
 #End Region
 
@@ -107,13 +113,20 @@ Namespace Import
                     'Get first record matching.
                     Dim SubQuery = Query.FirstOrDefault()
 
+                    'Extract the short description.
+                    Dim sDescription = (From Q In SubQuery.Elements("specific") _
+                                       Where Q.Attribute("name") = "Short Description" _
+                                       Select Q.Value).FirstOrDefault
+
+
                     'Create new rule object and assign values.
                     Dim Rule As New Rule(getAttributeValue(SubQuery.Attribute("name")), _
                                          getAttributeValue(SubQuery.Attribute("type")), _
                                          getAttributeValue(SubQuery.Attribute("internal-id")), _
                                          getAttributeValue(SubQuery.Attribute("charelem")), _
                                          getAttributeValue(SubQuery.Attribute("legality")), _
-                                         getAttributeValue(SubQuery.Attribute("url")))
+                                         getAttributeValue(SubQuery.Attribute("url")), _
+                                         Description:=sDescription)
 
                     Output = Rule
 
@@ -123,12 +136,18 @@ Namespace Import
 
                     'Loop all matching records and create collection of rules to return.
                     For Each Rule As XElement In Query
+                        'Extract the short description.
+                        Dim sDescription = (From Q In Rule.Elements("specific") _
+                                            Where Q.Attribute("name") = "Short Description" _
+                                            Select Q.Value).FirstOrDefault
+
                         Rules.Add(New Rule(getAttributeValue(Rule.Attribute("name")), _
                                            getAttributeValue(Rule.Attribute("type")), _
                                            getAttributeValue(Rule.Attribute("internal-id")), _
                                            getAttributeValue(Rule.Attribute("charelem")), _
                                            getAttributeValue(Rule.Attribute("legality")), _
-                                           getAttributeValue(Rule.Attribute("url"))))
+                                           getAttributeValue(Rule.Attribute("url")), _
+                                           Description:=sDescription))
 
                         Output = Rules
                     Next
@@ -233,6 +252,81 @@ Namespace Import
 
             Return Query
         End Function
+
+        ''' <summary>
+        ''' Loads powers for specified character.
+        ''' </summary>
+        ''' <param name="PowerCollection">Target collection object to store imported powers in.</param>
+        ''' <remarks>I implemented this rather than building out a proxy set of class objects, because it's of limited use, unlike rules and stats.</remarks>
+        Private Sub doLoadPowers(ByRef PowerCollection As Generic.SortedSet(Of Power))
+            'Get all "power" type rules.
+            Dim PowerRules As Generic.List(Of Rule) = getRule(Of List(Of Rule))(Type:="Power")
+
+            'Loop through every rule.
+            For Each Item As Rule In PowerRules
+                Dim PowerRule As Rule = Item
+
+                'Grab the matching element.
+                Dim Query = (From Power In _CharSheetData.Descendants("PowerStats").Elements("Power") _
+                             Where Power.Attribute("name") = PowerRule.Name _
+                             Select Power).FirstOrDefault
+
+                'Grab all weapon elements inside.
+                Dim WeaponQuery = From Weapon In Query.Elements("Weapon") _
+                                  Select Weapon
+
+                'Find the action type in the query.
+                Dim sActionType = (From Q In Query.Elements("specific") _
+                                   Where Q.Attribute("name") = "Action Type" _
+                                   Select Q.Value).FirstOrDefault
+
+                'Find power usage element in the query.
+                Dim sPowerUsage = (From Q In Query.Elements("specific") _
+                                   Where Q.Attribute("name") = "Power Usage" _
+                                   Select Q.Value).FirstOrDefault
+
+                'Create usage instance collection.
+                Dim Usages As New Generic.List(Of Usage)
+
+                'Loop through weapons collection.
+                For Each Weapon As XElement In WeaponQuery
+                    Dim ImportWeapon As New Usage(Weapon.Attribute("name").Value, _
+                                                  Weapon.Element("AttackBonus").Value, _
+                                                  Weapon.Element("Damage").Value, _
+                                                  _Character.AbilityScores.getAbilityByName(Weapon.Element("AttackStat").Value), _
+                                                  Weapon.Element("Defense").Value, _
+                                                  Weapon.Element("HitComponents").Value, _
+                                                  Weapon.Element("DamageComponents").Value)
+
+                    'Add to our temp collection.
+                    Usages.Add(ImportWeapon)
+                Next
+
+                Dim iPowerLevel = 1
+
+                'Determine level for power.
+                If (PowerRule.Name <> "Melee Basic Attack" And PowerRule.Name <> "Ranged Basic Attack") Then
+                    Dim CompendiumSearch As Generic.IEnumerable(Of XElement) = _
+                        _CompendiumData.getCompendiumSearchResults(PowerRule.Name, _
+                                                                   Data.Compendium.DataType.Power, _
+                                                                   Replace(PowerRule.InternalId, "ID_FMP_POWER_", ""))
+
+                    'Get power level out of search result.
+                    iPowerLevel = (From Q In CompendiumSearch.Elements("Level") _
+                                   Select Q.Value).FirstOrDefault
+                End If
+
+                'Create power instance.
+                Dim ImportPower As New Power(PowerRule.Name, _
+                                             sActionType.Trim(), _
+                                             sPowerUsage.Trim(), _
+                                             iPowerLevel, _
+                                             Usages)
+
+                'Add to character collection.
+                PowerCollection.Add(ImportPower)
+            Next
+        End Sub
 
         ''' <summary>
         ''' Loads specified defense score.
@@ -369,6 +463,16 @@ Namespace Import
             'Assign init values to character object.
             _Character.Initiative.Ability = InitAbil
             _Character.Initiative.Misc = InitMiscList
+
+            'Powers
+            doLoadPowers(_Character.Powers)
+
+            'Now load race features.
+            For Each Feature As Rule In getRule(Of List(Of Rule))(Type:="Racial Trait")
+                _Character.RaceFeatures.Add(New GenericNVP(Feature.Name, _
+                                                           Feature.Description, _
+                                                           Feature.InternalId))
+            Next
         End Sub
 
 #End Region

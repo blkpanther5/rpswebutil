@@ -1,10 +1,11 @@
-﻿Namespace Powers
+﻿Namespace Character.Powers
 
     ''' <summary>
     ''' Represents a creature's power or ability.
     ''' </summary>
     <Serializable()> _
     Public Class Power
+        'Implements IComparable
 
 #Region "Literals"
 
@@ -12,15 +13,15 @@
 
         Private _Action As String = Nothing
 
+        Private _Type As String = Nothing
+
         Private _Level As Integer = 1
 
         Private _Used As Boolean = False
 
+        Private _Usage As Generic.IEnumerable(Of Usage)
+
         Private _Description As String = Nothing
-
-        Private _AttackBreakdown As String = Nothing
-
-        Private _DamageBreakdown As String = Nothing
 
         Private _Notes As String = Nothing
 
@@ -29,7 +30,7 @@
 #Region "Properties"
 
         ''' <summary>
-        ''' Name of power
+        ''' Name of power.
         ''' </summary>
         Public ReadOnly Property Name As String
             Get
@@ -43,6 +44,15 @@
         Public ReadOnly Property Action As String
             Get
                 Return _Action
+            End Get
+        End Property
+
+        ''' <summary>
+        ''' Type of power.
+        ''' </summary>
+        Public ReadOnly Property Type As String
+            Get
+                Return _Type
             End Get
         End Property
 
@@ -68,29 +78,23 @@
         End Property
 
         ''' <summary>
+        ''' Contains weapon usage for power.
+        ''' </summary>
+        Public Property Usage As Generic.IEnumerable(Of Usage)
+            Get
+                Return _Usage
+            End Get
+            Set(ByVal value As Generic.IEnumerable(Of Usage))
+                _Usage = value
+            End Set
+        End Property
+
+        ''' <summary>
         ''' Contains HTML description of power.
         ''' </summary>
         Public ReadOnly Property Description As String
             Get
                 Return _Description
-            End Get
-        End Property
-
-        ''' <summary>
-        ''' Breakdown of attack bonuses.
-        ''' </summary>
-        Public ReadOnly Property AttackBreakdown As String
-            Get
-                Return _AttackBreakdown
-            End Get
-        End Property
-
-        ''' <summary>
-        ''' Breakdown of damage.
-        ''' </summary>
-        Public ReadOnly Property DamageBreakdown As String
-            Get
-                Return _DamageBreakdown
             End Get
         End Property
 
@@ -116,22 +120,21 @@
         ''' <param name="Name">Name of power.</param>
         ''' <param name="Action">Action required to use power.</param>
         ''' <param name="Level">Level of power.</param>
-        ''' <param name="AttackBreakdown">Breakdown of attack bonus.</param>
-        ''' <param name="DamageBreakdown">Breakdown of damage.</param>
+        ''' <param name="Usage">Collection of weapon usage stats for power.</param>
         ''' <param name="Description">HTML description of power.</param>
         Public Sub New(ByVal Name As String, _
                        ByVal Action As String, _
+                       ByVal Type As String, _
                        ByVal Level As Integer, _
-                       ByVal AttackBreakdown As String, _
-                       ByVal DamageBreakdown As String, _
+                       ByVal Usage As IEnumerable(Of Usage), _
                        Optional ByVal Description As String = Nothing)
 
             'Create object.
             _Name = Name
             _Action = Action
+            _Type = Type
             _Level = Level
-            _AttackBreakdown = AttackBreakdown
-            _DamageBreakdown = DamageBreakdown
+            _Usage = Usage
             _Description = Description
         End Sub
 
