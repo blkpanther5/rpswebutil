@@ -25,6 +25,7 @@ body {
     border-bottom-width: 1px;
     border-left-width: 1px;
     border-right-width: 1px;
+    background-color: #fff;
 }
 
 .ui-tabs-panel 
@@ -35,7 +36,7 @@ body {
 
 .ui-widget-header 
 {
-    background:none;
+    background: none;
     border-right: 0px;
     border-top: 0px;
     border-left: 0px;
