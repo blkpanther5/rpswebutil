@@ -123,6 +123,10 @@ Namespace Character.Powers
             _DamageBreakdown = DamageBreakdown
         End Sub
 
+        Private Sub New()
+
+        End Sub
+
 #End Region
 
     End Class

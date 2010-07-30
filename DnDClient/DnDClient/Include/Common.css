@@ -2,12 +2,14 @@
 body {
     font-size: medium;
     font-family: Century Gothic;
+    background: #f0f0f0;
 }
 
 /*-jQuery UI Overrides-------------------------------------------------------*/
 .ui-tabs 
 {
     border: 0px;
+    background: none;
 }
 
 .ui-tabs-nav 
@@ -17,6 +19,9 @@ body {
 
 .ui-tabs .ui-tabs-panel 
 {
+    height: 500px;
+    overflow: hidden;
+    background: #fff;
     border-bottom-width: 1px;
     border-left-width: 1px;
     border-right-width: 1px;
@@ -30,13 +35,24 @@ body {
 
 .ui-widget-header 
 {
-    background: #fff;
+    background:none;
     border-right: 0px;
     border-top: 0px;
     border-left: 0px;
 }
 
+.ui-accordion-header a
+{
+    font-weight: bold;
+}
+
 /*-Common Styles-------------------------------------------------------------*/
+#container 
+{
+    width: 768px;
+    height: 1024px;
+}
+
 .tdName 
 {
     font-variant: small-caps;
@@ -68,10 +84,13 @@ body {
 .BasicInformation 
 {
     width: 348px;
+    height: 368px;
     float: left;
     border: 1px #aaa solid;
     margin: 4px;
     padding: 4px;
+    background-color: #fff;
+    position: relative;
 }
 
 .BasicInformation table
@@ -98,4 +117,20 @@ body {
 .AbilityLine .AbilityMod
 {
     float:left; width:15%; background:#FFF; color:#777; text-align:center;
+}
+
+/*-Power Styles--------------------------------------------------------------*/
+
+#PowerList 
+{
+    width: 300px;
+    height: 500px;
+    overflow: auto;
+}
+
+.PowerButton 
+{
+    width: 95%;
+    text-align: left;
+    margin: 4px;
 }

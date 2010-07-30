@@ -5,7 +5,6 @@
     ''' </summary>
     <Serializable()> _
     Public Class Power
-        'Implements IComparable
 
 #Region "Literals"
 
@@ -136,6 +135,10 @@
             _Level = Level
             _Usage = Usage
             _Description = Description
+        End Sub
+
+        Private Sub New()
+
         End Sub
 
 #End Region

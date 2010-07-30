@@ -59,6 +59,7 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
@@ -94,18 +95,11 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\Character\BasicInfo.ascx.designer.vb">
-      <DependentUpon>BasicInfo.ascx</DependentUpon>
+    <Compile Include="Client.aspx.designer.vb">
+      <DependentUpon>Client.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Controls\Character\BasicInfo.ascx.vb">
-      <DependentUpon>BasicInfo.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Default.aspx.designer.vb">
-      <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Default.aspx.vb">
-      <DependentUpon>Default.aspx</DependentUpon>
+    <Compile Include="Client.aspx.vb">
+      <DependentUpon>Client.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -149,8 +143,7 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
-    <Content Include="Controls\Character\BasicInfo.ascx" />
-    <Content Include="Default.aspx" />
+    <Content Include="Client.aspx" />
     <Content Include="Include\Common.css" />
     <Content Include="Include\Compendium.css" />
     <Content Include="Include\jQueryUI\css\smoothness\images\ui-anim_basic_16x16.gif" />
@@ -564,7 +557,10 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Controls\" />
+    <Folder Include="Data\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\4eCharacter\RolePlayingSystem.vbproj">
       <Project>{7C0BDD67-5F03-45DE-B160-430495EAE309}</Project>

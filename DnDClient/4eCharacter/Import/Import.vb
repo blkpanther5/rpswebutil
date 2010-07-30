@@ -37,6 +37,10 @@ Namespace Import
         ''' </summary>
         Private _CompendiumData As New RolePlayingSystem.Data.Compendium
 
+        Private _Login As String = Nothing
+
+        Private _Password As String = Nothing
+
 #End Region
 
 #Region "Properties"
@@ -51,6 +55,30 @@ Namespace Import
             End Get
         End Property
 
+        ''' <summary>
+        ''' Contains user name to login to compendium.
+        ''' </summary>
+        Public Property Login As String
+            Get
+                Return _Login
+            End Get
+            Set(ByVal value As String)
+                _Login = value
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' Contains password to login to compendium.
+        ''' </summary>
+        Public Property Password As String
+            Get
+                Return _Password
+            End Get
+            Set(ByVal value As String)
+                _Password = value
+            End Set
+        End Property
+
 #End Region
 
 #Region "Events"
@@ -59,7 +87,20 @@ Namespace Import
         ''' Inits the XML character file importation system.
         ''' </summary>
         ''' <param name="FilePath">Path to file to be queried.</param>
-        Public Sub New(ByVal FilePath As String)
+        ''' <param name="Login">Login for compendium.</param>
+        ''' <param name="Password">Password for compendium.</param>
+        Public Sub New(ByVal FilePath As String, _
+                       Optional ByVal Login As String = Nothing, _
+                       Optional ByVal Password As String = Nothing)
+
+            'Set login and password.
+            _Login = Login
+            _Password = Password
+
+            'Set compendium object's login and password.
+            _CompendiumData.Login = Login
+            _CompendiumData.Password = Password
+
             'Check if file can be found, otherwise throw exception.
             If Not File.Exists(FilePath) Then _
                 Throw New FileNotFoundException("Can't file specified character file.")
@@ -76,7 +117,6 @@ Namespace Import
                 _Character = Nothing
 
             End Try
-
         End Sub
 
 #End Region
@@ -303,17 +343,23 @@ Namespace Import
                 Next
 
                 Dim iPowerLevel = 1
+                Dim sDescription = Nothing
 
-                'Determine level for power.
+                'Determine description and level for power.
                 If (PowerRule.Name <> "Melee Basic Attack" And PowerRule.Name <> "Ranged Basic Attack") Then
-                    Dim CompendiumSearch As Generic.IEnumerable(Of XElement) = _
-                        _CompendiumData.getCompendiumSearchResults(PowerRule.Name, _
-                                                                   Data.Compendium.DataType.Power, _
-                                                                   Replace(PowerRule.InternalId, "ID_FMP_POWER_", ""))
+                    Dim CompendiumSearch As Generic.IEnumerable(Of XElement) = Nothing
+                    'Dim CompendiumSearch As Generic.IEnumerable(Of XElement) = _
+                    '    _CompendiumData.getCompendiumSearchResults(PowerRule.Name, _
+                    '                                               Data.Compendium.DataType.Power, _
+                    '                                               Replace(PowerRule.InternalId, "ID_FMP_POWER_", ""))
 
                     'Get power level out of search result.
-                    iPowerLevel = (From Q In CompendiumSearch.Elements("Level") _
-                                   Select Q.Value).FirstOrDefault
+                    If CompendiumSearch IsNot Nothing Then _
+                        iPowerLevel = (From Q In CompendiumSearch.Elements("Level") _
+                                       Select Q.Value).FirstOrDefault
+
+                    'Get description.
+                    'sDescription = _CompendiumData.getCompendiumEntry(PowerRule.URL)
                 End If
 
                 'Create power instance.
@@ -321,7 +367,8 @@ Namespace Import
                                              sActionType.Trim(), _
                                              sPowerUsage.Trim(), _
                                              iPowerLevel, _
-                                             Usages)
+                                             Usages, _
+                                             Description:=sDescription)
 
                 'Add to character collection.
                 PowerCollection.Add(ImportPower)

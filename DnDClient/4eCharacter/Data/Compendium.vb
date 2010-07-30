@@ -40,6 +40,10 @@ Namespace Data
 
         Private _WebClient As New ExtendedWebClient
 
+        Private _Login As String = Nothing
+
+        Private _Password As String = Nothing
+
 #End Region
 
 #Region "Properties"
@@ -52,6 +56,47 @@ Namespace Data
                 Return _WebClient
             End Get
         End Property
+
+        ''' <summary>
+        ''' Contains user name to login to compendium.
+        ''' </summary>
+        Public Property Login As String
+            Get
+                Return _Login
+            End Get
+            Set(ByVal value As String)
+                _Login = value
+            End Set
+        End Property
+
+        ''' <summary>
+        ''' Contains password to login to compendium.
+        ''' </summary>
+        Public Property Password As String
+            Get
+                Return _Password
+            End Get
+            Set(ByVal value As String)
+                _Password = value
+            End Set
+        End Property
+#End Region
+
+#Region "Events"
+
+        ''' <summary>
+        ''' Creates instance of compendium utils.
+        ''' </summary>
+        ''' <param name="Login">Login, if needed for compendium.</param>
+        ''' <param name="Password">Password, if needed for compendium.</param>
+        ''' <remarks></remarks>
+        Public Sub New(Optional ByVal Login As String = Nothing, _
+                       Optional ByVal Password As String = Nothing)
+
+            'Set values.
+            _Login = Login
+            _Password = Password
+        End Sub
 
 #End Region
 
@@ -69,31 +114,39 @@ Namespace Data
                                             Optional ByVal Id As Integer = 0) As IEnumerable(Of XElement)
 
             'Load XML document from query response.
-            Dim ResponseDoc As XDocument = _
-                XDocument.Load("http://www.wizards.com/dndinsider/compendium/CompendiumSearch.asmx/KeywordSearch?Keywords=" & SearchQuery & _
-                               "&tab=" & [Enum].Parse(GetType(DataType), Type).ToString() & "&NameOnly=false")
+            Dim ResponseDoc As XDocument
+            Dim ResponseElements As Generic.IEnumerable(Of XElement)
 
-            'Get result elements.
-            Dim ResponseElements As Generic.IEnumerable(Of XElement) = ResponseDoc.Descendants.Elements("Results").First.Elements()
+            Try
+                ResponseDoc = _
+                    XDocument.Load("http://www.wizards.com/dndinsider/compendium/CompendiumSearch.asmx/KeywordSearch?Keywords=" & SearchQuery & _
+                   "&tab=" & [Enum].Parse(GetType(DataType), Type).ToString() & "&NameOnly=false")
 
-            'If Id is specified, search for it.
-            If Id <> 0 Then _
-                ResponseElements = ResponseElements.Where(Function(E) E.Elements("ID").Value = Id)
+                'Get result elements.
+                ResponseElements = ResponseDoc.Descendants.Elements("Results").First.Elements()
 
-            Return ResponseElements
+                'If Id is specified, search for it.
+                If Id <> 0 Then _
+                    ResponseElements = ResponseElements.Where(Function(E) E.Elements("ID").Value = Id)
+
+            Catch ex As Exception
+                ResponseDoc = Nothing
+                ResponseElements = Nothing
+
+            End Try
+
+            Return TryCast(ResponseElements, IEnumerable(Of XElement))
         End Function
 
         ''' <summary>
         ''' Returns content of specified URL.
         ''' </summary>
         ''' <param name="Url">URL to post.</param>
-        ''' <param name="PostData">Optional post data.</param>
         ''' <returns>String of HTML content.</returns>
-        Function getCompendiumEntry(ByVal Url As String, _
-                                           ByVal PostData As Collections.Specialized.NameValueCollection) As String
-
+        Function getCompendiumEntry(ByVal Url As String) As String
             'Login URL.
             Dim sLoginUrl As String = "http://www.wizards.com/dndinsider/compendium/login.aspx"
+            Dim PostData As New Collections.Specialized.NameValueCollection
 
             'Web client object will do the heavy lifting.
             WebClient.UseDefaultCredentials = False
@@ -142,8 +195,20 @@ Namespace Data
                 sLoginUrl += "?page=" & sPage & "&id=" & sPageId
 
                 Try
+                    'Add authentication to the Upload Values.
+                    PostData.Add("email", Login)
+                    PostData.Add("password", Password)
+
                     'Attempt to authenticate.
                     sResponse = Text.Encoding.ASCII.GetString(WebClient.UploadValues(sLoginUrl, "POST", PostData))
+
+                    'Extract detail div.
+                    sResponse = sResponse.Replace(vbCrLf, " ")
+                    sResponse = sResponse.Substring(sResponse.IndexOf("<div id=""detail"">"))
+                    sResponse = sResponse.Substring(0, sResponse.LastIndexOf("</div>") + 6)
+
+                    'Remove any unknown characters (represended by '???').
+                    sResponse = Regex.Replace(sResponse, "\?{3}", "")
 
                 Catch ex As Exception
                     'If we throw an error, try the target page again, as we should have authenticated.
@@ -152,14 +217,6 @@ Namespace Data
 
                 End Try
             End If
-
-            'Extract detail div.
-            sResponse = sResponse.Replace(vbCrLf, " ")
-            sResponse = sResponse.Substring(sResponse.IndexOf("<div id=""detail"">"))
-            sResponse = sResponse.Substring(0, sResponse.LastIndexOf("</div>") + 6)
-
-            'Remove any unknown characters (represended by '???').
-            sResponse = Regex.Replace(sResponse, "\?{3}", "")
 
             'Return the final content.
             Return sResponse

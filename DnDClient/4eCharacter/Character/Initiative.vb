@@ -6,6 +6,7 @@ Namespace Character
     ''' <summary>
     ''' Represents initiative scores for creature.
     ''' </summary>
+    <Serializable()> _
     Public Class Initiative
 
 #Region "Literals"
