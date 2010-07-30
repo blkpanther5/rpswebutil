@@ -144,6 +144,8 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <Content Include="Client.aspx" />
+    <Content Include="Controls\Placeholder.txt" />
+    <Content Include="Data\Rolen_12.xml" />
     <Content Include="Include\Common.css" />
     <Content Include="Include\Compendium.css" />
     <Content Include="Include\jQueryUI\css\smoothness\images\ui-anim_basic_16x16.gif" />
@@ -557,10 +559,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controls\" />
-    <Folder Include="Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\4eCharacter\RolePlayingSystem.vbproj">
       <Project>{7C0BDD67-5F03-45DE-B160-430495EAE309}</Project>
