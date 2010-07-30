@@ -145,6 +145,7 @@
     </None>
     <Content Include="Client.aspx" />
     <Content Include="Controls\Placeholder.txt" />
+    <Content Include="Data\Placeholder.txt" />
     <Content Include="Data\Rolen_12.xml" />
     <Content Include="Include\Common.css" />
     <Content Include="Include\Compendium.css" />
