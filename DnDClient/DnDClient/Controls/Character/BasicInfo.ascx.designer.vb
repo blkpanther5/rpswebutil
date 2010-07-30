@@ -13,5 +13,167 @@ Option Explicit On
 Namespace Controls
 
     Partial Public Class BasicInfo
+
+        '''<summary>
+        '''divBasicInfo control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents divBasicInfo As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+        '''<summary>
+        '''lblCharacterName control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents lblCharacterName As Global.System.Web.UI.WebControls.Label
+
+        '''<summary>
+        '''lblPlayerName control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents lblPlayerName As Global.System.Web.UI.WebControls.Label
+
+        '''<summary>
+        '''lblRace control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents lblRace As Global.System.Web.UI.WebControls.Label
+
+        '''<summary>
+        '''lblClass control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents lblClass As Global.System.Web.UI.WebControls.Label
+
+        '''<summary>
+        '''lblLevel control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents lblLevel As Global.System.Web.UI.WebControls.Label
+
+        '''<summary>
+        '''lblStrScore control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents lblStrScore As Global.System.Web.UI.WebControls.Label
+
+        '''<summary>
+        '''lblStrMod control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents lblStrMod As Global.System.Web.UI.WebControls.Label
+
+        '''<summary>
+        '''lblConScore control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents lblConScore As Global.System.Web.UI.WebControls.Label
+
+        '''<summary>
+        '''lblConMod control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents lblConMod As Global.System.Web.UI.WebControls.Label
+
+        '''<summary>
+        '''lblDexScore control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents lblDexScore As Global.System.Web.UI.WebControls.Label
+
+        '''<summary>
+        '''lblDexMod control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents lblDexMod As Global.System.Web.UI.WebControls.Label
+
+        '''<summary>
+        '''lblIntScore control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents lblIntScore As Global.System.Web.UI.WebControls.Label
+
+        '''<summary>
+        '''lblIntMod control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents lblIntMod As Global.System.Web.UI.WebControls.Label
+
+        '''<summary>
+        '''lblWisScore control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents lblWisScore As Global.System.Web.UI.WebControls.Label
+
+        '''<summary>
+        '''lblWisMod control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents lblWisMod As Global.System.Web.UI.WebControls.Label
+
+        '''<summary>
+        '''lblChaScore control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents lblChaScore As Global.System.Web.UI.WebControls.Label
+
+        '''<summary>
+        '''lblChaMod control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents lblChaMod As Global.System.Web.UI.WebControls.Label
     End Class
 End Namespace

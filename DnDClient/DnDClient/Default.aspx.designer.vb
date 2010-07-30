@@ -10,6 +10,7 @@
 Option Strict On
 Option Explicit On
 
+
 Partial Public Class _Default
 
     '''<summary>
@@ -58,11 +59,11 @@ Partial Public Class _Default
     Protected WithEvents btnGet As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''iframeOutput control.
+    '''test control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents iframeOutput As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+    Protected WithEvents test As Global.RolePlayingSystem.Web.Controls.BasicInfo
 End Class

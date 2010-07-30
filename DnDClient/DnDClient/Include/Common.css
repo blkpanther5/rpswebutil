@@ -1,0 +1,101 @@
+﻿/*-Globals-------------------------------------------------------------------*/
+body {
+    font-size: medium;
+    font-family: Century Gothic;
+}
+
+/*-jQuery UI Overrides-------------------------------------------------------*/
+.ui-tabs 
+{
+    border: 0px;
+}
+
+.ui-tabs-nav 
+{
+    font-size: .7em;
+}
+
+.ui-tabs .ui-tabs-panel 
+{
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+}
+
+.ui-tabs-panel 
+{
+    font-size: small;
+    border-bottom: 1px #aaa solid;
+}
+
+.ui-widget-header 
+{
+    background: #fff;
+    border-right: 0px;
+    border-top: 0px;
+    border-left: 0px;
+}
+
+/*-Common Styles-------------------------------------------------------------*/
+.tdName 
+{
+    font-variant: small-caps;
+    font-size: smaller;
+    text-align: right;
+    border-right: 1px #f0f0f0 solid;
+}
+
+.tdNameTop 
+{
+    font-variant: small-caps;
+    font-size: smaller;
+    border-bottom: 1px #f0f0f0 solid;
+}
+
+.tdData 
+{
+    padding-left: 8px;
+    color: #777;
+    padding-bottom: 8px;
+}
+
+.smaller 
+{
+    font-size: smaller;
+}
+
+/*-Basic Info Styles---------------------------------------------------------*/
+.BasicInformation 
+{
+    width: 348px;
+    float: left;
+    border: 1px #aaa solid;
+    margin: 4px;
+    padding: 4px;
+}
+
+.BasicInformation table
+{
+    width: 100%;
+    padding: 2px;
+}
+
+#StatContainer 
+{
+    padding-top: 8px;
+}
+
+.AbilityLine 
+{
+    width:85%; background:#777; color:White; padding:4px; position:relative; text-align:center; margin:auto auto; margin-bottom: 4px;
+}
+
+.AbilityLine .AbilityScore
+{
+    float:left; width:15%; background:#FFF; color:#777; text-align:center; margin-right:4px;
+}
+
+.AbilityLine .AbilityMod
+{
+    float:left; width:15%; background:#FFF; color:#777; text-align:center;
+}

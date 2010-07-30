@@ -9,8 +9,6 @@ Public Class _Default
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Dim Import As New RolePlayingSystem.Import.Character(Server.MapPath("Rolen.xml"))
         Dim Character As RolePlayingSystem.Character.Base = Import.Character
-
-        Response.Write("Done! ")
     End Sub
 
     Private Sub btnLogin_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnLogin.Click
