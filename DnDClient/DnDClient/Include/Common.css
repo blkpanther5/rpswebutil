@@ -1,8 +1,9 @@
 ﻿/*-Globals-------------------------------------------------------------------*/
 body {
     font-size: medium;
-    font-family: Century Gothic;
+    font-family: Century Gothic,Helvetica,Verdana;
     background: #f0f0f0;
+    margin: 0px;
 }
 
 /*-jQuery UI Overrides-------------------------------------------------------*/
@@ -19,7 +20,7 @@ body {
 
 .ui-tabs .ui-tabs-panel 
 {
-    height: 500px;
+    height: 440px;
     overflow: hidden;
     background: #fff;
     border-bottom-width: 1px;
@@ -50,8 +51,9 @@ body {
 /*-Common Styles-------------------------------------------------------------*/
 #container 
 {
-    width: 768px;
-    height: 1024px;
+    margin: 5px;
+    width: 758px;
+    height: 940px;
 }
 
 .tdName 
@@ -84,8 +86,8 @@ body {
 /*-Basic Info Styles---------------------------------------------------------*/
 .BasicInformation 
 {
-    width: 348px;
-    height: 368px;
+    width: 47.5%;
+    height: 380px;
     float: left;
     border: 1px #aaa solid;
     margin: 4px;
@@ -118,6 +120,42 @@ body {
 .AbilityLine .AbilityMod
 {
     float:left; width:15%; background:#FFF; color:#777; text-align:center;
+}
+
+/*-OtherSummary Styles-------------------------------------------------------*/
+.OtherInformation 
+{
+    width: 47.5%;
+    height: 380px;
+    float: right;
+    border: 1px #aaa solid;
+    margin: 4px;
+    padding: 4px;
+    background-color: #fff;
+    position: relative;
+}
+
+#DefenseContainer 
+{
+    padding-top:8px;
+}
+
+#HealthContainer 
+{
+    padding-top:8px;
+}
+
+.OtherInformation table
+{
+    width: 100%;
+    padding: 2px;
+}
+
+/*-Tab browser Styles--------------------------------------------------------*/
+#InfoTabs 
+{
+    width: 752px;
+    float: left;
 }
 
 /*-Power Styles--------------------------------------------------------------*/

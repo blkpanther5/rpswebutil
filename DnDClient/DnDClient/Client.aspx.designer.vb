@@ -239,6 +239,51 @@ Partial Public Class _Client
     Protected WithEvents lblChaMod As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''lbPlusHP control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lbPlusHP As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
+    '''lblACScore control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblACScore As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblFortScore control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblFortScore As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblRefScore control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblRefScore As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblWillScore control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblWillScore As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
     '''PowerRepeater control.
     '''</summary>
     '''<remarks>

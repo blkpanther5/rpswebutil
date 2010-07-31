@@ -83,6 +83,8 @@
                 Case "charisma", "cha"
                     Return Me.Charisma
 
+                Case Else
+                    Return Nothing
             End Select
         End Function
 

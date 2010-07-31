@@ -149,7 +149,7 @@ Namespace Import
                              Select Rule)
 
                 'Depending on type passed in...
-                If GetType(t) = GetType(Rule) Then
+                If GetType(t) Is GetType(Rule) Then
                     'Get first record matching.
                     Dim SubQuery = Query.FirstOrDefault()
 
@@ -170,7 +170,7 @@ Namespace Import
 
                     Output = Rule
 
-                ElseIf GetType(t) = GetType(Generic.List(Of Rule)) Then
+                ElseIf GetType(t) Is GetType(Generic.List(Of Rule)) Then
                     'Collection of rules.
                     Dim Rules As New Generic.List(Of Rule)
 

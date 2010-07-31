@@ -141,7 +141,7 @@ Namespace Character
 
         Public Property ClassFeatures As New List(Of GenericNVP)
 
-        Public Property Feats As New SortedSet(Of GenericNVP)
+        'Public Property Feats As New SortedSet(Of GenericNVP)
 #End Region
 
     End Class

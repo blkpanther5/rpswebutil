@@ -5,6 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>DnDClient</title>
+
+    <meta name="viewport" content="width=device-width" />
     
     <link href="Include/jQueryUI/css/smoothness/jquery-ui-1.8.2.custom.css" rel="stylesheet" type="text/css" />
     <link href="Include/Compendium.css" rel="stylesheet" type="text/css" />
@@ -21,11 +23,32 @@
     <script type="text/javascript">
     //<![CDATA[
 
-        $(function () {
-            $("#InfoTabs").tabs();
-            $("#testlink").button();
-            $(".PowerButton").button();
-        });
+        function pageLoad(sender, args) {
+            $(function () {
+                $("#InfoTabs").tabs();
+                $("#testlink").button();
+                $(".PowerButton").button();
+                $(".styledbutton").button();
+            });
+        }
+
+        function loadHPDialog(iVal) {
+            $(function () {
+                //Set dialog title based on passed value.
+                if (iVal < 0) {
+                    var sTitle = "Subtract Hit Points";
+                } else {
+                    var sTitle = "Add Hit Points";
+                }
+
+                $("#HPDialog").dialog({
+                    height: 275,
+                    modal: true,
+                    resizable: false,
+                    title: sTitle
+                });
+            });
+        }
 
     //]]>
     </script>
@@ -39,11 +62,7 @@
         <asp:Button ID="btnLogin" runat="server" Text="Login to Compendium" /> &nbsp;
         <asp:Button runat="server" ID="btnGet" Text="Load Character" />
 
-        <hr />
-
-        <asp:UpdatePanel ID="upDefault" runat="server"
-            UpdateMode="Conditional"
-            ChildrenAsTriggers="true">
+        <asp:UpdatePanel ID="upDefault" runat="server">
             <ContentTemplate>
                 <!-- Basic Information Summary -->
                 <div id="divBasicInfo" runat="server" class="BasicInformation">
@@ -188,7 +207,93 @@
                     </table>
                 </div>
 
-                <div id="InfoTabs" style="float:left; width:728px;">
+                <!-- Other Information Summary -->
+                <div id="divOtherInfo" class="OtherInformation">
+                    <table border="0" cellspacing="0" cellpadding="2">
+                    <tr>
+                    <td class="tdNameTop">
+                        Health
+                    </td>
+                    </tr>
+
+                    <tr>
+                    <td id="HealthContainer">
+                        <div style="width:85%; background-color:#777; position:relative; text-align:center; color:#fff; font-size:larger; margin:auto auto; padding:4px;">
+                            <span style="position:relative; text-align:center;">Hit Points</span><br />
+
+                            <table border="0">
+                            <tr>
+                            <td>
+                                <a href="javascript:void(0);"
+                                    onclick="loadHPDialog(-1);"
+                                    class="styledbutton" 
+                                    style="font-size:small;"> - HP</a>
+                            </td>
+                            <td>
+                            <div style="background-color:#fff; color:#777; width:100%; margin:auto auto; position:relative; font-size:larger;">
+                                100
+                            </div>
+                            </td>
+                            <td>
+                                <asp:LinkButton id="lbPlusHP" runat="server"
+                                    CssClass="styledbutton" 
+                                    style="font-size:small;"> + HP </asp:LinkButton>
+                            </td>
+                            </tr>
+                            </table>
+                        </div>
+                    </td>
+                    </tr>
+
+                    <tr>
+                    <td class="tdNameTop">
+                        Defenses
+                    </td>
+                    </tr>
+
+                    <tr>
+                    <td id="DefenseContainer">
+                        <div class="AbilityLine">
+                            <div class="AbilityScore">
+                                <asp:Label ID="lblACScore" runat="server" 
+                                    Text="00" />
+                            </div>
+
+                            Armor Class
+                        </div>
+
+                        <div class="AbilityLine">
+                            <div class="AbilityScore">
+                                <asp:Label ID="lblFortScore" runat="server" 
+                                    Text="00" />
+                            </div>
+
+                            Fortitude Defense
+                        </div>
+
+                        <div class="AbilityLine">
+                            <div class="AbilityScore">
+                                <asp:Label ID="lblRefScore" runat="server" 
+                                    Text="00" />
+                            </div>
+
+                            Reflex Defense
+                        </div>
+
+                        <div class="AbilityLine">
+                            <div class="AbilityScore">
+                                <asp:Label ID="lblWillScore" runat="server" 
+                                    Text="00" />
+                            </div>
+
+                            Will Defense
+                        </div>
+                    </td>
+                    </tr>
+                    </table>
+                </div>
+
+                <div id="InfoTabs">
 	                <ul>
 		                <li><a href="#tabs-1">Powers</a></li>
 		                <li><a href="#tabs-2">Features</a></li>
@@ -221,6 +326,15 @@
                 </div>
             </ContentTemplate>
         </asp:UpdatePanel>
+    </div>
+
+    <!-- Dialog content -->
+    <div id="HPDialog" style="display:none; text-align:center;">
+        <input type="text" style="width:75px; font-size:20px; text-align:center;" value="0" /><br />
+        <input type="button" value="1" onclick="" class="styledbutton" /><input type="button" value="2" onclick="" class="styledbutton" /><input type="button" value="3" onclick="" class="styledbutton" /><br />
+        <input type="button" value="4" onclick="" class="styledbutton" /><input type="button" value="5" onclick="" class="styledbutton" /><input type="button" value="6" onclick="" class="styledbutton" /><br />
+        <input type="button" value="7" onclick="" class="styledbutton" /><input type="button" value="8" onclick="" class="styledbutton" /><input type="button" value="9" onclick="" class="styledbutton" /><br />
+        <input type="button" value="0" onclick="" class="styledbutton" />
     </div>
     </form>
 </body>
