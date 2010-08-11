@@ -527,6 +527,8 @@ Namespace Import
                                                            Feature.Description, _
                                                            Feature.InternalId))
             Next
+
+            'Load class features.
         End Sub
 
 #End Region
