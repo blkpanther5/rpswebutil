@@ -108,6 +108,36 @@ Namespace Character
         Public Property AdventureName As String
 
         ''' <summary>
+        ''' Represents characters maximum hit points.
+        ''' </summary>
+        Public Property HitPoints As Integer
+
+        ''' <summary>
+        ''' Characters current hit points.
+        ''' </summary>
+        Public Property CurrentHitPoints As Integer
+
+        ''' <summary>
+        ''' Represents characters maximum surges.
+        ''' </summary>
+        Public Property Surges As Integer
+
+        ''' <summary>
+        ''' Characters current surges left.
+        ''' </summary>
+        Public Property CurrentSurges As Integer
+
+        ''' <summary>
+        ''' Value surge heals.
+        ''' </summary>
+        Public Property SurgeValue As Integer
+
+        ''' <summary>
+        ''' Represents if the character has used his/her second wind ability.
+        ''' </summary>
+        Public Property SecondWindUsed As Boolean
+
+        ''' <summary>
         ''' Represents a creatures initiative values.
         ''' </summary>
         Public Property Initiative As New Initiative

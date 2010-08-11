@@ -4,43 +4,59 @@ Imports System.Xml
 Imports System.Xml.Linq
 Imports RolePlayingSystem
 Imports RolePlayingSystem.Data
+Imports RolePlayingSystem.Data.SQL
+Imports RolePlayingSystem.Data.SQL.Entities
 
 Public Class _Client
     Inherits System.Web.UI.Page
 
+#Region "Literals"
+
+    Protected dal As New SQL.RolePlayingSystem(ConfigurationManager.ConnectionStrings("dbcsDefault").ConnectionString)
+
+    Protected _Account As tblAccount = Nothing
+
+    Protected _AccountId As String = Nothing
+
     Public _Character As RolePlayingSystem.Character.Base = Nothing
 
+#End Region
+
+#Region "Events"
+
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        'First check credentials.
+        doCheckLoginStatus()
+
+        'Initialize database connection.
+        _Account = dal.getUserById(_AccountId)
+
+        'Load default (first) character for testing!
         'Deserialize character.
-        If Not String.IsNullOrEmpty(ViewState("CharacterFile")) Then
-            Dim XmlRead As XmlReader = XmlReader.Create(ViewState("CharacterFile"))
+        If File.Exists(_Account.tblCharacters.FirstOrDefault().CharacterData) Then
+            Dim XmlRead As XmlReader = XmlReader.Create(_Account.tblCharacters.FirstOrDefault().CharacterData)
             Dim Serializer As New System.Runtime.Serialization.NetDataContractSerializer()
 
-            'Now read out the file back into the object.
-            _Character = TryCast(Serializer.ReadObject(XmlRead, True), RolePlayingSystem.Character.Base)
+            Try
+                'Now read out the file back into the object.
+                _Character = TryCast(Serializer.ReadObject(XmlRead, True), RolePlayingSystem.Character.Base)
 
-            'Initialize character viewer.
-            doLoadCharacter(_Character)
+                'Initialize character viewer.
+                doLoadCharacter(_Character)
+
+            Catch ex As Exception
+                'Display error message (todo).
+
+            End Try
         End If
     End Sub
 
     Private Sub btnLogin_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnLogin.Click
-        'Set cookie values for login and password.
-        Dim Login As New HttpCookie("Login")
-        Dim Password As New HttpCookie("Password")
-
-        Login.Value = txtLogin.Text
-        Password.Value = txtPassword.Text
-
-        Login.Expires = Now.AddDays(1)
-        Password.Expires = Now.AddDays(1)
-
-        Response.Cookies.Add(Login)
-        Response.Cookies.Add(Password)
+        'Nothing
     End Sub
 
     Private Sub btnGet_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnGet.Click
-        Dim CharacterImport As New RolePlayingSystem.Import.Character(Server.MapPath("Rolen.xml"), Request.Cookies("Login").Value, Request.Cookies("Password").Value)
+        Dim CharacterImport As New RolePlayingSystem.Import.Character(Server.MapPath("Rolen.xml"), _Account.Login, _Account.Password)
         _Character = CharacterImport.Character
 
         'Save current file name.
@@ -55,7 +71,31 @@ Public Class _Client
         XmlWrite.Close()
     End Sub
 
+#End Region
+
 #Region "Methods"
+
+    ''' <summary>
+    ''' Attempts to verify login cookie is present.
+    ''' </summary>
+    Private Sub doCheckLoginStatus()
+        Dim LoginCookie As HttpCookie = Nothing
+
+        Try
+            'Find the cookie.
+            LoginCookie = Request.Cookies("AccountId")
+            _AccountId = LoginCookie.Value
+
+        Catch ex As Exception
+            'On error, null cookie.
+            LoginCookie = Nothing
+
+        End Try
+
+        'If cookie is missing, goto login page.
+        If LoginCookie Is Nothing Then _
+            Response.Redirect("default.aspx")
+    End Sub
 
     ''' <summary>
     ''' Returns appropriate color type for specified power type.
@@ -110,10 +150,21 @@ Public Class _Client
         lblChaScore.Text = Character.AbilityScores.Charisma.Score
         lblChaMod.Text = Character.AbilityScores.Charisma.Modifier
 
+        'Load the other info box.
+        lblHP.Text = Character.CurrentHitPoints
+        lblSurges.Text = Character.CurrentSurges
+        lblACScore.Text = Character.Defenses.AC.Score
+        lblRefScore.Text = Character.Defenses.Reflex.Score
+        lblFortScore.Text = Character.Defenses.Fortitude.Score
+        lblWillScore.Text = Character.Defenses.Will.Score
+
         'Load data source for powers.
         PowerRepeater.DataSource = Character.Powers.LogicalSort
         PowerRepeater.DataBind()
+
+        PowerSummary.InnerHtml = Character.Powers(2).Description
     End Sub
 
 #End Region
+
 End Class

@@ -53,6 +53,17 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=localhost;Initial Catalog=RolePlayingSystem;Persist Security Info=Tru"& _ 
+            "e;User ID=sa;Password=P@ssw0rd")>  _
+        Public ReadOnly Property RolePlayingSystemConnectionString() As String
+            Get
+                Return CType(Me("RolePlayingSystemConnectionString"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

@@ -57,6 +57,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -92,6 +93,12 @@
     </Compile>
     <Compile Include="Data\Compendium.vb" />
     <Compile Include="Common\Utility.vb" />
+    <Compile Include="Data\SQL\RolePlayingSystem.designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RolePlayingSystem.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Data\SQL\RolePlayingSystem.vb" />
     <Compile Include="Import\Import.vb" />
     <Compile Include="Import\Rule.vb" />
     <Compile Include="Import\Stat.vb" />
@@ -114,6 +121,10 @@
     <Compile Include="Common\Types.vb" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Data\SQL\RolePlayingSystem.dbml.layout">
+      <DependentUpon>RolePlayingSystem.dbml</DependentUpon>
+    </None>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -122,6 +133,11 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Data\SQL\RolePlayingSystem.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>RolePlayingSystem.designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -131,6 +147,9 @@
       <CustomToolNamespace>My</CustomToolNamespace>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

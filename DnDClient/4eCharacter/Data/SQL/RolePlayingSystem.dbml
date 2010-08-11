@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="RolePlayingSystem" EntityNamespace="Data.SQL.Entities" ContextNamespace="Data.SQL.Context" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=RolePlayingSystem;Persist Security Info=True;User ID=sa" SettingsObjectName="RolePlayingSystem.My.MySettings" SettingsPropertyName="RolePlayingSystemConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tblAccount" Member="tblAccounts">
+    <Type Name="tblAccount">
+      <Column Name="GUID" Type="System.String" DbType="Char(40) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Login" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Entered" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Revised" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="tblAccount_tblCharacter" Member="tblCharacters" ThisKey="GUID" OtherKey="AccountId" Type="tblCharacter" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tblCharacter" Member="tblCharacters">
+    <Type Name="tblCharacter">
+      <Column Name="GUID" Type="System.String" DbType="Char(40) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="AccountId" Type="System.String" DbType="Char(40) NOT NULL" CanBeNull="false" />
+      <Column Name="CharacterName" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="CharacterData" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Entered" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Revised" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Association Name="tblAccount_tblCharacter" Member="tblAccount" ThisKey="AccountId" OtherKey="GUID" Type="tblAccount" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

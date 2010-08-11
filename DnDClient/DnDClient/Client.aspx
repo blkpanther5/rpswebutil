@@ -23,6 +23,18 @@
     <script type="text/javascript">
     //<![CDATA[
 
+        //One time run.
+        $(function () {
+            //Assign events for numpad.
+            $("#HPDialog > .styledbutton").each(function () {
+                $(this).click(null);
+                $(this).click(function () {
+                    doNumpad($(this).val(), $('#txtHPMod'));
+                });
+            });
+        });
+
+        //Initialization stuff.
         function pageLoad(sender, args) {
             $(function () {
                 $("#InfoTabs").tabs();
@@ -34,9 +46,13 @@
 
         function loadHPDialog(iVal) {
             $(function () {
+                //Reset HP text box.
+                $("#txtHPMod").val("");
+
                 //Set dialog title based on passed value.
                 if (iVal < 0) {
                     var sTitle = "Subtract Hit Points";
+                    $("#txtHPMod").val("-");
                 } else {
                     var sTitle = "Add Hit Points";
                 }
@@ -50,18 +66,51 @@
             });
         }
 
+        //Increments the surge counter.
+        function saveSurges(iVal) {
+            $(function () {
+                if (parseInt($("#<%=lblSurges.ClientId%>").text()) + iVal == "NaN") {
+                    return false;
+                }
+
+                $("#<%=lblSurges.ClientId%>").text(parseInt($("#<%=lblSurges.ClientId%>").text()) + iVal);
+            });
+        }
+
+        //Takes tallied HP modifier and applies it to main character sheet.
+        function saveHitPoints() {
+            $(function () {
+                //Save current HP.
+                var iCurrentHP = parseInt($("#<%=lblHP.ClientId%>").text());
+
+                //Attempt to update.
+                $("#<%=lblHP.ClientId%>").text(iCurrentHP + parseInt($("#txtHPMod").val()));
+
+                //If the HP box is NaN then reset to last value.
+                if ($("#<%=lblHP.ClientId%>").text() == "NaN") {
+                    $("#<%=lblHP.ClientId%>").text(iCurrentHP);
+                }
+
+                //Close the dialog.
+                $("#HPDialog").dialog('close');
+            });
+        }
+
+        //Manages the numpad like function for HP add/subtract.
+        function doNumpad(sVal, oTarget) {
+            $(function () {
+                $(oTarget).val($(oTarget).val() + sVal.toString());
+            });
+        }
+
+
     //]]>
     </script>
 </head>
 <body>
-    <form id="form1" runat="server" enableviewstate="false">
+    <form id="form1" runat="server" enableviewstate="true">
     <asp:ScriptManager ID="smDefault" runat="server" />
     <div id="container">
-        Login: <asp:TextBox ID="txtLogin" runat="server" /> &nbsp;
-        Password: <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" /> &nbsp;
-        <asp:Button ID="btnLogin" runat="server" Text="Login to Compendium" /> &nbsp;
-        <asp:Button runat="server" ID="btnGet" Text="Load Character" />
-
         <asp:UpdatePanel ID="upDefault" runat="server">
             <ContentTemplate>
                 <!-- Basic Information Summary -->
@@ -218,26 +267,59 @@
 
                     <tr>
                     <td id="HealthContainer">
-                        <div style="width:85%; background-color:#777; position:relative; text-align:center; color:#fff; font-size:larger; margin:auto auto; padding:4px;">
+                        <div id="HPLine">
                             <span style="position:relative; text-align:center;">Hit Points</span><br />
 
-                            <table border="0">
+                            <table border="0" >
                             <tr>
                             <td>
                                 <a href="javascript:void(0);"
                                     onclick="loadHPDialog(-1);"
                                     class="styledbutton" 
-                                    style="font-size:small;"> - HP</a>
+                                    style="font-size:small;"> - </a>
                             </td>
                             <td>
-                            <div style="background-color:#fff; color:#777; width:100%; margin:auto auto; position:relative; font-size:larger;">
-                                100
+                            <div id="HPIndicator">
+                                <asp:Label ID="lblHP" runat="server"
+                                    Text="000" />
                             </div>
                             </td>
                             <td>
-                                <asp:LinkButton id="lbPlusHP" runat="server"
-                                    CssClass="styledbutton" 
-                                    style="font-size:small;"> + HP </asp:LinkButton>
+                                <a href="javascript:void(0);"
+                                    onclick="loadHPDialog(1);"
+                                    class="styledbutton" 
+                                    style="font-size:small;"> + </a>
+                            </td>
+                            </tr>
+                            </table>
+                        </div>
+                    </td>
+                    </tr>
+
+                    <tr>
+                    <td id="SurgeContainer">
+                        <div id="SurgeLine">
+                            <span style="position:relative; text-align:center;">Healing Surges</span><br />
+
+                            <table border="0" >
+                            <tr>
+                            <td>
+                                <a href="javascript:void(0);"
+                                    onclick="saveSurges(-1);"
+                                    class="styledbutton" 
+                                    style="font-size:small;"> - </a>
+                            </td>
+                            <td>
+                            <div id="SurgeIndicator">
+                                <asp:Label ID="lblSurges" runat="server"
+                                    Text="0" />
+                            </div>
+                            </td>
+                            <td>
+                                <a href="javascript:void(0);"
+                                    onclick="saveSurges(1);"
+                                    class="styledbutton" 
+                                    style="font-size:small;"> + </a>
                             </td>
                             </tr>
                             </table>
@@ -305,9 +387,11 @@
                         <div id="PowerList">
                             <asp:Repeater ID="PowerRepeater" runat="server">
                                 <ItemTemplate>
-                                    <input type="button" class="PowerButton" style="color:<%# getColorByPowerType(DataBinder.Eval(Container.DataItem, "Type")) %>;" value="<%# DataBinder.Eval(Container.DataItem, "Name").Trim%>" />
+                                    <input type="button" class="PowerButton" style="color:<%# getColorByPowerType(DataBinder.Eval(Container.DataItem, "Type")) %>;" value="[<%# DataBinder.Eval(Container.DataItem, "Level")%>] <%# DataBinder.Eval(Container.DataItem, "Name").Trim%>" />
                                 </ItemTemplate>
                             </asp:Repeater>
+                        </div>
+                        <div id="PowerSummary" runat="server">
                         </div>
 	                </div>
 	                <div id="tabs-2">
@@ -324,13 +408,16 @@
 		                <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
 	                </div>
                 </div>
+
+                <asp:Button ID="btnLogin" runat="server" Text="Refresh" /> &nbsp;
+                <asp:Button runat="server" ID="btnGet" Text="Import" />
             </ContentTemplate>
         </asp:UpdatePanel>
     </div>
 
     <!-- Dialog content -->
     <div id="HPDialog" style="display:none; text-align:center;">
-        <input type="text" style="width:75px; font-size:20px; text-align:center;" value="0" /><br />
+        <div style="padding-bottom:12px;"><a href="javascript:void(0)" onclick="saveHitPoints();">Ok</a> &nbsp; <input type="text" id="txtHPMod" style="width:75px; font-size:20px; text-align:center;" value="" /> &nbsp; <a href="javascript:void(0);" onclick="$('#txtHPMod').val('');">CE</a></div>
         <input type="button" value="1" onclick="" class="styledbutton" /><input type="button" value="2" onclick="" class="styledbutton" /><input type="button" value="3" onclick="" class="styledbutton" /><br />
         <input type="button" value="4" onclick="" class="styledbutton" /><input type="button" value="5" onclick="" class="styledbutton" /><input type="button" value="6" onclick="" class="styledbutton" /><br />
         <input type="button" value="7" onclick="" class="styledbutton" /><input type="button" value="8" onclick="" class="styledbutton" /><input type="button" value="9" onclick="" class="styledbutton" /><br />

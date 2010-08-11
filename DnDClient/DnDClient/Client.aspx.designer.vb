@@ -32,42 +32,6 @@ Partial Public Class _Client
     Protected WithEvents smDefault As Global.System.Web.UI.ScriptManager
 
     '''<summary>
-    '''txtLogin control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtLogin As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''txtPassword control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtPassword As Global.System.Web.UI.WebControls.TextBox
-
-    '''<summary>
-    '''btnLogin control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnLogin As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
-    '''btnGet control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnGet As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
     '''upDefault control.
     '''</summary>
     '''<remarks>
@@ -239,13 +203,22 @@ Partial Public Class _Client
     Protected WithEvents lblChaMod As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''lbPlusHP control.
+    '''lblHP control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents lbPlusHP As Global.System.Web.UI.WebControls.LinkButton
+    Protected WithEvents lblHP As Global.System.Web.UI.WebControls.Label
+
+    '''<summary>
+    '''lblSurges control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lblSurges As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
     '''lblACScore control.
@@ -291,4 +264,31 @@ Partial Public Class _Client
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents PowerRepeater As Global.System.Web.UI.WebControls.Repeater
+
+    '''<summary>
+    '''PowerSummary control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents PowerSummary As Global.System.Web.UI.HtmlControls.HtmlGenericControl
+
+    '''<summary>
+    '''btnLogin control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnLogin As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''btnGet control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnGet As Global.System.Web.UI.WebControls.Button
 End Class

@@ -1,50 +1,50 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Base xmlns:i="http://www.w3.org/2001/XMLSchema-instance" z:Id="1" z:Type="RolePlayingSystem.Character.Base" z:Assembly="RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/" xmlns="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character"><_AbilityScores xmlns:d2p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Id="2"><d2p1:_Charisma z:Id="3"><d2p1:_Level>12</d2p1:_Level><d2p1:_Score>22</d2p1:_Score></d2p1:_Charisma><d2p1:_Constitution z:Id="4"><d2p1:_Level>12</d2p1:_Level><d2p1:_Score>12</d2p1:_Score></d2p1:_Constitution><d2p1:_Dexterity z:Id="5"><d2p1:_Level>12</d2p1:_Level><d2p1:_Score>21</d2p1:_Score></d2p1:_Dexterity><d2p1:_Intelligence z:Id="6"><d2p1:_Level>12</d2p1:_Level><d2p1:_Score>11</d2p1:_Score></d2p1:_Intelligence><d2p1:_Strength z:Id="7"><d2p1:_Level>12</d2p1:_Level><d2p1:_Score>9</d2p1:_Score></d2p1:_Strength><d2p1:_Wisdom z:Id="8"><d2p1:_Level>12</d2p1:_Level><d2p1:_Score>11</d2p1:_Score></d2p1:_Wisdom></_AbilityScores><_AdventureName z:Id="9"></_AdventureName><_Alignment>Lawful_Good</_Alignment><_CharacterClass z:Id="10">Sorcerer</_CharacterClass><_CharacterRace z:Id="11">Kenku</_CharacterRace><_ClassFeatures xmlns:d2p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="12"><d2p1:_items z:Id="13" z:Size="0" /><d2p1:_size>0</d2p1:_size><d2p1:_version>0</d2p1:_version></_ClassFeatures><_Defenses xmlns:d2p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Defense" z:Id="14"><d2p1:_AC z:Id="15"><d2p1:_Ability xmlns:d4p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="5" i:nil="true" /><d2p1:_Armor>0</d2p1:_Armor><d2p1:_BaseScore>10</d2p1:_BaseScore><d2p1:_Class>0</d2p1:_Class><d2p1:_Enhancement>3</d2p1:_Enhancement><d2p1:_Feat>2</d2p1:_Feat><d2p1:_Level>12</d2p1:_Level><d2p1:_Misc xmlns:d4p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="16"><d4p1:_items z:Id="17" z:Size="0" /><d4p1:_size>0</d4p1:_size><d4p1:_version>0</d4p1:_version></d2p1:_Misc></d2p1:_AC><d2p1:_Fortitude z:Id="18"><d2p1:_Ability xmlns:d4p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="4" i:nil="true" /><d2p1:_Armor>0</d2p1:_Armor><d2p1:_BaseScore>10</d2p1:_BaseScore><d2p1:_Class>0</d2p1:_Class><d2p1:_Enhancement>2</d2p1:_Enhancement><d2p1:_Feat>0</d2p1:_Feat><d2p1:_Level>12</d2p1:_Level><d2p1:_Misc xmlns:d4p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="19"><d4p1:_items z:Ref="17" i:nil="true" /><d4p1:_size>0</d4p1:_size><d4p1:_version>0</d4p1:_version></d2p1:_Misc></d2p1:_Fortitude><d2p1:_Reflex z:Id="20"><d2p1:_Ability xmlns:d4p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="5" i:nil="true" /><d2p1:_Armor>0</d2p1:_Armor><d2p1:_BaseScore>10</d2p1:_BaseScore><d2p1:_Class>0</d2p1:_Class><d2p1:_Enhancement>2</d2p1:_Enhancement><d2p1:_Feat>0</d2p1:_Feat><d2p1:_Level>12</d2p1:_Level><d2p1:_Misc xmlns:d4p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="21"><d4p1:_items z:Ref="17" i:nil="true" /><d4p1:_size>0</d4p1:_size><d4p1:_version>0</d4p1:_version></d2p1:_Misc></d2p1:_Reflex><d2p1:_Will z:Id="22"><d2p1:_Ability xmlns:d4p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="3" i:nil="true" /><d2p1:_Armor>0</d2p1:_Armor><d2p1:_BaseScore>10</d2p1:_BaseScore><d2p1:_Class>2</d2p1:_Class><d2p1:_Enhancement>2</d2p1:_Enhancement><d2p1:_Feat>0</d2p1:_Feat><d2p1:_Level>12</d2p1:_Level><d2p1:_Misc xmlns:d4p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="23"><d4p1:_items z:Ref="17" i:nil="true" /><d4p1:_size>0</d4p1:_size><d4p1:_version>0</d4p1:_version></d2p1:_Misc></d2p1:_Will></_Defenses><_Deity i:nil="true" /><_EpicDestiny i:nil="true" /><_Feats xmlns:d2p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="24" z:Type="System.Collections.Generic.SortedSet`1[[RolePlayingSystem.Common.Types.GenericNVP, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><Count z:Id="25" z:Type="System.Int32" z:Assembly="0" xmlns="">0</Count><Comparer z:Id="26" z:Type="System.Collections.Generic.ObjectComparer`1[[RolePlayingSystem.Common.Types.GenericNVP, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0" xmlns="" /><Version z:Id="27" z:Type="System.Int32" z:Assembly="0" xmlns="">0</Version></_Feats><_Gender>Male</_Gender><_Height z:Id="28">5'0"</_Height><_Initiative z:Id="29"><_Ability xmlns:d3p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="5" i:nil="true" /><_Misc xmlns:d3p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="30"><d3p1:_items z:Id="31" z:Size="4"><d3p1:GenericBonus z:Id="32"><d3p1:Bonus>4</d3p1:Bonus><d3p1:Name z:Id="33">Improved Initiative</d3p1:Name></d3p1:GenericBonus><d3p1:GenericBonus i:nil="true" /><d3p1:GenericBonus i:nil="true" /><d3p1:GenericBonus i:nil="true" /></d3p1:_items><d3p1:_size>1</d3p1:_size><d3p1:_version>1</d3p1:_version></_Misc></_Initiative><_Level>12</_Level><_Movement xmlns:d2p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Movement" z:Id="34"><d2p1:_Armor>0</d2p1:_Armor><d2p1:_Base>6</d2p1:_Base><d2p1:_Item>0</d2p1:_Item><d2p1:_Misc xmlns:d3p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="35"><d3p1:_items z:Id="36" z:Size="4"><d3p1:GenericBonus z:Id="37"><d3p1:Bonus>0</d3p1:Bonus><d3p1:Name i:nil="true" /></d3p1:GenericBonus><d3p1:GenericBonus i:nil="true" /><d3p1:GenericBonus i:nil="true" /><d3p1:GenericBonus i:nil="true" /></d3p1:_items><d3p1:_size>1</d3p1:_size><d3p1:_version>1</d3p1:_version></d2p1:_Misc></_Movement><_Name z:Id="38">Rolen</_Name><_ParagonPath z:Id="39">Lightning Fury</_ParagonPath><_PlayerName z:Ref="9" i:nil="true" /><_Powers xmlns:d2p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Powers" z:Id="40"><d2p1:_items z:Id="41" z:Size="16"><d2p1:Power z:Id="42"><d2p1:_Action z:Id="43">Standard action</d2p1:_Action><d2p1:_Description i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Name z:Id="44">Melee Basic Attack</d2p1:_Name><d2p1:_Notes i:nil="true" /><d2p1:_Type z:Id="45">At-Will</d2p1:_Type><d2p1:_Usage z:Id="46" z:Type="System.Collections.Generic.List`1[[RolePlayingSystem.Character.Powers.Usage, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0"><d2p1:_items z:Id="47" z:Size="4"><d2p1:Usage z:Id="48"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="49"> 12 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="50">
+﻿<?xml version="1.0" encoding="utf-8"?><Base xmlns:i="http://www.w3.org/2001/XMLSchema-instance" z:Id="1" z:Type="RolePlayingSystem.Character.Base" z:Assembly="RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/" xmlns="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character"><_AbilityScores xmlns:d2p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Id="2"><d2p1:_Charisma z:Id="3"><d2p1:_Level>12</d2p1:_Level><d2p1:_Score>22</d2p1:_Score></d2p1:_Charisma><d2p1:_Constitution z:Id="4"><d2p1:_Level>12</d2p1:_Level><d2p1:_Score>12</d2p1:_Score></d2p1:_Constitution><d2p1:_Dexterity z:Id="5"><d2p1:_Level>12</d2p1:_Level><d2p1:_Score>21</d2p1:_Score></d2p1:_Dexterity><d2p1:_Intelligence z:Id="6"><d2p1:_Level>12</d2p1:_Level><d2p1:_Score>11</d2p1:_Score></d2p1:_Intelligence><d2p1:_Strength z:Id="7"><d2p1:_Level>12</d2p1:_Level><d2p1:_Score>9</d2p1:_Score></d2p1:_Strength><d2p1:_Wisdom z:Id="8"><d2p1:_Level>12</d2p1:_Level><d2p1:_Score>11</d2p1:_Score></d2p1:_Wisdom></_AbilityScores><_AdventureName z:Id="9"></_AdventureName><_Alignment>Lawful_Good</_Alignment><_CharacterClass z:Id="10">Sorcerer</_CharacterClass><_CharacterRace z:Id="11">Kenku</_CharacterRace><_ClassFeatures xmlns:d2p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="12"><d2p1:_items z:Id="13" z:Size="0" /><d2p1:_size>0</d2p1:_size><d2p1:_version>0</d2p1:_version></_ClassFeatures><_CurrentHitPoints>79</_CurrentHitPoints><_CurrentSurges>7</_CurrentSurges><_Defenses xmlns:d2p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Defense" z:Id="14"><d2p1:_AC z:Id="15"><d2p1:_Ability xmlns:d4p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="5" i:nil="true" /><d2p1:_Armor>0</d2p1:_Armor><d2p1:_BaseScore>10</d2p1:_BaseScore><d2p1:_Class>0</d2p1:_Class><d2p1:_Enhancement>3</d2p1:_Enhancement><d2p1:_Feat>2</d2p1:_Feat><d2p1:_Level>12</d2p1:_Level><d2p1:_Misc xmlns:d4p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="16"><d4p1:_items z:Id="17" z:Size="0" /><d4p1:_size>0</d4p1:_size><d4p1:_version>0</d4p1:_version></d2p1:_Misc></d2p1:_AC><d2p1:_Fortitude z:Id="18"><d2p1:_Ability xmlns:d4p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="4" i:nil="true" /><d2p1:_Armor>0</d2p1:_Armor><d2p1:_BaseScore>10</d2p1:_BaseScore><d2p1:_Class>0</d2p1:_Class><d2p1:_Enhancement>2</d2p1:_Enhancement><d2p1:_Feat>0</d2p1:_Feat><d2p1:_Level>12</d2p1:_Level><d2p1:_Misc xmlns:d4p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="19"><d4p1:_items z:Ref="17" i:nil="true" /><d4p1:_size>0</d4p1:_size><d4p1:_version>0</d4p1:_version></d2p1:_Misc></d2p1:_Fortitude><d2p1:_Reflex z:Id="20"><d2p1:_Ability xmlns:d4p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="5" i:nil="true" /><d2p1:_Armor>0</d2p1:_Armor><d2p1:_BaseScore>10</d2p1:_BaseScore><d2p1:_Class>0</d2p1:_Class><d2p1:_Enhancement>2</d2p1:_Enhancement><d2p1:_Feat>0</d2p1:_Feat><d2p1:_Level>12</d2p1:_Level><d2p1:_Misc xmlns:d4p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="21"><d4p1:_items z:Ref="17" i:nil="true" /><d4p1:_size>0</d4p1:_size><d4p1:_version>0</d4p1:_version></d2p1:_Misc></d2p1:_Reflex><d2p1:_Will z:Id="22"><d2p1:_Ability xmlns:d4p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="3" i:nil="true" /><d2p1:_Armor>0</d2p1:_Armor><d2p1:_BaseScore>10</d2p1:_BaseScore><d2p1:_Class>2</d2p1:_Class><d2p1:_Enhancement>2</d2p1:_Enhancement><d2p1:_Feat>0</d2p1:_Feat><d2p1:_Level>12</d2p1:_Level><d2p1:_Misc xmlns:d4p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="23"><d4p1:_items z:Ref="17" i:nil="true" /><d4p1:_size>0</d4p1:_size><d4p1:_version>0</d4p1:_version></d2p1:_Misc></d2p1:_Will></_Defenses><_Deity i:nil="true" /><_EpicDestiny i:nil="true" /><_Gender>Male</_Gender><_Height z:Id="24">5'0"</_Height><_HitPoints>79</_HitPoints><_Initiative z:Id="25"><_Ability xmlns:d3p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="5" i:nil="true" /><_Misc xmlns:d3p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="26"><d3p1:_items z:Id="27" z:Size="4"><d3p1:GenericBonus z:Id="28"><d3p1:Bonus>4</d3p1:Bonus><d3p1:Name z:Id="29">Improved Initiative</d3p1:Name></d3p1:GenericBonus><d3p1:GenericBonus i:nil="true" /><d3p1:GenericBonus i:nil="true" /><d3p1:GenericBonus i:nil="true" /></d3p1:_items><d3p1:_size>1</d3p1:_size><d3p1:_version>1</d3p1:_version></_Misc></_Initiative><_Level>12</_Level><_Movement xmlns:d2p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Movement" z:Id="30"><d2p1:_Armor>0</d2p1:_Armor><d2p1:_Base>6</d2p1:_Base><d2p1:_Item>0</d2p1:_Item><d2p1:_Misc xmlns:d3p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="31"><d3p1:_items z:Id="32" z:Size="4"><d3p1:GenericBonus z:Id="33"><d3p1:Bonus>0</d3p1:Bonus><d3p1:Name i:nil="true" /></d3p1:GenericBonus><d3p1:GenericBonus i:nil="true" /><d3p1:GenericBonus i:nil="true" /><d3p1:GenericBonus i:nil="true" /></d3p1:_items><d3p1:_size>1</d3p1:_size><d3p1:_version>1</d3p1:_version></d2p1:_Misc></_Movement><_Name z:Id="34">Rolen</_Name><_ParagonPath z:Id="35">Lightning Fury</_ParagonPath><_PlayerName z:Ref="9" i:nil="true" /><_Powers xmlns:d2p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Powers" z:Id="36"><d2p1:_items z:Id="37" z:Size="16"><d2p1:Power z:Id="38"><d2p1:_Action z:Id="39">Standard action</d2p1:_Action><d2p1:_Description i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Name z:Id="40">Melee Basic Attack</d2p1:_Name><d2p1:_Notes i:nil="true" /><d2p1:_Type z:Id="41">At-Will</d2p1:_Type><d2p1:_Usage z:Id="42" z:Type="System.Collections.Generic.List`1[[RolePlayingSystem.Character.Powers.Usage, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0"><d2p1:_items z:Id="43" z:Size="4"><d2p1:Usage z:Id="44"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="45"> 12 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="46">
             -1 Strength modifier.
             +6 half your level.
             +3 proficiency bonus.
             +3 enhancement bonus.
             +1 Feat bonus - Versatile Expertise (Light Blade)
 
-          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="51"> 1d4+2d6+2d6+3 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="52">
+          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="47"> 1d4+2d6+2d6+3 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="48">
             -1 Strength modifier.
             +3 enhancement bonus.
             +1 bonus - Two-Weapon Fighting
             +2d6+2d6 bonus to all damage.
 
-          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="53"> AC </d2p1:_Vs><d2p1:_Weapon z:Id="54">Challenge-Seeking Dagger +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="55"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="56"> 5 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="57">
+          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="49"> AC </d2p1:_Vs><d2p1:_Weapon z:Id="50">Challenge-Seeking Dagger +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="51"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="52"> 5 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="53">
             -1 Strength modifier.
             +6 half your level.
 
-          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="58"> 1d4-1 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="59">
+          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="54"> 1d4-1 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="55">
             -1 Strength modifier.
 
-          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="60"> AC </d2p1:_Vs><d2p1:_Weapon z:Id="61">Unarmed</d2p1:_Weapon></d2p1:Usage><d2p1:Usage i:nil="true" /><d2p1:Usage i:nil="true" /></d2p1:_items><d2p1:_size>2</d2p1:_size><d2p1:_version>2</d2p1:_version></d2p1:_Usage><d2p1:_Used>false</d2p1:_Used></d2p1:Power><d2p1:Power z:Id="62"><d2p1:_Action z:Id="63">Standard action</d2p1:_Action><d2p1:_Description i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Name z:Id="64">Ranged Basic Attack</d2p1:_Name><d2p1:_Notes i:nil="true" /><d2p1:_Type z:Id="65">At-Will</d2p1:_Type><d2p1:_Usage z:Id="66" z:Type="System.Collections.Generic.List`1[[RolePlayingSystem.Character.Powers.Usage, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0"><d2p1:_items z:Id="67" z:Size="4"><d2p1:Usage z:Id="68"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="69"> 18 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="70">
+          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="56"> AC </d2p1:_Vs><d2p1:_Weapon z:Id="57">Unarmed</d2p1:_Weapon></d2p1:Usage><d2p1:Usage i:nil="true" /><d2p1:Usage i:nil="true" /></d2p1:_items><d2p1:_size>2</d2p1:_size><d2p1:_version>2</d2p1:_version></d2p1:_Usage><d2p1:_Used>false</d2p1:_Used></d2p1:Power><d2p1:Power z:Id="58"><d2p1:_Action z:Id="59">Standard action</d2p1:_Action><d2p1:_Description i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Name z:Id="60">Ranged Basic Attack</d2p1:_Name><d2p1:_Notes i:nil="true" /><d2p1:_Type z:Id="61">At-Will</d2p1:_Type><d2p1:_Usage z:Id="62" z:Type="System.Collections.Generic.List`1[[RolePlayingSystem.Character.Powers.Usage, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0"><d2p1:_items z:Id="63" z:Size="4"><d2p1:Usage z:Id="64"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="65"> 18 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="66">
             +5 Dexterity modifier.
             +6 half your level.
             +3 proficiency bonus.
             +3 enhancement bonus.
             +1 Feat bonus - Versatile Expertise (Light Blade)
 
-          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="71"> 1d4+2d6+2d6+9 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="72">
+          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="67"> 1d4+2d6+2d6+9 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="68">
             +5 Dexterity modifier.
             +3 enhancement bonus.
             +1 bonus - Two-Weapon Fighting
             +2d6+2d6 bonus to all damage.
 
-          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="73"> AC </d2p1:_Vs><d2p1:_Weapon z:Id="74">Challenge-Seeking Dagger +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="75"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="76"> 11 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="77">
+          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="69"> AC </d2p1:_Vs><d2p1:_Weapon z:Id="70">Challenge-Seeking Dagger +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="71"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="72"> 11 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="73">
             +5 Dexterity modifier.
             +6 half your level.
 
-          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="78"> 1d4+5 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="79">
+          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="74"> 1d4+5 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="75">
             +5 Dexterity modifier.
 
-          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="80"> AC </d2p1:_Vs><d2p1:_Weapon z:Id="81">Unarmed</d2p1:_Weapon></d2p1:Usage><d2p1:Usage i:nil="true" /><d2p1:Usage i:nil="true" /></d2p1:_items><d2p1:_size>2</d2p1:_size><d2p1:_version>2</d2p1:_version></d2p1:_Usage><d2p1:_Used>false</d2p1:_Used></d2p1:Power><d2p1:Power z:Id="82"><d2p1:_Action z:Id="83">Standard action</d2p1:_Action><d2p1:_Description i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Name z:Id="84">Burning Spray</d2p1:_Name><d2p1:_Notes i:nil="true" /><d2p1:_Type z:Id="85">At-Will</d2p1:_Type><d2p1:_Usage z:Id="86" z:Type="System.Collections.Generic.List`1[[RolePlayingSystem.Character.Powers.Usage, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0"><d2p1:_items z:Id="87" z:Size="4"><d2p1:Usage z:Id="88"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="89"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="90">
+          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="76"> AC </d2p1:_Vs><d2p1:_Weapon z:Id="77">Unarmed</d2p1:_Weapon></d2p1:Usage><d2p1:Usage i:nil="true" /><d2p1:Usage i:nil="true" /></d2p1:_items><d2p1:_size>2</d2p1:_size><d2p1:_version>2</d2p1:_version></d2p1:_Usage><d2p1:_Used>false</d2p1:_Used></d2p1:Power><d2p1:Power z:Id="78"><d2p1:_Action z:Id="79">Standard action</d2p1:_Action><d2p1:_Description z:Id="80">&lt;div id="detail"&gt; 		 		&lt;h1 class="atwillpower"&gt;&lt;span class="level"&gt;Sorcerer Attack 1&lt;/span&gt;Burning Spray&lt;/h1&gt;&lt;p class="flavor"&gt;&lt;i&gt;You fling your arm in a wide arc, casting liquid fire at your foes.&lt;/i&gt;&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;At-Will&lt;/b&gt;&amp;nbsp;&amp;nbsp; &lt;img src="images/bullet.gif" alt=""/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;b&gt;Arcane&lt;/b&gt;, &lt;b&gt;Fire&lt;/b&gt;, &lt;b&gt;Implement&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Standard Action&lt;/b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Close&lt;/b&gt; blast 3&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Target&lt;/b&gt;: Each creature in blast&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Attack&lt;/b&gt;: Charisma vs. Reflex&lt;/p&gt;&lt;p class="flavor"&gt;&lt;b&gt;Hit&lt;/b&gt;: 1d8 + Charisma modifier fire damage.&lt;br/&gt;Level 21: 2d8 + Charisma modifier fire damage.&lt;/p&gt;&lt;p class="powerstat"&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;Dragon Magic&lt;/b&gt;: The next enemy that hits you with a melee attack before the end of your next turn takes fire damage equal to your Strength modifier.&lt;/p&gt;&lt;p&gt;Published in &lt;a target="_new" href="http://www.wizards.com/default.asp?x=products/dndacc/9780786950164"&gt;Player's Handbook 2&lt;/a&gt;, page(s) 138.&lt;/p&gt;     &lt;/div&gt;</d2p1:_Description><d2p1:_Level>1</d2p1:_Level><d2p1:_Name z:Id="81">Burning Spray</d2p1:_Name><d2p1:_Notes i:nil="true" /><d2p1:_Type z:Id="82">At-Will</d2p1:_Type><d2p1:_Usage z:Id="83" z:Type="System.Collections.Generic.List`1[[RolePlayingSystem.Character.Powers.Usage, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0"><d2p1:_items z:Id="84" z:Size="4"><d2p1:Usage z:Id="85"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="86"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="87">
             +6 Charisma modifier.
             +6 half your level.
             +3 enhancement bonus.
             +1 Feat bonus - Versatile Expertise (Staff)
 
-          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="91"> 1d8+2d6+2d6+22 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="92">
+          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="88"> 1d8+2d6+2d6+22 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="89">
             +6 Charisma modifier.
             +3 enhancement bonus.
             +3 off-hand enhancement bonus.
@@ -53,13 +53,13 @@
             +2 Feat bonus - Weapon Focus (Staff)
             +2d6+2d6 bonus to all damage.
 
-          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="93"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="94">Challenge-Seeking Quickbeam staff +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="95"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="96"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="97">
+          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="90"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="91">Challenge-Seeking Quickbeam staff +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="92"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="93"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="94">
             +6 Charisma modifier.
             +6 half your level.
             +3 enhancement bonus.
             +1 Feat bonus - Versatile Expertise (Light Blade)
 
-          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="98"> 1d8+2d6+2d6+20 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="99">
+          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="95"> 1d8+2d6+2d6+20 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="96">
             +6 Charisma modifier.
             +3 enhancement bonus.
             +3 off-hand enhancement bonus.
@@ -67,21 +67,40 @@
             +1 bonus - Two-Weapon Fighting
             +2d6+2d6 bonus to all damage.
 
-          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="100"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="101">Challenge-Seeking Dagger +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="102"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="103"> 12 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="104">
+          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="97"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="98">Challenge-Seeking Dagger +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="99"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="100"> 12 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="101">
             +6 Charisma modifier.
             +6 half your level.
 
-          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="105"> 1d8+13 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="106">
+          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="102"> 1d8+13 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="103">
             +6 Charisma modifier.
             +7 bonus - Storm Power
 
-          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="107"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="108">Unarmed</d2p1:_Weapon></d2p1:Usage><d2p1:Usage i:nil="true" /></d2p1:_items><d2p1:_size>3</d2p1:_size><d2p1:_version>3</d2p1:_version></d2p1:_Usage><d2p1:_Used>false</d2p1:_Used></d2p1:Power><d2p1:Power z:Id="109"><d2p1:_Action z:Id="110">Standard action</d2p1:_Action><d2p1:_Description i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Name z:Id="111">Lightning Strike</d2p1:_Name><d2p1:_Notes i:nil="true" /><d2p1:_Type z:Id="112">At-Will</d2p1:_Type><d2p1:_Usage z:Id="113" z:Type="System.Collections.Generic.List`1[[RolePlayingSystem.Character.Powers.Usage, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0"><d2p1:_items z:Id="114" z:Size="4"><d2p1:Usage z:Id="115"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="116"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="117">
+          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="104"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="105">Unarmed</d2p1:_Weapon></d2p1:Usage><d2p1:Usage i:nil="true" /></d2p1:_items><d2p1:_size>3</d2p1:_size><d2p1:_version>3</d2p1:_version></d2p1:_Usage><d2p1:_Used>false</d2p1:_Used></d2p1:Power><d2p1:Power z:Id="106"><d2p1:_Action z:Id="107">Standard action</d2p1:_Action><d2p1:_Description z:Id="108">
+
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+
+&lt;html xmlns="http://www.w3.org/1999/xhtml" &gt;
+&lt;head id="Head1"&gt;&lt;title&gt;
+	Lightning Strike
+&lt;/title&gt;&lt;link href="styles/detail.css" media="screen" rel="stylesheet" type="text/css" /&gt;&lt;link href="styles/print.css" media="print" rel="stylesheet" type="text/css" /&gt;&lt;/head&gt;
+&lt;body&gt;
+    &lt;form name="form1" method="post" action="power.aspx?id=3005" id="form1"&gt;
+&lt;input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTY4MDc0NjM4OGRkPFlNEjHBgbQ/h4RAEmaFdlFiwWd4bQhhv5/YZRBg2YM=" /&gt;
+
+    &lt;div id="detail"&gt;
+		
+		&lt;h1 class="atwillpower"&gt;&lt;span class="level"&gt;Sorcerer Attack 1&lt;/span&gt;Lightning Strike&lt;/h1&gt;&lt;p class="flavor"&gt;&lt;i&gt;Lightning strikes your foe and then ricochets to another enemy.&lt;/i&gt;&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;At-Will&lt;/b&gt;&amp;nbsp;&amp;nbsp; &lt;img src="images/bullet.gif" alt=""/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;b&gt;Arcane&lt;/b&gt;, &lt;b&gt;Implement&lt;/b&gt;, &lt;b&gt;Lightning&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Standard Action&lt;/b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Ranged&lt;/b&gt; 10&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Target&lt;/b&gt;: One creature&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Attack&lt;/b&gt;: Charisma vs. Reflex&lt;/p&gt;&lt;p class="flavor"&gt;&lt;b&gt;Hit&lt;/b&gt;: 1d8 + Charisma modifier lightning damage. An enemy of your choice other than the target and within 10 squares of the target takes lightning damage equal to your Dexterity modifier.&lt;br/&gt;Level 21: 2d8 + Charisma modifier lightning damage.&lt;/p&gt;&lt;p class="powerstat"&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;Storm Magic&lt;/b&gt;: You can apply your Storm Power bonus either to the damage roll against the target or to the damage taken by the enemy within 10 squares of the target.&lt;/p&gt;&lt;br/&gt;Update (4/9/2010)&lt;br/&gt;In the Hit entry, replace ???a creature of your choice??? with ???an enemy of your choice.??? &lt;p&gt;Published in &lt;a target="_new" href="http://www.wizards.com/default.asp?x=products/dndacc/9780786949571"&gt;Arcane Power&lt;/a&gt;, page(s) 28.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</d2p1:_Description><d2p1:_Level>1</d2p1:_Level><d2p1:_Name z:Id="109">Lightning Strike</d2p1:_Name><d2p1:_Notes i:nil="true" /><d2p1:_Type z:Id="110">At-Will</d2p1:_Type><d2p1:_Usage z:Id="111" z:Type="System.Collections.Generic.List`1[[RolePlayingSystem.Character.Powers.Usage, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0"><d2p1:_items z:Id="112" z:Size="4"><d2p1:Usage z:Id="113"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="114"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="115">
             +6 Charisma modifier.
             +6 half your level.
             +3 enhancement bonus.
             +1 Feat bonus - Versatile Expertise (Staff)
 
-          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="118"> 1d8+2d6+2d6+22 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="119">
+          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="116"> 1d8+2d6+2d6+22 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="117">
             +6 Charisma modifier.
             +3 enhancement bonus.
             +3 off-hand enhancement bonus.
@@ -90,13 +109,13 @@
             +2 Feat bonus - Weapon Focus (Staff)
             +2d6+2d6 bonus to all damage.
 
-          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="120"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="121">Challenge-Seeking Quickbeam staff +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="122"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="123"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="124">
+          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="118"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="119">Challenge-Seeking Quickbeam staff +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="120"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="121"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="122">
             +6 Charisma modifier.
             +6 half your level.
             +3 enhancement bonus.
             +1 Feat bonus - Versatile Expertise (Light Blade)
 
-          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="125"> 1d8+2d6+2d6+20 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="126">
+          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="123"> 1d8+2d6+2d6+20 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="124">
             +6 Charisma modifier.
             +3 enhancement bonus.
             +3 off-hand enhancement bonus.
@@ -104,21 +123,40 @@
             +1 bonus - Two-Weapon Fighting
             +2d6+2d6 bonus to all damage.
 
-          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="127"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="128">Challenge-Seeking Dagger +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="129"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="130"> 12 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="131">
+          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="125"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="126">Challenge-Seeking Dagger +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="127"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="128"> 12 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="129">
             +6 Charisma modifier.
             +6 half your level.
 
-          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="132"> 1d8+13 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="133">
+          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="130"> 1d8+13 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="131">
             +6 Charisma modifier.
             +7 bonus - Storm Power
 
-          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="134"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="135">Unarmed</d2p1:_Weapon></d2p1:Usage><d2p1:Usage i:nil="true" /></d2p1:_items><d2p1:_size>3</d2p1:_size><d2p1:_version>3</d2p1:_version></d2p1:_Usage><d2p1:_Used>false</d2p1:_Used></d2p1:Power><d2p1:Power z:Id="136"><d2p1:_Action z:Id="137">Standard action</d2p1:_Action><d2p1:_Description i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Name z:Id="138">Whirlwind</d2p1:_Name><d2p1:_Notes i:nil="true" /><d2p1:_Type z:Id="139">Encounter</d2p1:_Type><d2p1:_Usage z:Id="140" z:Type="System.Collections.Generic.List`1[[RolePlayingSystem.Character.Powers.Usage, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0"><d2p1:_items z:Id="141" z:Size="4"><d2p1:Usage z:Id="142"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="143"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="144">
+          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="132"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="133">Unarmed</d2p1:_Weapon></d2p1:Usage><d2p1:Usage i:nil="true" /></d2p1:_items><d2p1:_size>3</d2p1:_size><d2p1:_version>3</d2p1:_version></d2p1:_Usage><d2p1:_Used>false</d2p1:_Used></d2p1:Power><d2p1:Power z:Id="134"><d2p1:_Action z:Id="135">Standard action</d2p1:_Action><d2p1:_Description z:Id="136">
+
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+
+&lt;html xmlns="http://www.w3.org/1999/xhtml" &gt;
+&lt;head id="Head1"&gt;&lt;title&gt;
+	Whirlwind
+&lt;/title&gt;&lt;link href="styles/detail.css" media="screen" rel="stylesheet" type="text/css" /&gt;&lt;link href="styles/print.css" media="print" rel="stylesheet" type="text/css" /&gt;&lt;/head&gt;
+&lt;body&gt;
+    &lt;form name="form1" method="post" action="power.aspx?id=3009" id="form1"&gt;
+&lt;input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTY4MDc0NjM4OGRkPFlNEjHBgbQ/h4RAEmaFdlFiwWd4bQhhv5/YZRBg2YM=" /&gt;
+
+    &lt;div id="detail"&gt;
+		
+		&lt;h1 class="encounterpower"&gt;&lt;span class="level"&gt;Sorcerer Attack 1&lt;/span&gt;Whirlwind&lt;/h1&gt;&lt;p class="flavor"&gt;&lt;i&gt;You create a small whirlwind that buffets creatures and knocks them off their feet.&lt;/i&gt;&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Encounter&lt;/b&gt;&amp;nbsp;&amp;nbsp; &lt;img src="images/bullet.gif" alt=""/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;b&gt;Arcane&lt;/b&gt;, &lt;b&gt;Implement&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Standard Action&lt;/b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Area&lt;/b&gt; burst 1 within 10 squares&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Target&lt;/b&gt;: Each creature in burst&lt;/p&gt;&lt;p class="flavor"&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;Storm Magic&lt;/b&gt;: You can choose not to target a creature in the origin square of the burst.&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Attack&lt;/b&gt;: Charisma vs. Fortitude&lt;/p&gt;&lt;p class="flavor"&gt;&lt;b&gt;Hit&lt;/b&gt;: 1d10 + Charisma modifier damage, and you knock the target prone.&lt;/p&gt;&lt;p&gt;Published in &lt;a target="_new" href="http://www.wizards.com/default.asp?x=products/dndacc/9780786949571"&gt;Arcane Power&lt;/a&gt;, page(s) 29.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</d2p1:_Description><d2p1:_Level>1</d2p1:_Level><d2p1:_Name z:Id="137">Whirlwind</d2p1:_Name><d2p1:_Notes i:nil="true" /><d2p1:_Type z:Id="138">Encounter</d2p1:_Type><d2p1:_Usage z:Id="139" z:Type="System.Collections.Generic.List`1[[RolePlayingSystem.Character.Powers.Usage, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0"><d2p1:_items z:Id="140" z:Size="4"><d2p1:Usage z:Id="141"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="142"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="143">
             +6 Charisma modifier.
             +6 half your level.
             +3 enhancement bonus.
             +1 Feat bonus - Versatile Expertise (Staff)
 
-          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="145"> 1d10+2d6+2d6+22 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="146">
+          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="144"> 1d10+2d6+2d6+22 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="145">
             +6 Charisma modifier.
             +3 enhancement bonus.
             +3 off-hand enhancement bonus.
@@ -127,13 +165,13 @@
             +2 Feat bonus - Weapon Focus (Staff)
             +2d6+2d6 bonus to all damage.
 
-          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="147"> Fortitude </d2p1:_Vs><d2p1:_Weapon z:Id="148">Challenge-Seeking Quickbeam staff +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="149"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="150"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="151">
+          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="146"> Fortitude </d2p1:_Vs><d2p1:_Weapon z:Id="147">Challenge-Seeking Quickbeam staff +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="148"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="149"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="150">
             +6 Charisma modifier.
             +6 half your level.
             +3 enhancement bonus.
             +1 Feat bonus - Versatile Expertise (Light Blade)
 
-          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="152"> 1d10+2d6+2d6+20 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="153">
+          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="151"> 1d10+2d6+2d6+20 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="152">
             +6 Charisma modifier.
             +3 enhancement bonus.
             +3 off-hand enhancement bonus.
@@ -141,15 +179,34 @@
             +1 bonus - Two-Weapon Fighting
             +2d6+2d6 bonus to all damage.
 
-          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="154"> Fortitude </d2p1:_Vs><d2p1:_Weapon z:Id="155">Challenge-Seeking Dagger +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="156"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="157"> 12 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="158">
+          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="153"> Fortitude </d2p1:_Vs><d2p1:_Weapon z:Id="154">Challenge-Seeking Dagger +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="155"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="156"> 12 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="157">
             +6 Charisma modifier.
             +6 half your level.
 
-          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="159"> 1d10+13 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="160">
+          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="158"> 1d10+13 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="159">
             +6 Charisma modifier.
             +7 bonus - Storm Power
 
-          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="161"> Fortitude </d2p1:_Vs><d2p1:_Weapon z:Id="162">Unarmed</d2p1:_Weapon></d2p1:Usage><d2p1:Usage i:nil="true" /></d2p1:_items><d2p1:_size>3</d2p1:_size><d2p1:_version>3</d2p1:_version></d2p1:_Usage><d2p1:_Used>false</d2p1:_Used></d2p1:Power><d2p1:Power z:Id="163"><d2p1:_Action z:Id="164">Standard action</d2p1:_Action><d2p1:_Description i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Name z:Id="165">Shocking Magnetism</d2p1:_Name><d2p1:_Notes i:nil="true" /><d2p1:_Type z:Id="166">Daily</d2p1:_Type><d2p1:_Usage z:Id="167" z:Type="System.Collections.Generic.List`1[[RolePlayingSystem.Character.Powers.Usage, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0"><d2p1:_items z:Id="168" z:Size="4"><d2p1:Usage z:Id="169"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="170"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="171">
+          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="160"> Fortitude </d2p1:_Vs><d2p1:_Weapon z:Id="161">Unarmed</d2p1:_Weapon></d2p1:Usage><d2p1:Usage i:nil="true" /></d2p1:_items><d2p1:_size>3</d2p1:_size><d2p1:_version>3</d2p1:_version></d2p1:_Usage><d2p1:_Used>false</d2p1:_Used></d2p1:Power><d2p1:Power z:Id="162"><d2p1:_Action z:Id="163">Standard action</d2p1:_Action><d2p1:_Description z:Id="164">
+
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+
+&lt;html xmlns="http://www.w3.org/1999/xhtml" &gt;
+&lt;head id="Head1"&gt;&lt;title&gt;
+	Shocking Magnetism
+&lt;/title&gt;&lt;link href="styles/detail.css" media="screen" rel="stylesheet" type="text/css" /&gt;&lt;link href="styles/print.css" media="print" rel="stylesheet" type="text/css" /&gt;&lt;/head&gt;
+&lt;body&gt;
+    &lt;form name="form1" method="post" action="power.aspx?id=5844" id="form1"&gt;
+&lt;input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTY4MDc0NjM4OGRkPFlNEjHBgbQ/h4RAEmaFdlFiwWd4bQhhv5/YZRBg2YM=" /&gt;
+
+    &lt;div id="detail"&gt;
+		
+		&lt;h1 class="dailypower"&gt;&lt;span class="level"&gt;Sorcerer Attack 1&lt;/span&gt;Shocking Magnetism&lt;/h1&gt;&lt;p class="flavor"&gt;&lt;i&gt;You become a conduit for lightning. The pulsing energy  ccumulates within your body, enabling you to shock those who come near.&lt;/i&gt;&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Daily&lt;/b&gt;&amp;nbsp;&amp;nbsp; &lt;img src="images/bullet.gif" alt=""/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;b&gt;Arcane&lt;/b&gt;, &lt;b&gt;Implement&lt;/b&gt;, &lt;b&gt;Lightning&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Standard Action&lt;/b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Ranged&lt;/b&gt; 10&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Target&lt;/b&gt;: One or two creatures&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Attack&lt;/b&gt;: Charisma vs. Reflex&lt;/p&gt;&lt;p class="flavor"&gt;&lt;b&gt;Hit&lt;/b&gt;: 3d6 + Charisma modifier lightning damage, and you pull the target a number of squares equal to your Dexterity modifier.&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Effect&lt;/b&gt;: Until the end of the encounter, each creature that starts its turn adjacent to you takes lightning damage equal to your Dexterity modifier. You can dismiss the effect as a free action.&lt;/p&gt;&lt;p&gt;Published in &lt;a target="_new" href="http://www.wizards.com/default.asp?x=products/dndacc/9780786949571"&gt;Arcane Power&lt;/a&gt;, page(s) 30.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</d2p1:_Description><d2p1:_Level>1</d2p1:_Level><d2p1:_Name z:Id="165">Shocking Magnetism</d2p1:_Name><d2p1:_Notes i:nil="true" /><d2p1:_Type z:Id="166">Daily</d2p1:_Type><d2p1:_Usage z:Id="167" z:Type="System.Collections.Generic.List`1[[RolePlayingSystem.Character.Powers.Usage, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0"><d2p1:_items z:Id="168" z:Size="4"><d2p1:Usage z:Id="169"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="170"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="171">
             +6 Charisma modifier.
             +6 half your level.
             +3 enhancement bonus.
@@ -186,13 +243,51 @@
             +6 Charisma modifier.
             +7 bonus - Storm Power
 
-          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="188"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="189">Unarmed</d2p1:_Weapon></d2p1:Usage><d2p1:Usage i:nil="true" /></d2p1:_items><d2p1:_size>3</d2p1:_size><d2p1:_version>3</d2p1:_version></d2p1:_Usage><d2p1:_Used>false</d2p1:_Used></d2p1:Power><d2p1:Power z:Id="190"><d2p1:_Action z:Id="191">Immediate Interrupt</d2p1:_Action><d2p1:_Description i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Name z:Id="192">Dragonflame Mantle</d2p1:_Name><d2p1:_Notes i:nil="true" /><d2p1:_Type z:Id="193">Encounter</d2p1:_Type><d2p1:_Usage z:Id="194" z:Type="System.Collections.Generic.List`1[[RolePlayingSystem.Character.Powers.Usage, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0"><d2p1:_items z:Id="195" z:Size="0" /><d2p1:_size>0</d2p1:_size><d2p1:_version>0</d2p1:_version></d2p1:_Usage><d2p1:_Used>false</d2p1:_Used></d2p1:Power><d2p1:Power z:Id="196"><d2p1:_Action z:Id="197">Standard action</d2p1:_Action><d2p1:_Description i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Name z:Id="198">Dancing Lightning</d2p1:_Name><d2p1:_Notes i:nil="true" /><d2p1:_Type z:Id="199">Encounter</d2p1:_Type><d2p1:_Usage z:Id="200" z:Type="System.Collections.Generic.List`1[[RolePlayingSystem.Character.Powers.Usage, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0"><d2p1:_items z:Id="201" z:Size="4"><d2p1:Usage z:Id="202"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="203"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="204">
+          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="188"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="189">Unarmed</d2p1:_Weapon></d2p1:Usage><d2p1:Usage i:nil="true" /></d2p1:_items><d2p1:_size>3</d2p1:_size><d2p1:_version>3</d2p1:_version></d2p1:_Usage><d2p1:_Used>false</d2p1:_Used></d2p1:Power><d2p1:Power z:Id="190"><d2p1:_Action z:Id="191">Immediate Interrupt</d2p1:_Action><d2p1:_Description z:Id="192">
+
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+
+&lt;html xmlns="http://www.w3.org/1999/xhtml" &gt;
+&lt;head id="Head1"&gt;&lt;title&gt;
+	Dragonflame Mantle
+&lt;/title&gt;&lt;link href="styles/detail.css" media="screen" rel="stylesheet" type="text/css" /&gt;&lt;link href="styles/print.css" media="print" rel="stylesheet" type="text/css" /&gt;&lt;/head&gt;
+&lt;body&gt;
+    &lt;form name="form1" method="post" action="power.aspx?id=3741" id="form1"&gt;
+&lt;input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTY4MDc0NjM4OGRkPFlNEjHBgbQ/h4RAEmaFdlFiwWd4bQhhv5/YZRBg2YM=" /&gt;
+
+    &lt;div id="detail"&gt;
+		
+		&lt;h1 class="encounterpower"&gt;&lt;span class="level"&gt;Sorcerer Utility 2&lt;/span&gt;Dragonflame Mantle&lt;/h1&gt;&lt;p class="flavor"&gt;&lt;i&gt;You ward yourself with a mantle of flame.&lt;/i&gt;&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Encounter&lt;/b&gt;&amp;nbsp;&amp;nbsp; &lt;img src="images/bullet.gif" alt=""/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;b&gt;Arcane&lt;/b&gt;, &lt;b&gt;Fire&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Immediate Interrupt&lt;/b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Personal&lt;/b&gt; &lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Trigger&lt;/b&gt;: You are hit by an attack&lt;/p&gt;&lt;p class="flavor"&gt;&lt;b&gt;Effect&lt;/b&gt;: Until the end of your next turn, you gain a +1 power bonus to all defenses, and any creature that hits you with a melee attack takes 1d6 fire damage.&lt;/p&gt;&lt;p&gt;Published in &lt;a target="_new" href="http://www.wizards.com/default.asp?x=products/dndacc/9780786950164"&gt;Player's Handbook 2&lt;/a&gt;, page(s) 140.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</d2p1:_Description><d2p1:_Level>2</d2p1:_Level><d2p1:_Name z:Id="193">Dragonflame Mantle</d2p1:_Name><d2p1:_Notes i:nil="true" /><d2p1:_Type z:Id="194">Encounter</d2p1:_Type><d2p1:_Usage z:Id="195" z:Type="System.Collections.Generic.List`1[[RolePlayingSystem.Character.Powers.Usage, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0"><d2p1:_items z:Id="196" z:Size="0" /><d2p1:_size>0</d2p1:_size><d2p1:_version>0</d2p1:_version></d2p1:_Usage><d2p1:_Used>false</d2p1:_Used></d2p1:Power><d2p1:Power z:Id="197"><d2p1:_Action z:Id="198">Standard action</d2p1:_Action><d2p1:_Description z:Id="199">
+
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+
+&lt;html xmlns="http://www.w3.org/1999/xhtml" &gt;
+&lt;head id="Head1"&gt;&lt;title&gt;
+	Dancing Lightning
+&lt;/title&gt;&lt;link href="styles/detail.css" media="screen" rel="stylesheet" type="text/css" /&gt;&lt;link href="styles/print.css" media="print" rel="stylesheet" type="text/css" /&gt;&lt;/head&gt;
+&lt;body&gt;
+    &lt;form name="form1" method="post" action="power.aspx?id=5269" id="form1"&gt;
+&lt;input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTY4MDc0NjM4OGRkPFlNEjHBgbQ/h4RAEmaFdlFiwWd4bQhhv5/YZRBg2YM=" /&gt;
+
+    &lt;div id="detail"&gt;
+		
+		&lt;h1 class="encounterpower"&gt;&lt;span class="level"&gt;Sorcerer Attack 3&lt;/span&gt;Dancing Lightning&lt;/h1&gt;&lt;p class="flavor"&gt;&lt;i&gt;As lightning strikes your foe, thunder batters creatures around it.&lt;/i&gt;&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Encounter&lt;/b&gt;&amp;nbsp;&amp;nbsp; &lt;img src="images/bullet.gif" alt=""/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;b&gt;Arcane&lt;/b&gt;, &lt;b&gt;Implement&lt;/b&gt;, &lt;b&gt;Lightning&lt;/b&gt;, &lt;b&gt;Thunder&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Standard Action&lt;/b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Ranged&lt;/b&gt; 10&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Target&lt;/b&gt;: One creature&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Attack&lt;/b&gt;: Charisma vs. Reflex&lt;/p&gt;&lt;p class="flavor"&gt;&lt;b&gt;Hit&lt;/b&gt;: 2d10 + Charisma modifier lightning damage, and each creature adjacent to the target takes thunder damage equal to your Charisma modifier.&lt;/p&gt;&lt;p&gt;Published in &lt;a target="_new" href="http://www.wizards.com/default.asp?x=products/dndacc/9780786950164"&gt;Player's Handbook 2&lt;/a&gt;, page(s) 140.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</d2p1:_Description><d2p1:_Level>3</d2p1:_Level><d2p1:_Name z:Id="200">Dancing Lightning</d2p1:_Name><d2p1:_Notes i:nil="true" /><d2p1:_Type z:Id="201">Encounter</d2p1:_Type><d2p1:_Usage z:Id="202" z:Type="System.Collections.Generic.List`1[[RolePlayingSystem.Character.Powers.Usage, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0"><d2p1:_items z:Id="203" z:Size="4"><d2p1:Usage z:Id="204"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="205"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="206">
             +6 Charisma modifier.
             +6 half your level.
             +3 enhancement bonus.
             +1 Feat bonus - Versatile Expertise (Staff)
 
-          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="205"> 2d10+2d6+2d6+22 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="206">
+          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="207"> 2d10+2d6+2d6+22 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="208">
             +6 Charisma modifier.
             +3 enhancement bonus.
             +3 off-hand enhancement bonus.
@@ -201,13 +296,13 @@
             +2 Feat bonus - Weapon Focus (Staff)
             +2d6+2d6 bonus to all damage.
 
-          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="207"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="208">Challenge-Seeking Quickbeam staff +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="209"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="210"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="211">
+          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="209"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="210">Challenge-Seeking Quickbeam staff +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="211"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="212"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="213">
             +6 Charisma modifier.
             +6 half your level.
             +3 enhancement bonus.
             +1 Feat bonus - Versatile Expertise (Light Blade)
 
-          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="212"> 2d10+2d6+2d6+20 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="213">
+          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="214"> 2d10+2d6+2d6+20 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="215">
             +6 Charisma modifier.
             +3 enhancement bonus.
             +3 off-hand enhancement bonus.
@@ -215,21 +310,40 @@
             +1 bonus - Two-Weapon Fighting
             +2d6+2d6 bonus to all damage.
 
-          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="214"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="215">Challenge-Seeking Dagger +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="216"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="217"> 12 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="218">
+          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="216"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="217">Challenge-Seeking Dagger +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="218"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="219"> 12 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="220">
             +6 Charisma modifier.
             +6 half your level.
 
-          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="219"> 2d10+13 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="220">
+          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="221"> 2d10+13 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="222">
             +6 Charisma modifier.
             +7 bonus - Storm Power
 
-          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="221"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="222">Unarmed</d2p1:_Weapon></d2p1:Usage><d2p1:Usage i:nil="true" /></d2p1:_items><d2p1:_size>3</d2p1:_size><d2p1:_version>3</d2p1:_version></d2p1:_Usage><d2p1:_Used>false</d2p1:_Used></d2p1:Power><d2p1:Power z:Id="223"><d2p1:_Action z:Id="224">Immediate Interrupt</d2p1:_Action><d2p1:_Description i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Name z:Id="225">Slaad's Gambit</d2p1:_Name><d2p1:_Notes i:nil="true" /><d2p1:_Type z:Id="226">Daily</d2p1:_Type><d2p1:_Usage z:Id="227" z:Type="System.Collections.Generic.List`1[[RolePlayingSystem.Character.Powers.Usage, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0"><d2p1:_items z:Id="228" z:Size="4"><d2p1:Usage z:Id="229"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="230"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="231">
+          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="223"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="224">Unarmed</d2p1:_Weapon></d2p1:Usage><d2p1:Usage i:nil="true" /></d2p1:_items><d2p1:_size>3</d2p1:_size><d2p1:_version>3</d2p1:_version></d2p1:_Usage><d2p1:_Used>false</d2p1:_Used></d2p1:Power><d2p1:Power z:Id="225"><d2p1:_Action z:Id="226">Immediate Interrupt</d2p1:_Action><d2p1:_Description z:Id="227">
+
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+
+&lt;html xmlns="http://www.w3.org/1999/xhtml" &gt;
+&lt;head id="Head1"&gt;&lt;title&gt;
+	Slaad's Gambit
+&lt;/title&gt;&lt;link href="styles/detail.css" media="screen" rel="stylesheet" type="text/css" /&gt;&lt;link href="styles/print.css" media="print" rel="stylesheet" type="text/css" /&gt;&lt;/head&gt;
+&lt;body&gt;
+    &lt;form name="form1" method="post" action="power.aspx?id=5849" id="form1"&gt;
+&lt;input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTY4MDc0NjM4OGRkPFlNEjHBgbQ/h4RAEmaFdlFiwWd4bQhhv5/YZRBg2YM=" /&gt;
+
+    &lt;div id="detail"&gt;
+		
+		&lt;h1 class="dailypower"&gt;&lt;span class="level"&gt;Sorcerer Attack 5&lt;/span&gt;Slaad's Gambit&lt;/h1&gt;&lt;p class="flavor"&gt;&lt;i&gt;You tap into chaos just as a foe is about to hit you. A greenish hue flickers across your skin as you teleport away, then make your own attack.&lt;/i&gt;&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Daily&lt;/b&gt;&amp;nbsp;&amp;nbsp; &lt;img src="images/bullet.gif" alt=""/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;b&gt;Arcane&lt;/b&gt;, &lt;b&gt;Implement&lt;/b&gt;, &lt;b&gt;Psychic&lt;/b&gt;, &lt;b&gt;Teleportation&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Immediate Interrupt&lt;/b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Ranged&lt;/b&gt; 5&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Trigger&lt;/b&gt;: An enemy within 5 squares of you hits you&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Target&lt;/b&gt;: The triggering enemy&lt;/p&gt;&lt;p class="flavor"&gt;&lt;b&gt;Effect&lt;/b&gt;: Before the attack, you teleport your speed.&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Attack&lt;/b&gt;: Charisma vs. Will&lt;/p&gt;&lt;p class="flavor"&gt;&lt;b&gt;Hit&lt;/b&gt;: 2d10 + Charisma modifier psychic damage.&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Miss&lt;/b&gt;: Half damage.&lt;/p&gt;&lt;p&gt;Published in &lt;a target="_new" href="http://www.wizards.com/default.asp?x=products/dndacc/9780786949571"&gt;Arcane Power&lt;/a&gt;, page(s) 31.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</d2p1:_Description><d2p1:_Level>5</d2p1:_Level><d2p1:_Name z:Id="228">Slaad's Gambit</d2p1:_Name><d2p1:_Notes i:nil="true" /><d2p1:_Type z:Id="229">Daily</d2p1:_Type><d2p1:_Usage z:Id="230" z:Type="System.Collections.Generic.List`1[[RolePlayingSystem.Character.Powers.Usage, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0"><d2p1:_items z:Id="231" z:Size="4"><d2p1:Usage z:Id="232"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="233"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="234">
             +6 Charisma modifier.
             +6 half your level.
             +3 enhancement bonus.
             +1 Feat bonus - Versatile Expertise (Staff)
 
-          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="232"> 2d10+2d6+2d6+22 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="233">
+          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="235"> 2d10+2d6+2d6+22 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="236">
             +6 Charisma modifier.
             +3 enhancement bonus.
             +3 off-hand enhancement bonus.
@@ -238,13 +352,13 @@
             +2 Feat bonus - Weapon Focus (Staff)
             +2d6+2d6 bonus to all damage.
 
-          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="234"> Will </d2p1:_Vs><d2p1:_Weapon z:Id="235">Challenge-Seeking Quickbeam staff +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="236"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="237"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="238">
+          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="237"> Will </d2p1:_Vs><d2p1:_Weapon z:Id="238">Challenge-Seeking Quickbeam staff +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="239"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="240"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="241">
             +6 Charisma modifier.
             +6 half your level.
             +3 enhancement bonus.
             +1 Feat bonus - Versatile Expertise (Light Blade)
 
-          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="239"> 2d10+2d6+2d6+20 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="240">
+          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="242"> 2d10+2d6+2d6+20 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="243">
             +6 Charisma modifier.
             +3 enhancement bonus.
             +3 off-hand enhancement bonus.
@@ -252,21 +366,59 @@
             +1 bonus - Two-Weapon Fighting
             +2d6+2d6 bonus to all damage.
 
-          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="241"> Will </d2p1:_Vs><d2p1:_Weapon z:Id="242">Challenge-Seeking Dagger +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="243"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="244"> 12 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="245">
+          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="244"> Will </d2p1:_Vs><d2p1:_Weapon z:Id="245">Challenge-Seeking Dagger +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="246"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="247"> 12 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="248">
             +6 Charisma modifier.
             +6 half your level.
 
-          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="246"> 2d10+13 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="247">
+          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="249"> 2d10+13 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="250">
             +6 Charisma modifier.
             +7 bonus - Storm Power
 
-          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="248"> Will </d2p1:_Vs><d2p1:_Weapon z:Id="249">Unarmed</d2p1:_Weapon></d2p1:Usage><d2p1:Usage i:nil="true" /></d2p1:_items><d2p1:_size>3</d2p1:_size><d2p1:_version>3</d2p1:_version></d2p1:_Usage><d2p1:_Used>false</d2p1:_Used></d2p1:Power><d2p1:Power z:Id="250"><d2p1:_Action z:Id="251">Move Action</d2p1:_Action><d2p1:_Description i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Name z:Id="252">Lightning Shift</d2p1:_Name><d2p1:_Notes i:nil="true" /><d2p1:_Type z:Id="253">Encounter</d2p1:_Type><d2p1:_Usage z:Id="254" z:Type="System.Collections.Generic.List`1[[RolePlayingSystem.Character.Powers.Usage, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0"><d2p1:_items z:Ref="195" i:nil="true" /><d2p1:_size>0</d2p1:_size><d2p1:_version>0</d2p1:_version></d2p1:_Usage><d2p1:_Used>false</d2p1:_Used></d2p1:Power><d2p1:Power z:Id="255"><d2p1:_Action z:Id="256">Standard action</d2p1:_Action><d2p1:_Description i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Name z:Id="257">Spark Form</d2p1:_Name><d2p1:_Notes i:nil="true" /><d2p1:_Type z:Id="258">Encounter</d2p1:_Type><d2p1:_Usage z:Id="259" z:Type="System.Collections.Generic.List`1[[RolePlayingSystem.Character.Powers.Usage, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0"><d2p1:_items z:Id="260" z:Size="4"><d2p1:Usage z:Id="261"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="262"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="263">
+          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="251"> Will </d2p1:_Vs><d2p1:_Weapon z:Id="252">Unarmed</d2p1:_Weapon></d2p1:Usage><d2p1:Usage i:nil="true" /></d2p1:_items><d2p1:_size>3</d2p1:_size><d2p1:_version>3</d2p1:_version></d2p1:_Usage><d2p1:_Used>false</d2p1:_Used></d2p1:Power><d2p1:Power z:Id="253"><d2p1:_Action z:Id="254">Move Action</d2p1:_Action><d2p1:_Description z:Id="255">
+
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+
+&lt;html xmlns="http://www.w3.org/1999/xhtml" &gt;
+&lt;head id="Head1"&gt;&lt;title&gt;
+	Lightning Shift
+&lt;/title&gt;&lt;link href="styles/detail.css" media="screen" rel="stylesheet" type="text/css" /&gt;&lt;link href="styles/print.css" media="print" rel="stylesheet" type="text/css" /&gt;&lt;/head&gt;
+&lt;body&gt;
+    &lt;form name="form1" method="post" action="power.aspx?id=5853" id="form1"&gt;
+&lt;input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTY4MDc0NjM4OGRkPFlNEjHBgbQ/h4RAEmaFdlFiwWd4bQhhv5/YZRBg2YM=" /&gt;
+
+    &lt;div id="detail"&gt;
+		
+		&lt;h1 class="encounterpower"&gt;&lt;span class="level"&gt;Sorcerer Utility 6&lt;/span&gt;Lightning Shift&lt;/h1&gt;&lt;p class="flavor"&gt;&lt;i&gt;With a flourish of snapping sparks, your single step speeds you, lightning-quick, across the battlefield.&lt;/i&gt;&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Encounter&lt;/b&gt;&amp;nbsp;&amp;nbsp; &lt;img src="images/bullet.gif" alt=""/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;b&gt;Arcane&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Move Action&lt;/b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Personal&lt;/b&gt; &lt;/p&gt;&lt;p class="flavor"&gt;&lt;b&gt;Effect&lt;/b&gt;: You shift your speed. You ignore difficult terrain during the shift.&lt;/p&gt;&lt;p&gt;Published in &lt;a target="_new" href="http://www.wizards.com/default.asp?x=products/dndacc/9780786949571"&gt;Arcane Power&lt;/a&gt;, page(s) 32.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</d2p1:_Description><d2p1:_Level>6</d2p1:_Level><d2p1:_Name z:Id="256">Lightning Shift</d2p1:_Name><d2p1:_Notes i:nil="true" /><d2p1:_Type z:Id="257">Encounter</d2p1:_Type><d2p1:_Usage z:Id="258" z:Type="System.Collections.Generic.List`1[[RolePlayingSystem.Character.Powers.Usage, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0"><d2p1:_items z:Ref="196" i:nil="true" /><d2p1:_size>0</d2p1:_size><d2p1:_version>0</d2p1:_version></d2p1:_Usage><d2p1:_Used>false</d2p1:_Used></d2p1:Power><d2p1:Power z:Id="259"><d2p1:_Action z:Id="260">Standard action</d2p1:_Action><d2p1:_Description z:Id="261">
+
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+
+&lt;html xmlns="http://www.w3.org/1999/xhtml" &gt;
+&lt;head id="Head1"&gt;&lt;title&gt;
+	Spark Form
+&lt;/title&gt;&lt;link href="styles/detail.css" media="screen" rel="stylesheet" type="text/css" /&gt;&lt;link href="styles/print.css" media="print" rel="stylesheet" type="text/css" /&gt;&lt;/head&gt;
+&lt;body&gt;
+    &lt;form name="form1" method="post" action="power.aspx?id=3016" id="form1"&gt;
+&lt;input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTY4MDc0NjM4OGRkPFlNEjHBgbQ/h4RAEmaFdlFiwWd4bQhhv5/YZRBg2YM=" /&gt;
+
+    &lt;div id="detail"&gt;
+		
+		&lt;h1 class="encounterpower"&gt;&lt;span class="level"&gt;Sorcerer Attack 7&lt;/span&gt;Spark Form&lt;/h1&gt;&lt;p class="flavor"&gt;&lt;i&gt;Your body briefly becomes a shower of dancing sparks that zips among foes, shocking them as you go.&lt;/i&gt;&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Encounter&lt;/b&gt;&amp;nbsp;&amp;nbsp; &lt;img src="images/bullet.gif" alt=""/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;b&gt;Arcane&lt;/b&gt;, &lt;b&gt;Implement&lt;/b&gt;, &lt;b&gt;Lightning&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Standard Action&lt;/b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Melee&lt;/b&gt; 1&lt;/p&gt;&lt;p class="flavor"&gt;&lt;b&gt;Effect&lt;/b&gt;: You shift your speed + 2. During the shift, you can move through enemies' spaces. When you leave any creature's space, make the following attack against that creature. Whenever you use this power, you can make the attack against a creature only once.&lt;/p&gt;&lt;p class="powerstat"&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;Target&lt;/b&gt;: One creature&lt;/p&gt;&lt;p class="powerstat"&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;Attack&lt;/b&gt;: Charisma vs. Reflex&lt;/p&gt;&lt;p class="flavor"&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;Hit&lt;/b&gt;: 1d6 + Charisma modifier lightning damage.&lt;/p&gt;&lt;br/&gt;Update (11/23/2009)&lt;br/&gt;Replace the power???s text (not including keywords) with the following text.&lt;br/&gt;&lt;br/&gt;Standard Action&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;Melee 1&lt;br/&gt;Effect: You shift your speed + 2. During the shift, you can move through enemies' spaces. When you leave any creature's space, make the following attack against that creature. Whenever you use this power, you can make the attack against a creature only once.&lt;br/&gt;    Target: One creature&lt;br/&gt;    Attack: Charisma vs. Reflex&lt;br/&gt;    Hit: 1d6 + Charisma modifier lightning damage.&lt;br/&gt;&lt;p&gt;Published in &lt;a target="_new" href="http://www.wizards.com/default.asp?x=products/dndacc/9780786949571"&gt;Arcane Power&lt;/a&gt;, page(s) 32.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</d2p1:_Description><d2p1:_Level>7</d2p1:_Level><d2p1:_Name z:Id="262">Spark Form</d2p1:_Name><d2p1:_Notes i:nil="true" /><d2p1:_Type z:Id="263">Encounter</d2p1:_Type><d2p1:_Usage z:Id="264" z:Type="System.Collections.Generic.List`1[[RolePlayingSystem.Character.Powers.Usage, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0"><d2p1:_items z:Id="265" z:Size="4"><d2p1:Usage z:Id="266"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="267"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="268">
             +6 Charisma modifier.
             +6 half your level.
             +3 enhancement bonus.
             +1 Feat bonus - Versatile Expertise (Staff)
 
-          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="264"> 1d6+2d6+2d6+22 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="265">
+          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="269"> 1d6+2d6+2d6+22 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="270">
             +6 Charisma modifier.
             +3 enhancement bonus.
             +3 off-hand enhancement bonus.
@@ -275,13 +427,13 @@
             +2 Feat bonus - Weapon Focus (Staff)
             +2d6+2d6 bonus to all damage.
 
-          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="266"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="267">Challenge-Seeking Quickbeam staff +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="268"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="269"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="270">
+          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="271"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="272">Challenge-Seeking Quickbeam staff +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="273"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="274"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="275">
             +6 Charisma modifier.
             +6 half your level.
             +3 enhancement bonus.
             +1 Feat bonus - Versatile Expertise (Light Blade)
 
-          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="271"> 1d6+2d6+2d6+20 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="272">
+          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="276"> 1d6+2d6+2d6+20 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="277">
             +6 Charisma modifier.
             +3 enhancement bonus.
             +3 off-hand enhancement bonus.
@@ -289,21 +441,40 @@
             +1 bonus - Two-Weapon Fighting
             +2d6+2d6 bonus to all damage.
 
-          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="273"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="274">Challenge-Seeking Dagger +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="275"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="276"> 12 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="277">
+          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="278"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="279">Challenge-Seeking Dagger +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="280"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="281"> 12 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="282">
             +6 Charisma modifier.
             +6 half your level.
 
-          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="278"> 1d6+13 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="279">
+          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="283"> 1d6+13 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="284">
             +6 Charisma modifier.
             +7 bonus - Storm Power
 
-          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="280"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="281">Unarmed</d2p1:_Weapon></d2p1:Usage><d2p1:Usage i:nil="true" /></d2p1:_items><d2p1:_size>3</d2p1:_size><d2p1:_version>3</d2p1:_version></d2p1:_Usage><d2p1:_Used>false</d2p1:_Used></d2p1:Power><d2p1:Power z:Id="282"><d2p1:_Action z:Id="283">Standard action</d2p1:_Action><d2p1:_Description i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Name z:Id="284">Winds of Change</d2p1:_Name><d2p1:_Notes i:nil="true" /><d2p1:_Type z:Id="285">Daily</d2p1:_Type><d2p1:_Usage z:Id="286" z:Type="System.Collections.Generic.List`1[[RolePlayingSystem.Character.Powers.Usage, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0"><d2p1:_items z:Id="287" z:Size="4"><d2p1:Usage z:Id="288"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="289"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="290">
+          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="285"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="286">Unarmed</d2p1:_Weapon></d2p1:Usage><d2p1:Usage i:nil="true" /></d2p1:_items><d2p1:_size>3</d2p1:_size><d2p1:_version>3</d2p1:_version></d2p1:_Usage><d2p1:_Used>false</d2p1:_Used></d2p1:Power><d2p1:Power z:Id="287"><d2p1:_Action z:Id="288">Standard action</d2p1:_Action><d2p1:_Description z:Id="289">
+
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+
+&lt;html xmlns="http://www.w3.org/1999/xhtml" &gt;
+&lt;head id="Head1"&gt;&lt;title&gt;
+	Winds of Change
+&lt;/title&gt;&lt;link href="styles/detail.css" media="screen" rel="stylesheet" type="text/css" /&gt;&lt;link href="styles/print.css" media="print" rel="stylesheet" type="text/css" /&gt;&lt;/head&gt;
+&lt;body&gt;
+    &lt;form name="form1" method="post" action="power.aspx?id=3039" id="form1"&gt;
+&lt;input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTY4MDc0NjM4OGRkPFlNEjHBgbQ/h4RAEmaFdlFiwWd4bQhhv5/YZRBg2YM=" /&gt;
+
+    &lt;div id="detail"&gt;
+		
+		&lt;h1 class="dailypower"&gt;&lt;span class="level"&gt;Sorcerer Attack 9&lt;/span&gt;Winds of Change&lt;/h1&gt;&lt;p class="flavor"&gt;&lt;i&gt;You become like the wind, blasting your enemies with the force of a storm.&lt;/i&gt;&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Daily&lt;/b&gt;&amp;nbsp;&amp;nbsp; &lt;img src="images/bullet.gif" alt=""/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;b&gt;Arcane&lt;/b&gt;, &lt;b&gt;Implement&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Standard Action&lt;/b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Close&lt;/b&gt; burst 3&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Target&lt;/b&gt;: Each enemy in burst&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Attack&lt;/b&gt;: Charisma vs. Fortitude&lt;/p&gt;&lt;p class="flavor"&gt;&lt;b&gt;Hit&lt;/b&gt;: 3d8 + Charisma modifier damage, and you push the target 3 squares.&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Miss&lt;/b&gt;: Half damage, and you push the target 1 square.&lt;/p&gt;&lt;p class="flavor"&gt;&lt;b&gt;Effect&lt;/b&gt;: Until the end of your next turn, you gain a fly speed equal to your speed, and you can hover.&lt;/p&gt;&lt;p&gt;Published in &lt;a target="_new" href="http://www.wizards.com/default.asp?x=products/dndacc/9780786949571"&gt;Arcane Power&lt;/a&gt;, page(s) 34.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</d2p1:_Description><d2p1:_Level>9</d2p1:_Level><d2p1:_Name z:Id="290">Winds of Change</d2p1:_Name><d2p1:_Notes i:nil="true" /><d2p1:_Type z:Id="291">Daily</d2p1:_Type><d2p1:_Usage z:Id="292" z:Type="System.Collections.Generic.List`1[[RolePlayingSystem.Character.Powers.Usage, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0"><d2p1:_items z:Id="293" z:Size="4"><d2p1:Usage z:Id="294"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="295"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="296">
             +6 Charisma modifier.
             +6 half your level.
             +3 enhancement bonus.
             +1 Feat bonus - Versatile Expertise (Staff)
 
-          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="291"> 3d8+2d6+2d6+22 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="292">
+          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="297"> 3d8+2d6+2d6+22 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="298">
             +6 Charisma modifier.
             +3 enhancement bonus.
             +3 off-hand enhancement bonus.
@@ -312,13 +483,13 @@
             +2 Feat bonus - Weapon Focus (Staff)
             +2d6+2d6 bonus to all damage.
 
-          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="293"> Fortitude </d2p1:_Vs><d2p1:_Weapon z:Id="294">Challenge-Seeking Quickbeam staff +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="295"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="296"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="297">
+          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="299"> Fortitude </d2p1:_Vs><d2p1:_Weapon z:Id="300">Challenge-Seeking Quickbeam staff +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="301"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="302"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="303">
             +6 Charisma modifier.
             +6 half your level.
             +3 enhancement bonus.
             +1 Feat bonus - Versatile Expertise (Light Blade)
 
-          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="298"> 3d8+2d6+2d6+20 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="299">
+          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="304"> 3d8+2d6+2d6+20 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="305">
             +6 Charisma modifier.
             +3 enhancement bonus.
             +3 off-hand enhancement bonus.
@@ -326,21 +497,59 @@
             +1 bonus - Two-Weapon Fighting
             +2d6+2d6 bonus to all damage.
 
-          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="300"> Fortitude </d2p1:_Vs><d2p1:_Weapon z:Id="301">Challenge-Seeking Dagger +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="302"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="303"> 12 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="304">
+          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="306"> Fortitude </d2p1:_Vs><d2p1:_Weapon z:Id="307">Challenge-Seeking Dagger +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="308"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="309"> 12 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="310">
             +6 Charisma modifier.
             +6 half your level.
 
-          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="305"> 3d8+13 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="306">
+          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="311"> 3d8+13 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="312">
             +6 Charisma modifier.
             +7 bonus - Storm Power
 
-          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="307"> Fortitude </d2p1:_Vs><d2p1:_Weapon z:Id="308">Unarmed</d2p1:_Weapon></d2p1:Usage><d2p1:Usage i:nil="true" /></d2p1:_items><d2p1:_size>3</d2p1:_size><d2p1:_version>3</d2p1:_version></d2p1:_Usage><d2p1:_Used>false</d2p1:_Used></d2p1:Power><d2p1:Power z:Id="309"><d2p1:_Action z:Id="310">Immediate Reaction</d2p1:_Action><d2p1:_Description i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Name z:Id="311">Narrow Escape</d2p1:_Name><d2p1:_Notes i:nil="true" /><d2p1:_Type z:Id="312">Encounter</d2p1:_Type><d2p1:_Usage z:Id="313" z:Type="System.Collections.Generic.List`1[[RolePlayingSystem.Character.Powers.Usage, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0"><d2p1:_items z:Ref="195" i:nil="true" /><d2p1:_size>0</d2p1:_size><d2p1:_version>0</d2p1:_version></d2p1:_Usage><d2p1:_Used>false</d2p1:_Used></d2p1:Power><d2p1:Power z:Id="314"><d2p1:_Action z:Id="315">Standard action</d2p1:_Action><d2p1:_Description i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Name z:Id="316">Furious Bolts</d2p1:_Name><d2p1:_Notes i:nil="true" /><d2p1:_Type z:Id="317">Encounter</d2p1:_Type><d2p1:_Usage z:Id="318" z:Type="System.Collections.Generic.List`1[[RolePlayingSystem.Character.Powers.Usage, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0"><d2p1:_items z:Id="319" z:Size="4"><d2p1:Usage z:Id="320"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="321"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="322">
+          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="313"> Fortitude </d2p1:_Vs><d2p1:_Weapon z:Id="314">Unarmed</d2p1:_Weapon></d2p1:Usage><d2p1:Usage i:nil="true" /></d2p1:_items><d2p1:_size>3</d2p1:_size><d2p1:_version>3</d2p1:_version></d2p1:_Usage><d2p1:_Used>false</d2p1:_Used></d2p1:Power><d2p1:Power z:Id="315"><d2p1:_Action z:Id="316">Immediate Reaction</d2p1:_Action><d2p1:_Description z:Id="317">
+
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+
+&lt;html xmlns="http://www.w3.org/1999/xhtml" &gt;
+&lt;head id="Head1"&gt;&lt;title&gt;
+	Narrow Escape
+&lt;/title&gt;&lt;link href="styles/detail.css" media="screen" rel="stylesheet" type="text/css" /&gt;&lt;link href="styles/print.css" media="print" rel="stylesheet" type="text/css" /&gt;&lt;/head&gt;
+&lt;body&gt;
+    &lt;form name="form1" method="post" action="power.aspx?id=5283" id="form1"&gt;
+&lt;input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTY4MDc0NjM4OGRkPFlNEjHBgbQ/h4RAEmaFdlFiwWd4bQhhv5/YZRBg2YM=" /&gt;
+
+    &lt;div id="detail"&gt;
+		
+		&lt;h1 class="encounterpower"&gt;&lt;span class="level"&gt;Sorcerer Utility 10&lt;/span&gt;Narrow Escape&lt;/h1&gt;&lt;p class="flavor"&gt;&lt;i&gt;You teleport away from your foe and reduce the force of its attack.&lt;/i&gt;&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Encounter&lt;/b&gt;&amp;nbsp;&amp;nbsp; &lt;img src="images/bullet.gif" alt=""/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;b&gt;Arcane&lt;/b&gt;, &lt;b&gt;Teleportation&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Immediate Reaction&lt;/b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Personal&lt;/b&gt; &lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Trigger&lt;/b&gt;: You are hit by an attack&lt;/p&gt;&lt;p class="flavor"&gt;&lt;b&gt;Effect&lt;/b&gt;: You take half damage from the attack. You then teleport a number of squares equal to your Charisma modifier + your Dexterity modifier.&lt;/p&gt;&lt;p&gt;Published in &lt;a target="_new" href="http://www.wizards.com/default.asp?x=products/dndacc/9780786950164"&gt;Player's Handbook 2&lt;/a&gt;, page(s) 143.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</d2p1:_Description><d2p1:_Level>10</d2p1:_Level><d2p1:_Name z:Id="318">Narrow Escape</d2p1:_Name><d2p1:_Notes i:nil="true" /><d2p1:_Type z:Id="319">Encounter</d2p1:_Type><d2p1:_Usage z:Id="320" z:Type="System.Collections.Generic.List`1[[RolePlayingSystem.Character.Powers.Usage, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0"><d2p1:_items z:Ref="196" i:nil="true" /><d2p1:_size>0</d2p1:_size><d2p1:_version>0</d2p1:_version></d2p1:_Usage><d2p1:_Used>false</d2p1:_Used></d2p1:Power><d2p1:Power z:Id="321"><d2p1:_Action z:Id="322">Standard action</d2p1:_Action><d2p1:_Description z:Id="323">
+
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+
+&lt;html xmlns="http://www.w3.org/1999/xhtml" &gt;
+&lt;head id="Head1"&gt;&lt;title&gt;
+	Furious Bolts
+&lt;/title&gt;&lt;link href="styles/detail.css" media="screen" rel="stylesheet" type="text/css" /&gt;&lt;link href="styles/print.css" media="print" rel="stylesheet" type="text/css" /&gt;&lt;/head&gt;
+&lt;body&gt;
+    &lt;form name="form1" method="post" action="power.aspx?id=5895" id="form1"&gt;
+&lt;input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTY4MDc0NjM4OGRkPFlNEjHBgbQ/h4RAEmaFdlFiwWd4bQhhv5/YZRBg2YM=" /&gt;
+
+    &lt;div id="detail"&gt;
+		
+		&lt;h1 class="encounterpower"&gt;&lt;span class="level"&gt;Lightning Fury Attack 11&lt;/span&gt;Furious Bolts&lt;/h1&gt;&lt;p class="flavor"&gt;&lt;i&gt;Jagged streaks of lightning fly from your hands and flash between several foes.&lt;/i&gt;&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Encounter&lt;/b&gt;&amp;nbsp;&amp;nbsp; &lt;img src="images/bullet.gif" alt=""/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;b&gt;Arcane&lt;/b&gt;, &lt;b&gt;Implement&lt;/b&gt;, &lt;b&gt;Lightning&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Standard Action&lt;/b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Ranged&lt;/b&gt; 20&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Primary Target&lt;/b&gt;: One creature&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Primary Attack&lt;/b&gt;: Charisma vs. Reflex&lt;/p&gt;&lt;p class="flavor"&gt;&lt;b&gt;Hit&lt;/b&gt;: 2d8 + Charisma modifier lightning damage. Make a secondary attack.&lt;/p&gt;&lt;p class="powerstat"&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;Secondary Target&lt;/b&gt;: One creature within 10 squares of the primary target&lt;/p&gt;&lt;p class="flavor"&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;Secondary Attack&lt;/b&gt;: Charisma vs. Reflex&lt;/p&gt;&lt;p class="powerstat"&gt;&amp;nbsp;&amp;nbsp;&lt;b&gt;Hit&lt;/b&gt;: 2d4 + Charisma modifier lightning damage. Repeat the secondary attack against any single creature you have not yet hit with this attack. (You can continue attacking as long as you keep hitting and still have targets you haven???t attacked yet.)&lt;/p&gt;&lt;p class="flavor"&gt;&lt;b&gt;Effect&lt;/b&gt;: On your next turn, you gain a bonus to your first attack roll equal to the number of creatures you hit with furious bolts.&lt;/p&gt;&lt;p&gt;Published in &lt;a target="_new" href="http://www.wizards.com/default.asp?x=products/dndacc/9780786949571"&gt;Arcane Power&lt;/a&gt;, page(s) 46.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</d2p1:_Description><d2p1:_Level>11</d2p1:_Level><d2p1:_Name z:Id="324">Furious Bolts</d2p1:_Name><d2p1:_Notes i:nil="true" /><d2p1:_Type z:Id="325">Encounter</d2p1:_Type><d2p1:_Usage z:Id="326" z:Type="System.Collections.Generic.List`1[[RolePlayingSystem.Character.Powers.Usage, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0"><d2p1:_items z:Id="327" z:Size="4"><d2p1:Usage z:Id="328"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="329"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="330">
             +6 Charisma modifier.
             +6 half your level.
             +3 enhancement bonus.
             +1 Feat bonus - Versatile Expertise (Staff)
 
-          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="323"> 2d8+2d6+2d6+22 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="324">
+          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="331"> 2d8+2d6+2d6+22 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="332">
             +6 Charisma modifier.
             +3 enhancement bonus.
             +3 off-hand enhancement bonus.
@@ -349,13 +558,13 @@
             +2 Feat bonus - Weapon Focus (Staff)
             +2d6+2d6 bonus to all damage.
 
-          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="325"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="326">Challenge-Seeking Quickbeam staff +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="327"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="328"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="329">
+          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="333"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="334">Challenge-Seeking Quickbeam staff +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="335"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="336"> 16 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="337">
             +6 Charisma modifier.
             +6 half your level.
             +3 enhancement bonus.
             +1 Feat bonus - Versatile Expertise (Light Blade)
 
-          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="330"> 2d8+2d6+2d6+20 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="331">
+          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="338"> 2d8+2d6+2d6+20 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="339">
             +6 Charisma modifier.
             +3 enhancement bonus.
             +3 off-hand enhancement bonus.
@@ -363,12 +572,31 @@
             +1 bonus - Two-Weapon Fighting
             +2d6+2d6 bonus to all damage.
 
-          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="332"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="333">Challenge-Seeking Dagger +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="334"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="335"> 12 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="336">
+          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="340"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="341">Challenge-Seeking Dagger +3</d2p1:_Weapon></d2p1:Usage><d2p1:Usage z:Id="342"><d2p1:_Ability xmlns:d8p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" i:nil="true" /><d2p1:_Attack z:Id="343"> 12 </d2p1:_Attack><d2p1:_AttackBreakdown z:Id="344">
             +6 Charisma modifier.
             +6 half your level.
 
-          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="337"> 2d8+13 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="338">
+          </d2p1:_AttackBreakdown><d2p1:_Damage z:Id="345"> 2d8+13 </d2p1:_Damage><d2p1:_DamageBreakdown z:Id="346">
             +6 Charisma modifier.
             +7 bonus - Storm Power
 
-          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="339"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="340">Unarmed</d2p1:_Weapon></d2p1:Usage><d2p1:Usage i:nil="true" /></d2p1:_items><d2p1:_size>3</d2p1:_size><d2p1:_version>3</d2p1:_version></d2p1:_Usage><d2p1:_Used>false</d2p1:_Used></d2p1:Power><d2p1:Power z:Id="341"><d2p1:_Action z:Id="342">Minor Action</d2p1:_Action><d2p1:_Description i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Name z:Id="343">Lightning in the Blood</d2p1:_Name><d2p1:_Notes i:nil="true" /><d2p1:_Type z:Id="344">Daily</d2p1:_Type><d2p1:_Usage z:Id="345" z:Type="System.Collections.Generic.List`1[[RolePlayingSystem.Character.Powers.Usage, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0"><d2p1:_items z:Ref="195" i:nil="true" /><d2p1:_size>0</d2p1:_size><d2p1:_version>0</d2p1:_version></d2p1:_Usage><d2p1:_Used>false</d2p1:_Used></d2p1:Power><d2p1:Power i:nil="true" /></d2p1:_items><d2p1:_size>15</d2p1:_size><d2p1:_version>15</d2p1:_version></_Powers><_RaceFeatures xmlns:d2p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="346"><d2p1:_items z:Id="347" z:Size="4"><d2p1:GenericNVP z:Id="348"><d2p1:_InternalId z:Id="349">ID_FMP_RACIAL_TRAIT_1524</d2p1:_InternalId><d2p1:_Name z:Id="350">Flock Effect</d2p1:_Name><d2p1:_Value z:Id="351"> Gain +3 against flanked creature instead of +2, and grant +3 to attack rolls and checks with aid action instead of +2. </d2p1:_Value></d2p1:GenericNVP><d2p1:GenericNVP z:Id="352"><d2p1:_InternalId z:Id="353">ID_FMP_RACIAL_TRAIT_1525</d2p1:_InternalId><d2p1:_Name z:Id="354">Mimicry</d2p1:_Name><d2p1:_Value z:Id="355"> Mimic sounds and voices with a successful Insight check (opposed by Bluff). </d2p1:_Value></d2p1:GenericNVP><d2p1:GenericNVP z:Id="356"><d2p1:_InternalId z:Id="357">ID_INTERNAL_RACIAL_TRAIT_BLUFF_BONUS</d2p1:_InternalId><d2p1:_Name z:Id="358">Bluff Bonus</d2p1:_Name><d2p1:_Value i:nil="true" /></d2p1:GenericNVP><d2p1:GenericNVP z:Id="359"><d2p1:_InternalId z:Id="360">ID_INTERNAL_RACIAL_TRAIT_STEALTH_BONUS</d2p1:_InternalId><d2p1:_Name z:Id="361">Stealth Bonus</d2p1:_Name><d2p1:_Value i:nil="true" /></d2p1:GenericNVP></d2p1:_items><d2p1:_size>4</d2p1:_size><d2p1:_version>4</d2p1:_version></_RaceFeatures><_Size>Medium</_Size><_Skills xmlns:d2p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Skills" z:Id="362"><d2p1:_items z:Id="363" z:Size="32"><d2p1:Skill z:Id="364"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="5" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="365"><d5p1:_items z:Ref="17" i:nil="true" /><d5p1:_size>0</d5p1:_size><d5p1:_version>0</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="366">Acrobatics</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>false</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="367"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="6" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="368"><d5p1:_items z:Ref="17" i:nil="true" /><d5p1:_size>0</d5p1:_size><d5p1:_version>0</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="369">Arcana</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>true</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="370"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="3" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="371"><d5p1:_items z:Id="372" z:Size="4"><d5p1:GenericBonus z:Id="373"><d5p1:Bonus>2</d5p1:Bonus><d5p1:Name z:Id="374">Unnamed</d5p1:Name></d5p1:GenericBonus><d5p1:GenericBonus i:nil="true" /><d5p1:GenericBonus i:nil="true" /><d5p1:GenericBonus i:nil="true" /></d5p1:_items><d5p1:_size>1</d5p1:_size><d5p1:_version>1</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="375">Bluff</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>true</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="376"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="3" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="377"><d5p1:_items z:Ref="17" i:nil="true" /><d5p1:_size>0</d5p1:_size><d5p1:_version>0</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="378">Diplomacy</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>false</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="379"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="8" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="380"><d5p1:_items z:Ref="17" i:nil="true" /><d5p1:_size>0</d5p1:_size><d5p1:_version>0</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="381">Dungeoneering</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>false</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="382"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="4" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="383"><d5p1:_items z:Ref="17" i:nil="true" /><d5p1:_size>0</d5p1:_size><d5p1:_version>0</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="384">Endurance</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>false</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="385"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="8" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="386"><d5p1:_items z:Ref="17" i:nil="true" /><d5p1:_size>0</d5p1:_size><d5p1:_version>0</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="387">Heal</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>false</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="388"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="6" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="389"><d5p1:_items z:Ref="17" i:nil="true" /><d5p1:_size>0</d5p1:_size><d5p1:_version>0</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="390">History</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>false</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="391"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="8" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="392"><d5p1:_items z:Ref="17" i:nil="true" /><d5p1:_size>0</d5p1:_size><d5p1:_version>0</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="393">Insight</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>false</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="394"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="3" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="395"><d5p1:_items z:Ref="17" i:nil="true" /><d5p1:_size>0</d5p1:_size><d5p1:_version>0</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="396">Intimidate</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>true</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="397"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="8" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="398"><d5p1:_items z:Ref="17" i:nil="true" /><d5p1:_size>0</d5p1:_size><d5p1:_version>0</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="399">Nature</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>false</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="400"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="8" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="401"><d5p1:_items z:Ref="17" i:nil="true" /><d5p1:_size>0</d5p1:_size><d5p1:_version>0</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="402">Perception</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>false</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="403"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="6" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="404"><d5p1:_items z:Ref="17" i:nil="true" /><d5p1:_size>0</d5p1:_size><d5p1:_version>0</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="405">Religion</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>false</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="406"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="5" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="407"><d5p1:_items z:Id="408" z:Size="4"><d5p1:GenericBonus z:Id="409"><d5p1:Bonus>4</d5p1:Bonus><d5p1:Name z:Ref="374" i:nil="true" /></d5p1:GenericBonus><d5p1:GenericBonus i:nil="true" /><d5p1:GenericBonus i:nil="true" /><d5p1:GenericBonus i:nil="true" /></d5p1:_items><d5p1:_size>1</d5p1:_size><d5p1:_version>1</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="410">Stealth</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>true</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="411"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="3" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="412"><d5p1:_items z:Ref="17" i:nil="true" /><d5p1:_size>0</d5p1:_size><d5p1:_version>0</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="413">Streetwise</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>false</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="414"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="5" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="415"><d5p1:_items z:Ref="17" i:nil="true" /><d5p1:_size>0</d5p1:_size><d5p1:_version>0</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="416">Thievery</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>false</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="417"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="7" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="418"><d5p1:_items z:Ref="17" i:nil="true" /><d5p1:_size>0</d5p1:_size><d5p1:_version>0</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="419">Athletics</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>false</d2p1:_Trained></d2p1:Skill><d2p1:Skill i:nil="true" /><d2p1:Skill i:nil="true" /><d2p1:Skill i:nil="true" /><d2p1:Skill i:nil="true" /><d2p1:Skill i:nil="true" /><d2p1:Skill i:nil="true" /><d2p1:Skill i:nil="true" /><d2p1:Skill i:nil="true" /><d2p1:Skill i:nil="true" /><d2p1:Skill i:nil="true" /><d2p1:Skill i:nil="true" /><d2p1:Skill i:nil="true" /><d2p1:Skill i:nil="true" /><d2p1:Skill i:nil="true" /><d2p1:Skill i:nil="true" /></d2p1:_items><d2p1:_size>17</d2p1:_size><d2p1:_version>17</d2p1:_version></_Skills><_Weight z:Id="420">110 lb.</_Weight></Base>
+          </d2p1:_DamageBreakdown><d2p1:_Vs z:Id="347"> Reflex </d2p1:_Vs><d2p1:_Weapon z:Id="348">Unarmed</d2p1:_Weapon></d2p1:Usage><d2p1:Usage i:nil="true" /></d2p1:_items><d2p1:_size>3</d2p1:_size><d2p1:_version>3</d2p1:_version></d2p1:_Usage><d2p1:_Used>false</d2p1:_Used></d2p1:Power><d2p1:Power z:Id="349"><d2p1:_Action z:Id="350">Minor Action</d2p1:_Action><d2p1:_Description z:Id="351">
+
+&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+
+&lt;html xmlns="http://www.w3.org/1999/xhtml" &gt;
+&lt;head id="Head1"&gt;&lt;title&gt;
+	Lightning in the Blood
+&lt;/title&gt;&lt;link href="styles/detail.css" media="screen" rel="stylesheet" type="text/css" /&gt;&lt;link href="styles/print.css" media="print" rel="stylesheet" type="text/css" /&gt;&lt;/head&gt;
+&lt;body&gt;
+    &lt;form name="form1" method="post" action="power.aspx?id=5896" id="form1"&gt;
+&lt;input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTY4MDc0NjM4OGRkPFlNEjHBgbQ/h4RAEmaFdlFiwWd4bQhhv5/YZRBg2YM=" /&gt;
+
+    &lt;div id="detail"&gt;
+		
+		&lt;h1 class="dailypower"&gt;&lt;span class="level"&gt;Lightning Fury Utility 12&lt;/span&gt;Lightning in the Blood&lt;/h1&gt;&lt;p class="flavor"&gt;&lt;i&gt;You feel energized as lightning arcs through your veins and flashes in your eyes.&lt;/i&gt;&lt;/p&gt;&lt;p class="powerstat"&gt;&lt;b&gt;Daily&lt;/b&gt;&amp;nbsp;&amp;nbsp; &lt;img src="images/bullet.gif" alt=""/&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &lt;b&gt;Arcane&lt;/b&gt;, &lt;b&gt;Lightning&lt;/b&gt;&lt;br/&gt;&lt;b&gt;Minor Action&lt;/b&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;b&gt;Personal&lt;/b&gt; &lt;/p&gt;&lt;p class="flavor"&gt;&lt;b&gt;Effect&lt;/b&gt;: Until the end of the encounter, your lightning attacks deal an additional die of damage. (The die is the same size the attack already deals.)&lt;/p&gt;&lt;p&gt;Published in &lt;a target="_new" href="http://www.wizards.com/default.asp?x=products/dndacc/9780786949571"&gt;Arcane Power&lt;/a&gt;, page(s) 46.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;/form&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</d2p1:_Description><d2p1:_Level>12</d2p1:_Level><d2p1:_Name z:Id="352">Lightning in the Blood</d2p1:_Name><d2p1:_Notes i:nil="true" /><d2p1:_Type z:Id="353">Daily</d2p1:_Type><d2p1:_Usage z:Id="354" z:Type="System.Collections.Generic.List`1[[RolePlayingSystem.Character.Powers.Usage, RolePlayingSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" z:Assembly="0"><d2p1:_items z:Ref="196" i:nil="true" /><d2p1:_size>0</d2p1:_size><d2p1:_version>0</d2p1:_version></d2p1:_Usage><d2p1:_Used>false</d2p1:_Used></d2p1:Power><d2p1:Power i:nil="true" /></d2p1:_items><d2p1:_size>15</d2p1:_size><d2p1:_version>15</d2p1:_version></_Powers><_RaceFeatures xmlns:d2p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="355"><d2p1:_items z:Id="356" z:Size="4"><d2p1:GenericNVP z:Id="357"><d2p1:_InternalId z:Id="358">ID_FMP_RACIAL_TRAIT_1524</d2p1:_InternalId><d2p1:_Name z:Id="359">Flock Effect</d2p1:_Name><d2p1:_Value z:Id="360"> Gain +3 against flanked creature instead of +2, and grant +3 to attack rolls and checks with aid action instead of +2. </d2p1:_Value></d2p1:GenericNVP><d2p1:GenericNVP z:Id="361"><d2p1:_InternalId z:Id="362">ID_FMP_RACIAL_TRAIT_1525</d2p1:_InternalId><d2p1:_Name z:Id="363">Mimicry</d2p1:_Name><d2p1:_Value z:Id="364"> Mimic sounds and voices with a successful Insight check (opposed by Bluff). </d2p1:_Value></d2p1:GenericNVP><d2p1:GenericNVP z:Id="365"><d2p1:_InternalId z:Id="366">ID_INTERNAL_RACIAL_TRAIT_BLUFF_BONUS</d2p1:_InternalId><d2p1:_Name z:Id="367">Bluff Bonus</d2p1:_Name><d2p1:_Value i:nil="true" /></d2p1:GenericNVP><d2p1:GenericNVP z:Id="368"><d2p1:_InternalId z:Id="369">ID_INTERNAL_RACIAL_TRAIT_STEALTH_BONUS</d2p1:_InternalId><d2p1:_Name z:Id="370">Stealth Bonus</d2p1:_Name><d2p1:_Value i:nil="true" /></d2p1:GenericNVP></d2p1:_items><d2p1:_size>4</d2p1:_size><d2p1:_version>4</d2p1:_version></_RaceFeatures><_SecondWindUsed>false</_SecondWindUsed><_Size>Medium</_Size><_Skills xmlns:d2p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Skills" z:Id="371"><d2p1:_items z:Id="372" z:Size="32"><d2p1:Skill z:Id="373"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="5" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="374"><d5p1:_items z:Ref="17" i:nil="true" /><d5p1:_size>0</d5p1:_size><d5p1:_version>0</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="375">Acrobatics</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>false</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="376"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="6" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="377"><d5p1:_items z:Ref="17" i:nil="true" /><d5p1:_size>0</d5p1:_size><d5p1:_version>0</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="378">Arcana</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>true</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="379"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="3" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="380"><d5p1:_items z:Id="381" z:Size="4"><d5p1:GenericBonus z:Id="382"><d5p1:Bonus>2</d5p1:Bonus><d5p1:Name z:Id="383">Unnamed</d5p1:Name></d5p1:GenericBonus><d5p1:GenericBonus i:nil="true" /><d5p1:GenericBonus i:nil="true" /><d5p1:GenericBonus i:nil="true" /></d5p1:_items><d5p1:_size>1</d5p1:_size><d5p1:_version>1</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="384">Bluff</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>true</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="385"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="3" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="386"><d5p1:_items z:Ref="17" i:nil="true" /><d5p1:_size>0</d5p1:_size><d5p1:_version>0</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="387">Diplomacy</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>false</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="388"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="8" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="389"><d5p1:_items z:Ref="17" i:nil="true" /><d5p1:_size>0</d5p1:_size><d5p1:_version>0</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="390">Dungeoneering</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>false</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="391"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="4" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="392"><d5p1:_items z:Ref="17" i:nil="true" /><d5p1:_size>0</d5p1:_size><d5p1:_version>0</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="393">Endurance</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>false</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="394"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="8" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="395"><d5p1:_items z:Ref="17" i:nil="true" /><d5p1:_size>0</d5p1:_size><d5p1:_version>0</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="396">Heal</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>false</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="397"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="6" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="398"><d5p1:_items z:Ref="17" i:nil="true" /><d5p1:_size>0</d5p1:_size><d5p1:_version>0</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="399">History</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>false</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="400"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="8" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="401"><d5p1:_items z:Ref="17" i:nil="true" /><d5p1:_size>0</d5p1:_size><d5p1:_version>0</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="402">Insight</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>false</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="403"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="3" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="404"><d5p1:_items z:Ref="17" i:nil="true" /><d5p1:_size>0</d5p1:_size><d5p1:_version>0</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="405">Intimidate</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>true</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="406"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="8" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="407"><d5p1:_items z:Ref="17" i:nil="true" /><d5p1:_size>0</d5p1:_size><d5p1:_version>0</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="408">Nature</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>false</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="409"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="8" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="410"><d5p1:_items z:Ref="17" i:nil="true" /><d5p1:_size>0</d5p1:_size><d5p1:_version>0</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="411">Perception</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>false</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="412"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="6" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="413"><d5p1:_items z:Ref="17" i:nil="true" /><d5p1:_size>0</d5p1:_size><d5p1:_version>0</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="414">Religion</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>false</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="415"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="5" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="416"><d5p1:_items z:Id="417" z:Size="4"><d5p1:GenericBonus z:Id="418"><d5p1:Bonus>4</d5p1:Bonus><d5p1:Name z:Ref="383" i:nil="true" /></d5p1:GenericBonus><d5p1:GenericBonus i:nil="true" /><d5p1:GenericBonus i:nil="true" /><d5p1:GenericBonus i:nil="true" /></d5p1:_items><d5p1:_size>1</d5p1:_size><d5p1:_version>1</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="419">Stealth</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>true</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="420"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="3" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="421"><d5p1:_items z:Ref="17" i:nil="true" /><d5p1:_size>0</d5p1:_size><d5p1:_version>0</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="422">Streetwise</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>false</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="423"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="5" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="424"><d5p1:_items z:Ref="17" i:nil="true" /><d5p1:_size>0</d5p1:_size><d5p1:_version>0</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="425">Thievery</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>false</d2p1:_Trained></d2p1:Skill><d2p1:Skill z:Id="426"><d2p1:_Ability xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Character.Ability" z:Ref="7" i:nil="true" /><d2p1:_Level>1</d2p1:_Level><d2p1:_Misc xmlns:d5p1="http://schemas.datacontract.org/2004/07/RolePlayingSystem.Common.Types" z:Id="427"><d5p1:_items z:Ref="17" i:nil="true" /><d5p1:_size>0</d5p1:_size><d5p1:_version>0</d5p1:_version></d2p1:_Misc><d2p1:_Name z:Id="428">Athletics</d2p1:_Name><d2p1:_Penalty>0</d2p1:_Penalty><d2p1:_Trained>false</d2p1:_Trained></d2p1:Skill><d2p1:Skill i:nil="true" /><d2p1:Skill i:nil="true" /><d2p1:Skill i:nil="true" /><d2p1:Skill i:nil="true" /><d2p1:Skill i:nil="true" /><d2p1:Skill i:nil="true" /><d2p1:Skill i:nil="true" /><d2p1:Skill i:nil="true" /><d2p1:Skill i:nil="true" /><d2p1:Skill i:nil="true" /><d2p1:Skill i:nil="true" /><d2p1:Skill i:nil="true" /><d2p1:Skill i:nil="true" /><d2p1:Skill i:nil="true" /><d2p1:Skill i:nil="true" /></d2p1:_items><d2p1:_size>17</d2p1:_size><d2p1:_version>17</d2p1:_version></_Skills><_SurgeValue>1</_SurgeValue><_Surges>7</_Surges><_Weight z:Id="429">110 lb.</_Weight></Base>

@@ -348,10 +348,10 @@ Namespace Import
                 'Determine description and level for power.
                 If (PowerRule.Name <> "Melee Basic Attack" And PowerRule.Name <> "Ranged Basic Attack") Then
                     Dim CompendiumSearch As Generic.IEnumerable(Of XElement) = Nothing
-                    'Dim CompendiumSearch As Generic.IEnumerable(Of XElement) = _
-                    '    _CompendiumData.getCompendiumSearchResults(PowerRule.Name, _
-                    '                                               Data.Compendium.DataType.Power, _
-                    '                                               Replace(PowerRule.InternalId, "ID_FMP_POWER_", ""))
+                    CompendiumSearch = _
+                        _CompendiumData.getCompendiumSearchResults(PowerRule.Name, _
+                                                                   Data.Compendium.DataType.Power, _
+                                                                   Replace(PowerRule.InternalId, "ID_FMP_POWER_", ""))
 
                     'Get power level out of search result.
                     If CompendiumSearch IsNot Nothing Then _
@@ -359,7 +359,7 @@ Namespace Import
                                        Select Q.Value).FirstOrDefault
 
                     'Get description.
-                    'sDescription = _CompendiumData.getCompendiumEntry(PowerRule.URL)
+                    sDescription = _CompendiumData.getCompendiumEntry(PowerRule.URL)
                 End If
 
                 'Create power instance.
@@ -430,6 +430,13 @@ Namespace Import
             _Character.Weight = getDetail("Weight")
             _Character.PlayerName = getDetail("Player")
             _Character.AdventureName = getDetail("Company")
+
+            _Character.HitPoints = getStat("Hit Points").Value
+            _Character.Surges = getStat("Healing Surges").Value
+            _Character.SurgeValue = getStat("Healing Surge Value").Value
+            _Character.CurrentHitPoints = _Character.HitPoints
+            _Character.CurrentSurges = _Character.Surges
+            _Character.SecondWindUsed = False
 
             'Begin loading base stats!
             _Character.AbilityScores.Strength.Score = getStat("Strength").Value

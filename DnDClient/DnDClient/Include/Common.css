@@ -1,7 +1,7 @@
 ﻿/*-Globals-------------------------------------------------------------------*/
 body {
     font-size: medium;
-    font-family: Century Gothic,Helvetica,Verdana;
+    font-family: AppleGothic,Verdana;
     background: #f0f0f0;
     margin: 0px;
 }
@@ -135,12 +135,7 @@ body {
     position: relative;
 }
 
-#DefenseContainer 
-{
-    padding-top:8px;
-}
-
-#HealthContainer 
+#DefenseContainer, #HealthContainer, #SurgeContainer
 {
     padding-top:8px;
 }
@@ -149,6 +144,16 @@ body {
 {
     width: 100%;
     padding: 2px;
+}
+
+#HPLine, #SurgeLine
+{
+    width:85%; background-color:#777; position:relative; text-align:center; color:#fff; font-size:larger; margin:auto auto; padding:4px;
+}
+
+#HPIndicator, #SurgeIndicator
+{
+    background-color:#fff; color:#777; width:100px; margin:auto auto; position:relative; font-size:larger;
 }
 
 /*-Tab browser Styles--------------------------------------------------------*/
@@ -160,11 +165,18 @@ body {
 
 /*-Power Styles--------------------------------------------------------------*/
 
-#PowerList 
+#PowerList, #PowerSummary 
 {
+    float: left;
     width: 300px;
     height: 500px;
     overflow: auto;
+}
+
+#PowerSummary 
+{
+    margin-left: 15px;
+    width: 395px;
 }
 
 .PowerButton 

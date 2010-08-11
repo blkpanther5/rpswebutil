@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="RolePlayingSystem">
+  <DataContextMoniker Name="/RolePlayingSystem" />
+  <nestedChildShapes>
+    <classShape Id="c7138bd3-189b-407c-883f-68d0b395154c" absoluteBounds="0.75, 1, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/RolePlayingSystem/tblAccount" />
+      <nestedChildShapes>
+        <elementListCompartment Id="60df5b67-a9dc-4ab4-bfa7-c9fd260856ea" absoluteBounds="0.765, 1.46, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2a40af48-9b59-4552-9cce-f8d7f1d19f80" absoluteBounds="3.5, 0.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/RolePlayingSystem/tblCharacter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cdaf1530-c16c-4213-94b6-5203fe043bbe" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.88544840494792); (3.5 : 1.88544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/RolePlayingSystem/tblAccount/tblAccount_tblCharacter" />
+      <nodes>
+        <classShapeMoniker Id="c7138bd3-189b-407c-883f-68d0b395154c" />
+        <classShapeMoniker Id="2a40af48-9b59-4552-9cce-f8d7f1d19f80" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
