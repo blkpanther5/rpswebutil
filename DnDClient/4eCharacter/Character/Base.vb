@@ -167,11 +167,20 @@ Namespace Character
         ''' </summary>
         Public Property Powers As New PowerCollection
 
+        ''' <summary>
+        ''' Contains all race features.
+        ''' </summary>
         Public Property RaceFeatures As New List(Of GenericNVP)
 
+        ''' <summary>
+        ''' Contains all class features.
+        ''' </summary>
         Public Property ClassFeatures As New List(Of GenericNVP)
 
-        'Public Property Feats As New SortedSet(Of GenericNVP)
+        ''' <summary>
+        ''' Contains all character feats.
+        ''' </summary>
+        Public Property Feats As New List(Of GenericNVP)
 #End Region
 
     End Class

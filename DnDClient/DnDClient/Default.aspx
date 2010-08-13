@@ -29,7 +29,7 @@
                 Password: 
             </td>
             <td class="tdData">
-                <asp:TextBox ID="txtPassword" runat="server" />
+                <asp:TextBox ID="txtPassword" runat="server" TextMode="Password" />
                 <asp:RequiredFieldValidator ID="valPassword" runat="server"
                     ControlToValidate="txtPassword"
                     Text="*" />

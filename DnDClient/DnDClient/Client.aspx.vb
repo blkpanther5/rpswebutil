@@ -31,10 +31,13 @@ Public Class _Client
         'Initialize database connection.
         _Account = dal.getUserById(_AccountId)
 
+        'Grab path to first character.
+        Dim sCharacterPath As String = (_Account.tblCharacters.FirstOrDefault().CharacterData)
+
         'Load default (first) character for testing!
         'Deserialize character.
-        If File.Exists(_Account.tblCharacters.FirstOrDefault().CharacterData) Then
-            Dim XmlRead As XmlReader = XmlReader.Create(_Account.tblCharacters.FirstOrDefault().CharacterData)
+        If File.Exists(sCharacterPath) Then
+            Dim XmlRead As XmlReader = XmlReader.Create(sCharacterPath)
             Dim Serializer As New System.Runtime.Serialization.NetDataContractSerializer()
 
             Try
@@ -60,10 +63,10 @@ Public Class _Client
         _Character = CharacterImport.Character
 
         'Save current file name.
-        ViewState("CharacterFile") = Server.MapPath("/Data/") & "\" & _Character.Name & "_" & _Character.Level & ".xml"
+        Dim sCharacterPath As String = (_Account.tblCharacters.FirstOrDefault().CharacterData)
 
         'Create stream and serializer.
-        Dim XmlWrite As XmlWriter = XmlWriter.Create(ViewState("CharacterFile"))
+        Dim XmlWrite As XmlWriter = XmlWriter.Create(sCharacterPath)
         Dim Serializer As New System.Runtime.Serialization.NetDataContractSerializer()
 
         'Serialize.
